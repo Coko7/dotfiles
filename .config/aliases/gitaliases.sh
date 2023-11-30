@@ -32,6 +32,3 @@ alias gpl='git pull'
 alias gplo='git pull origin'
 
 alias gstl='git stash list'
-
-# Shortcut alias to edit this file
-alias vgalias='vim $XDG_CONFIG_HOME/aliases/gitaliases.sh'
