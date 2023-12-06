@@ -23,7 +23,12 @@ alias fs='ranger'
 alias soz='source $ZDOTDIR/.zshrc'
 
 function weather() {
-  curl wttr.in/${1}
+  if [ -z "$2" ]; then
+    curl wttr.in/${1}
+  else
+    # passing "v2" as argument will display more info (like sunrise / sunset)
+    curl "wttr.in/${1}?format=${2}"
+  fi
 }
 
 # CD quick aliases
