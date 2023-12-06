@@ -1,0 +1,7 @@
+alias valias='vim $XDG_CONFIG_HOME/aliases/aliases.sh'
+alias vgalias='vim $XDG_CONFIG_HOME/aliases/gitaliases.sh'
+alias vquick='vim $XDG_CONFIG_HOME/aliases/vim-quick-edits.sh'
+alias vjump='vim $XDG_CONFIG_HOME/aliases/kjump.sh'
+alias vzsh='vim $ZDOTDIR/.zshrc'
+alias vspace='vim $ZDOTDIR/spaceship.zsh'
+alias vmux='vim $XDG_CONFIG_HOME/tmux/tmux.conf'
