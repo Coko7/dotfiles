@@ -20,8 +20,8 @@ alias gbl='git branch --list'
 #alias gc='git commit'
 
 #alias gd='git diff --color=always | less -r'
-function gd() { git diff "$@" --color=always | less -r; }
-function gds() { git diff --staged "$@" --color=always | less -r; }
+function gd() { git diff --color=always "$@" | less -r; }
+function gds() { git diff --color=always --staged "$@" | less -r; }
 
 function gsh() { git show "$@" --color=always | less -r; }
 
@@ -43,3 +43,4 @@ alias gstl='git stash list'
 # Source Marco Fontani's custom git-grepblame command
 # See: https://blog.darkpan.com/posts/git-grepblame/
 source $HOME/scripts/git-grepblame.sh
+
