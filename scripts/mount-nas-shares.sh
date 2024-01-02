@@ -19,6 +19,6 @@ else
 	echo
 	read -p "Network share: " share
 
-	# uid is needed 
+	# uid is needed to correctly setup file permissions and allow the current user to edit the remote files
 	sudo mount --mkdir -t cifs "//$NAS/$share" "/mnt/nas/$share" -o uid=$unix_user,username=$username,password=$password,vers=2.0
 fi
