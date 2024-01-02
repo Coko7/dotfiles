@@ -9,7 +9,7 @@ All my Linux configuration files. I use this to configure my entire system.
 - Window manager: [awesome](https://awesomewm.org/)
 - Application launcher: [Rofi](https://github.com/davatorium/rofi)
 - Compositor: [picom](https://github.com/yshui/picom)
-- Shell: [Zsh](https://www.zsh.org/) using ([Spaceship](https://spaceship-prompt.sh/) prompt)
+- Shell: [Zsh](https://www.zsh.org/) (with [Spaceship](https://spaceship-prompt.sh/) for my prompt)
 - Terminals:
   - [Alacritty](https://alacritty.org)
   - [Konsole](https://konsole.kde.org/)
