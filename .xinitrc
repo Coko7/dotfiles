@@ -4,6 +4,9 @@
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
+nm-applet &
+flameshot &
+
 # set desktop background with custom effect
 betterlockscreen -w dim
 
@@ -19,4 +22,6 @@ xrandr --setprovideroutputsource modesetting NVIDIA-0
 #/usr/bin/prime-offload
 #~/scripts/set-wallpaper.sh &
 # ~/scripts/natural-scrolling.sh
+
+# Run window manager
 exec awesome

@@ -16,4 +16,3 @@ run "picom"
 #run "/usr/bin/redshift"
 ##run "mpd"
 ##run "nm-applet"
-
