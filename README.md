@@ -2,9 +2,7 @@
 
 All my Linux configuration files. I use this to configure my entire system.
 
-## My ([FLOSS](https://wikipedia.org/wiki/Free_and_open-source_software)) setup
-
-### System
+## System setup
 
 - Operating system: [Arch Linux](https://archlinux.org/)
 - Display server: [Xorg](https://www.x.org/)
@@ -23,7 +21,7 @@ All my Linux configuration files. I use this to configure my entire system.
     - [PulseAudio Volume Control](https://freedesktop.org/software/pulseaudio/pavucontrol/) for simple audio control
     - [QjackCtl](https://qjackctl.sourceforge.io/) for advanced audio stuff
 
-### Other applications
+## Other applications
 
 - Browser: [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - Communication:
@@ -44,6 +42,7 @@ All my Linux configuration files. I use this to configure my entire system.
   - [Joplin](https://joplinapp.org/) for taking notes (uses Markdown)
 - Screenshots: [Flameshot](https://flameshot.org/)
 - Theming:
+  - [Catpuccin](https://github.com/catppuccin/catppuccin) Mocha for my color scheme (I also use [Rigel](https://github.com/Rigellute/rigel) sometimes)
   - [LXAppearance](https://github.com/lxde/lxappearance) to configure my GTK theme
   - [Qt5ct](https://github.com/desktop-app/qt5ct) for apps that use QT toolkit (KDE apps)
 - Torrent: [qBittorrent](https://www.qbittorrent.org/)
@@ -51,3 +50,8 @@ All my Linux configuration files. I use this to configure my entire system.
   - Editing: [Kdenlive](https://kdenlive.org/en/)
   - Viewing: [mpv](https://mpv.io/)
   - YouTube client: [FreeTube](https://freetubeapp.io/)
+
+I try to limit myself to only use [FLOSS](https://wikipedia.org/wiki/Free_and_open-source_software) software. If you are interested, I recommend you to check the following websites:
+- [Privacy Tools](https://www.privacytools.io/)
+- [Privacy Guides](https://www.privacyguides.org/)
+- [Thew New Oil](https://thenewoil.org/)
