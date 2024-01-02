@@ -1,0 +1,76 @@
+import = [
+  # uncomment the flavour you want below:
+  "~/.config/alacritty/catppuccin/catppuccin-mocha.toml"
+  # "~/.config/alacritty/catppuccin/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/catppuccin/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin/catppuccin-latte.toml"
+]
+
+working_directory = "None"
+
+# [colors.bright]
+# black = "#5c6370"
+# blue = "#61afef"
+# cyan = "#56b6c2"
+# green = "#98c379"
+# magenta = "#c678dd"
+# red = "#e06c75"
+# white = "#ffffff"
+# yellow = "#e5c07b"
+#
+# [colors.cursor]
+# cursor = "0xffcc1b"
+# text = "0x002635"
+#
+# [colors.normal]
+# black = "#5c6370"
+# blue = "#61afef"
+# cyan = "#56b6c2"
+# green = "#98c379"
+# magenta = "#c678dd"
+# red = "#e06c75"
+# white = "#abb2bf"
+# yellow = "#e5c07b"
+#
+# [colors.primary]
+# background = "#1e2127"
+# foreground = "#abb2bf"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 10
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.normal]
+family = "JetBrainsMono NF"
+style = "Medium"
+
+[font.offset]
+x = -1
+y = -1
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+dynamic_padding = false
+dynamic_title = true
+opacity = 0.8
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 2
+y = 2
