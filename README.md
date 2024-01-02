@@ -36,6 +36,7 @@ All my Linux configuration files. I use this to configure my entire system.
   - Editing: [Gimp](https://www.gimp.org/)
   - Vewing: [feh](https://feh.finalrewind.org/)
 - Network:
+  - Synchronization: [Syncthing](https://syncthing.net/)
   - VPN: [OpenVPN](https://openvpn.net/)
 - Office:
   - [ONLYOFFICE](https://www.onlyoffice.com/) for my Office suite 
