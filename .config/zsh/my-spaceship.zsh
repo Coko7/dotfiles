@@ -1,6 +1,6 @@
 SPACESHIP_PROMPT_ORDER=(
   #time           # Time stamps section
-  user           # Username section
+  #user           # Username section
   #host           # Hostname section
   dir            # Current directory section
   git            # Git section (git_branch + git_status)
@@ -10,7 +10,7 @@ SPACESHIP_PROMPT_ORDER=(
   bun            # Bun section
   #deno           # Deno section
   #ruby           # Ruby section
-  #python         # Python section
+  python         # Python section
   #elm            # Elm section
   #elixir         # Elixir section
   #xcode          # Xcode section
@@ -18,7 +18,7 @@ SPACESHIP_PROMPT_ORDER=(
   #golang         # Go section
   #perl           # Perl section
   #php            # PHP section
-  #rust           # Rust section
+  rust           # Rust section
   #haskell        # Haskell Stack section
   #scala          # Scala section
   #kotlin         # Kotlin section
@@ -32,8 +32,8 @@ SPACESHIP_PROMPT_ORDER=(
   #aws            # Amazon Web Services section
   #gcloud         # Google Cloud Platform section
   #azure          # Azure section
-  #venv           # virtualenv section
-  #conda          # conda virtualenv section
+  venv           # virtualenv section
+  conda          # conda virtualenv section
   dotnet         # .NET section
   #ocaml          # OCaml section
   #vlang          # V section
@@ -58,27 +58,32 @@ SPACESHIP_PROMPT_ORDER=(
 )
 
 # PROMPT
-SPACESHIP_PROMPT_ADD_NEWLINE="false"
-SPACESHIP_PROMPT_SEPARATE_LINE="true"
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+SPACESHIP_PROMPT_SEPARATE_LINE=false
 
 # USER
-SPACESHIP_USER_SHOW=always
-SPACESHIP_USER_SUFFIX="@wsl-2"
+#SPACESHIP_USER_SHOW=always
+#SPACESHIP_USER_SUFFIX=" "
+
+# HOSTNAME
+SPACESHIP_HOST_SHOW=false
+SPACESHIP_HOST_PREFIX="@"
 
 # DIR
-SPACESHIP_DIR_PREFIX=" "
+SPACESHIP_DIR_PREFIX=""
 SPACESHIP_DIR_TRUNC_REPO=false
 
-# GIT
-SPACESHIP_GIT_PREFIX=""
+# Git
+#SPACESHIP_GIT_SHOW=true
+#SPACESHIP_GIT_PREFIX=""
 
-# GIT BRANCH
-SPACESHIP_GIT_BRANCH_SHOW="${SPACESHIP_GIT_BRANCH_SHOW:=true}"
-SPACESHIP_GIT_BRANCH_PREFIX="${SPACESHIP_GIT_BRANCH_PREFIX:="$SPACESHIP_GIT_SYMBOL"}"
-SPACESHIP_GIT_BRANCH_SUFFIX="${SPACESHIP_GIT_BRANCH_SUFFIX:=""}"
-SPACESHIP_GIT_BRANCH_COLOR="${SPACESHIP_GIT_BRANCH_COLOR:="magenta"}"
+# Do not truncate path in repos
+#SPACESHIP_DIR_TRUNC_REPO=false
+
+# Add custom Ember section
+# See: https://github.com/spaceship-prompt/spaceship-ember
+#spaceship add ember
 
 # Add a custom vi-mode section to the prompt
 # See: https://github.com/spaceship-prompt/spaceship-vi-mode
 #spaceship add --before char vi_mode
-
