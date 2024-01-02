@@ -2,6 +2,20 @@
 
 fpath=($XDG_CONFIG_HOME/zsh/plugins $fpath)
 
+# +------------+
+# | NAVIGATION |
+# +------------+
+
+#setopt AUTO_CD              # Go to folder path without using cd.
+
+setopt AUTO_PUSHD           # Push the old directory onto the stack on cd.
+setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
+setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
+
+setopt CORRECT              # Spelling correction
+setopt CDABLE_VARS          # Change directory to a path stored in a variable.
+setopt EXTENDED_GLOB        # Use extended globbing syntax.
+
 # +---------+
 # | HISTORY |
 # +---------+
@@ -22,14 +36,15 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 
 source $ZDOTDIR/spaceship/spaceship.zsh
 for f in $XDG_CONFIG_HOME/aliases/*; do source "$f"; done
+eval $(thefuck --alias)
 
 # +-----------+
 # | VI KEYMAP |
 # +-----------+
 
 # Vi mode
-#bindkey -v
-#export KEYTIMEOUT=1
+bindkey -v
+export KEYTIMEOUT=1
 
 # +------------+
 # | COMPLETION |
@@ -37,11 +52,7 @@ for f in $XDG_CONFIG_HOME/aliases/*; do source "$f"; done
 
 #source $XDG_CONFIG_HOME/zsh/completion.zsh
 
-# +---------------------+
-# | SYNTAX HIGHLIGHTING |
-# +---------------------+
-
-source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# ZSH plugins
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bold,bg=black,bold"
-
+source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cba6f7,bold,bg=1e1e2e,bold"

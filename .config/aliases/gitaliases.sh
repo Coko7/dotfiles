@@ -34,6 +34,7 @@ function glo() { git log --pretty="oneline" "$@" --color=always | less -r ; }
 function glol() { git log --graph --oneline --decorate "$@" --color=always | less -r; }
 function gls() { git log --stat "$@" --color=always | less -r; }
 function glg() { git log --graph "$@" --color=always | less -r; }
+alias glgp="git log --graph --abbrev-commit --decorate --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold yellow)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 alias gpl='git pull'
 alias gplo='git pull origin'
@@ -43,4 +44,3 @@ alias gstl='git stash list'
 # Source Marco Fontani's custom git-grepblame command
 # See: https://blog.darkpan.com/posts/git-grepblame/
 source $HOME/scripts/git-grepblame.sh
-
