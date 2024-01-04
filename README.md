@@ -20,6 +20,10 @@ All my Linux configuration files. I use this to configure my entire system.
   - GUI apps:
     - [PulseAudio Volume Control](https://freedesktop.org/software/pulseaudio/pavucontrol/) for simple audio control
     - [QjackCtl](https://qjackctl.sourceforge.io/) for advanced audio stuff
+- Theming:
+  - [Catpuccin](https://github.com/catppuccin/catppuccin) Mocha for my color scheme (I also use [Rigel](https://github.com/Rigellute/rigel) sometimes)
+  - [LXAppearance](https://github.com/lxde/lxappearance) to configure my GTK theme
+  - [Qt5ct](https://github.com/desktop-app/qt5ct) for apps that use QT toolkit (KDE apps)
 
 ## Other applications
 
@@ -42,10 +46,6 @@ All my Linux configuration files. I use this to configure my entire system.
   - [ONLYOFFICE](https://www.onlyoffice.com/) for my Office suite 
   - [Joplin](https://joplinapp.org/) for taking notes (uses Markdown)
 - Screenshots: [Flameshot](https://flameshot.org/)
-- Theming:
-  - [Catpuccin](https://github.com/catppuccin/catppuccin) Mocha for my color scheme (I also use [Rigel](https://github.com/Rigellute/rigel) sometimes)
-  - [LXAppearance](https://github.com/lxde/lxappearance) to configure my GTK theme
-  - [Qt5ct](https://github.com/desktop-app/qt5ct) for apps that use QT toolkit (KDE apps)
 - Torrent: [qBittorrent](https://www.qbittorrent.org/)
 - Videos:
   - Editing: [Kdenlive](https://kdenlive.org/en/)
