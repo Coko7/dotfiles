@@ -524,6 +524,7 @@ awful.rules.rules = {
 
     -- 2. Web (www)
     { rule = { class = "firefox" }, properties = { screen = 1, tag = "www" } },
+    { rule = { class = "Brave-browser" }, properties = { screen = 1, tag = "www" } },
 
     -- 3. Terminal (term)
 
