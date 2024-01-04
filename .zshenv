@@ -7,6 +7,9 @@
 export TERM='alacritty'
 export WORKSPACE="$HOME/workspace"
 
+# X11
+export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
+
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
