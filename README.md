@@ -13,7 +13,7 @@ All my Linux configuration files. I use this to configure my entire system.
 - Terminals:
   - [Alacritty](https://alacritty.org)
   - [Konsole](https://konsole.kde.org/)
-- Text/code editor: [Neovim](https://neovim.io/)
+- Text/code editor: [Neovim](https://neovim.io/) (using [kickstart](https://github.com/nvim-lua/kickstart.nvim))
 - Audio:
   - Drivers and interface: [ALSA](https://www.alsa-project.org/)
   - Sound server: [PipeWire](https://pipewire.org/)
