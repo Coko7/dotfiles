@@ -11,20 +11,20 @@ jump_directory() {
                 #echo "  - progdata: /mnt/c/ProgramData"
                 #echo "  - roam: $WIN_USER_HOME/AppData/Roaming/"
                 #echo 'Linux:'
-                echo "- alias: $XDG_CONFIG_HOME"
-                echo "- conf: $XDG_CONFIG_HOME/aliases"
+                echo "- conf: $XDG_CONFIG_HOME"
+                echo "- alias: $XDG_CONFIG_HOME/aliases"
                 echo "- dl: $HOME/Downloads"
-                echo "- work: $HOME/workspace"
+                echo "- work: $WORKSPACE"
         # Windows
         #elif [ "$1" = "wdl" ]; then cd $WIN_USER_HOME/Downloads
         #elif [ "$1" = "rep" ]; then cd $WIN_USER_HOME/source/repos
         #elif [ "$1" = "progdata" ]; then cd /mnt/c/ProgramData
         #elif [ "$1" = "roam" ]; then cd $WIN_USER_HOME/AppData/Roaming
         # Linux
-        elif [ "$1" = "alias" ]; then cd $XDG_CONFIG_HOME/aliases
         elif [ "$1" = "conf" ]; then cd $XDG_CONFIG_HOME
+        elif [ "$1" = "alias" ]; then cd $XDG_CONFIG_HOME/aliases
         elif [ "$1" = "dl" ]; then cd $HOME/Downloads
-        elif [ "$1" = "work" ]; then cd $HOME/Workspace
+        elif [ "$1" = "work" ]; then cd $WORKSPACE
         else echo "Failed to teleport to $1 (hint: j -h)"
         fi
 }
