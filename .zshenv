@@ -26,6 +26,10 @@ export HISTSIZE=10000                   # Maximum events for internal history
 export SAVEHIST=10000                   # Maximum events in history file
 export SPACESHIP_CONFIG="$ZDOTDIR/my-spaceship.zsh"
 
+# rust
+export RUSTUP_HOME="$XDG_CONFIG_HOME/rustup"
+export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
+
 # Man pages
 export MANPAGER='nvim +Man!'
 
