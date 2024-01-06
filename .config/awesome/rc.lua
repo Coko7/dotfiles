@@ -236,16 +236,16 @@ globalkeys = gears.table.join(
               {description = "go back", group = "tag"}),
     awful.key({ modkey,           }, "b", function ()
 	    awful.util.spawn("firefox") end,
-              {description = "launch firefox", group = "applications"}),
+              {description = "launch Firefox", group = "applications"}),
     awful.key({ modkey,           }, "e", function ()
 	    awful.util.spawn("nemo") end,
-              {description = "launch nemo", group = "applications"}),
+              {description = "launch Nemo", group = "applications"}),
     awful.key({ modkey,           }, "Print", function ()
 	    awful.util.spawn("flameshot gui") end,
-              {description = "take screenshot", group = "applications"}),
+              {description = "take a screenshot", group = "applications"}),
     awful.key({ modkey, "Mod1"           }, "l", function ()
 	    awful.util.spawn("betterlockscreen -l") end,
-              {description = "lock", group = "applications"}),
+              {description = "lock the computer", group = "applications"}),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -325,19 +325,19 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey,           }, "r", function ()
 	    awful.util.spawn("rofi -show drun") end,
-              {description = "run rofi (drun)", group = "launcher"}),
+              {description = "open the app launcher", group = "launcher"}),
 
     awful.key({ modkey, "Shift" }, "r", function ()
 	    awful.util.spawn("rofi -show run") end,
-              {description = "run rofi", group = "launcher"}),
+              {description = "open the command launcher", group = "launcher"}),
 
     awful.key({ modkey,           }, ",", function ()
 	    awful.util.spawn("rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c") end,
-              {description = "emoji picker (rofi)", group = "launcher"}),
+              {description = "open the emoji picker", group = "launcher"}),
 
     awful.key({ modkey,           }, "c", function ()
 	    awful.util.spawn("rofi -modi calc -show calc -no-show-match -no-sort") end,
-              {description = "calculator", group = "launcher"}),
+              {description = "open the calculator", group = "launcher"})
 
     -- awful.key({ modkey }, "x",
     --           function ()
@@ -350,8 +350,8 @@ globalkeys = gears.table.join(
     --           end,
     --           {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+    -- awful.key({ modkey }, "p", function() menubar.show() end,
+    --           {description = "show the menubar", group = "launcher"})
 )
 
 clientkeys = gears.table.join(
