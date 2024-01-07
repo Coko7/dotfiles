@@ -36,7 +36,6 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 
 source $ZDOTDIR/spaceship/spaceship.zsh
 for f in $XDG_CONFIG_HOME/aliases/*; do source "$f"; done
-eval $(thefuck --alias)
 
 # +-----------+
 # | VI KEYMAP |
