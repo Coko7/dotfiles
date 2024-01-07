@@ -525,6 +525,7 @@ awful.rules.rules = {
     -- 2. Web (www)
     { rule = { class = "firefox" }, properties = { screen = 1, tag = "www" } },
     { rule = { class = "Brave-browser" }, properties = { screen = 1, tag = "www" } },
+    { rule = { class = "thunderbird" }, properties = { screen = 1, tag = "www" } },
 
     -- 3. Terminal (term)
 
@@ -544,6 +545,8 @@ awful.rules.rules = {
     -- 7. Gaming (game)
     { rule = { class = "steam" }, properties = { screen = 1, tag = "game" } },
     { rule = { class = "love" }, properties = { screen = 1, tag = "game" } }, -- Olympus has the "love" class
+    { rule = { class = "MultiMC" }, properties = { screen = 1, tag = "game" } },
+    { rule = { class = "Minecraft Launcher" }, properties = { screen = 1, tag = "game" } },
 
     -- 8.
 
