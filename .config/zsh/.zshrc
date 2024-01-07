@@ -30,11 +30,17 @@ setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
+# +--------------+
+# | SHELL PROMPT |
+# +--------------+
+
+#source $ZDOTDIR/spaceship/spaceship.zsh
+eval "$(starship init zsh)"
+
 # +---------+
 # | ALIASES |
 # +---------+
 
-source $ZDOTDIR/spaceship/spaceship.zsh
 for f in $XDG_CONFIG_HOME/aliases/*; do source "$f"; done
 
 # +-----------+
@@ -51,12 +57,18 @@ export KEYTIMEOUT=1
 
 #source $XDG_CONFIG_HOME/zsh/completion.zsh
 
-# ZSH plugins
+# +---------+
+# | PLUGINS |
+# +---------+
+
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cba6f7,bold,bg=1e1e2e,bold"
 
-# Rust
+# +------+
+# | RUST |
+# +------+
+
 source $CARGO_HOME/env
 
 # Flexing Arch
