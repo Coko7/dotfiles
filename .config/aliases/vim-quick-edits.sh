@@ -9,7 +9,8 @@ alias vjump="vim $XDG_CONFIG_HOME/aliases/kjump.sh"
 
 alias vzsh="vim $ZDOTDIR/.zshrc"
 alias vzshenv="vim $HOME/.zshenv"
-alias vspace="vim $ZDOTDIR/my-spaceship.zsh"
+#alias vspace="vim $ZDOTDIR/my-spaceship.zsh"
+alias vstar="vim $XDG_CONFIG_HOME/starship/starship.toml"
 
 alias vmux="vim $XDG_CONFIG_HOME/tmux/tmux.conf"
 
