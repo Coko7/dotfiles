@@ -15,7 +15,8 @@ truncation_length = 3
 truncate_to_repo = false # If in a git repo, truncates the path to the root dir of the git repo
 truncation_symbol = '.../'
 style = "bold italic blue"
-read_only = ' 🔒'
+# read_only = ' 🔒'
+read_only = ' 🔏'
 read_only_style = 'purple'
 
 [git_branch]
@@ -23,8 +24,8 @@ symbol = " "
 # format = '[$symbol $branch](purple)'
 
 [character]
-success_symbol = "[❯](bold purple)"
-error_symbol = "[❯](bold red)"
+success_symbol = '[⮞](bold purple)'
+error_symbol = '[✗](bold red)'
 
 # Make prompt single line
 [line_break]
