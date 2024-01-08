@@ -56,3 +56,10 @@ I try to limit myself to only use [FLOSS](https://wikipedia.org/wiki/Free_and_op
 - [Privacy Tools](https://www.privacytools.io/)
 - [Privacy Guides](https://www.privacyguides.org/)
 - [Thew New Oil](https://thenewoil.org/)
+
+## Inspiration
+
+I did not make all of this myself. I am mainly tweaking existing configs from other people:
+- [Phantas0s](https://github.com/Phantas0s/.dotfiles): Solid Zsh setup (without [omz](https://ohmyz.sh/)) and overall nice directory structure (Blog: [The Valuable Dev](https://thevaluable.dev/))
+- [BrodieRobertson](https://github.com/BrodieRobertson/dotfiles): Automatic sourcing of aliases (Youtube: [Brodie Robertson](https://www.youtube.com/channel/UCld68syR8Wi-GY_n4CaoJGA)
+- [Derek Taylor](https://gitlab.com/dwt1/dotfiles): Offers great advice on how to manage dotfiles (Youtube: [DistroTube](https://youtu.be/RIvJ8FNZrfc))
