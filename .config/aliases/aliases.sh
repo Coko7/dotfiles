@@ -3,6 +3,10 @@
 # X11
 alias xpropc='xprop | grep WM_CLASS' # display xprop class
 alias xop='xdg-open' # open file with default app
+#alias xop='wslview' # WSL only
+
+alias cb='xclip -selection clipboard'
+#alias cb='win32yank.exe -i' # WSL only
 
 # wget
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
