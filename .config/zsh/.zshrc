@@ -55,7 +55,8 @@ export KEYTIMEOUT=1
 # | COMPLETION |
 # +------------+
 
-#source $XDG_CONFIG_HOME/zsh/completion.zsh
+source $ZDOTDIR/completion.zsh
+autoload -U compinit; compinit
 
 # +---------+
 # | PLUGINS |
