@@ -25,6 +25,7 @@ symbol = " "
 
 [character]
 success_symbol = '[⮞](bold purple)'
+vimcmd_symbol = '[⮟](bold green)'
 error_symbol = '[✗](bold red)'
 
 # Make prompt single line
