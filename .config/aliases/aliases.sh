@@ -20,8 +20,23 @@ alias dust='du -sh * | sort -hr'
 # anyone? Check if I have internet
 alias any1='ping 8.8.8.8'
 
+# ls
 alias ls='eza --icons -a --group-directories-first'
 alias ll='ls -alF'
+
+# pacman
+alias paci='sudo pacman -S'               # install
+#alias pachi='sudo pacman -Ql'             # Pacman Has Installed - what files where installed in a package
+alias pacs='sudo pacman -Ss'              # search
+alias pacu='sudo pacman -Syu'             # update
+alias pacr='sudo pacman -R'               # remove package but not dependencies
+#alias pacrr='sudo pacman -Rs'             # remove package with unused dependencies by other softwares
+#alias pacrc='sudo pacman -Sc'             # remove pacman's cache
+#alias pacro='pacman -Rns $(pacman -Qtdq)'
+#alias pacrl='rm /var/lib/pacman/db.lck'   # pacman remove locks
+alias pacls="sudo pacman -Qe"
+#alias pacc='sudo pacman -Sc'
+#alias paccc='sudo pacman -Scc'            # empty the whole cache
 
 # APT (Debian)
 alias aptu='sudo apt update && apt list --upgradable && sudo apt upgrade'
