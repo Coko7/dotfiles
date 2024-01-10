@@ -23,8 +23,11 @@ alias any1='ping 8.8.8.8'
 alias ls='eza --icons -a --group-directories-first'
 alias ll='ls -alF'
 
-# Upgrade (Debian only)
-#alias upgrates='sudo apt update && apt list --upgradable && sudo apt upgrade'
+# APT (Debian)
+alias aptu='sudo apt update && apt list --upgradable && sudo apt upgrade'
+alias aptar='sudo apt autoremove'
+
+# Common
 alias vim='nvim'
 alias fs='ranger'
 alias soz="source $ZDOTDIR/.zshrc"
@@ -47,4 +50,5 @@ alias cd....='cd ../../..'
 alias cd.....='cd ../../../..'
 alias cd......='cd ../../../../..'
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# .dotfiles git alias
+alias dtf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
