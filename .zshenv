@@ -6,6 +6,7 @@
 
 export TERM='alacritty'
 export WORKSPACE="$HOME/workspace"
+export SCRIPTS="$XDG_CONFIG_HOME/scripts"
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -28,6 +29,9 @@ export SAVEHIST=10000                   # Maximum events in history file
 # prompt
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 # export SPACESHIP_CONFIG="$ZDOTDIR/my-spaceship.zsh"
+
+# bat
+#export BAT_THEME="Dracula"
 
 # rust
 export RUSTUP_HOME="$XDG_CONFIG_HOME/rustup"

@@ -1,7 +1,7 @@
 #!/bin/sh
 
-NAS="192.168.1.54"
-NAS_ALT="nas.home"
+NAS="192.168.1.103"
+NAS_ALT="nas-ds923.home"
 
 unix_user=$(whoami)
 

@@ -3,7 +3,7 @@
 # Aliases to quickly edit important files
 
 alias valias="vim $XDG_CONFIG_HOME/aliases/aliases.sh"
-alias vgalias="vim $XDG_CONFIG_HOME/aliases/gitaliases.sh"
+alias vgalias="vim $XDG_CONFIG_HOME/aliases/git-aliases.sh"
 alias vquick="vim $XDG_CONFIG_HOME/aliases/vim-quick-edits.sh"
 alias vjump="vim $XDG_CONFIG_HOME/aliases/kjump.sh"
 

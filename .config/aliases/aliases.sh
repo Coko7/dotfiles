@@ -47,7 +47,7 @@ alias vim='nvim'
 alias fs='ranger'
 alias soz="source $ZDOTDIR/.zshrc"
 alias lock='betterlockscreen -l dim'
-alias twitch-dl="$HOME/scripts/twitch-dl/twitch-dl.2.1.3.pyz"
+alias twitch-dl="$SCRIPTS/twitch-dl/twitch-dl.2.1.3.pyz"
 
 function weather() {
   if [ -z "$2" ]; then
