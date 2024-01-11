@@ -2,7 +2,7 @@
 
 All my Linux configuration files. I use this to configure my entire system.
 
-## System setup
+## 🐧 System setup
 
 - Operating system: [Arch Linux](https://archlinux.org/)
 - Display server: [Xorg](https://www.x.org/)
@@ -25,8 +25,21 @@ All my Linux configuration files. I use this to configure my entire system.
   - [LXAppearance](https://github.com/lxde/lxappearance) to configure my GTK theme
   - [Qt5ct](https://github.com/desktop-app/qt5ct) for apps that use QT toolkit (KDE apps)
 
-## Other applications
+## 🖥️ Desktop applications
 
+<table>
+  <tr>
+    <td>🚨</td>
+    <td>I try to limit myself to only use <a href="https://wikipedia.org/wiki/Free_and_open-source_software">FLOSS</a> software. If you are interested, I recommend you to check the following websites:
+      <ul>
+        <li><a href="https://www.privacytools.io/">Privacy Tools</a></li>
+        <li><a href="https://www.privacyguides.org/">Privacy Guides</a></li>
+        <li><a href="https://thenewoil.org/">The New Oil</a></li>
+      </ul>
+  </tr>
+</table>
+
+Anyway, here are the desktop apps I most commonly use:
 - Browser: [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - Communication:
   - Messaging: [Signal](https://www.signal.org/)
@@ -52,12 +65,7 @@ All my Linux configuration files. I use this to configure my entire system.
   - Viewing: [mpv](https://mpv.io/)
   - YouTube client: [FreeTube](https://freetubeapp.io/)
 
-I try to limit myself to only use [FLOSS](https://wikipedia.org/wiki/Free_and_open-source_software) software. If you are interested, I recommend you to check the following websites:
-- [Privacy Tools](https://www.privacytools.io/)
-- [Privacy Guides](https://www.privacyguides.org/)
-- [Thew New Oil](https://thenewoil.org/)
-
-## Inspiration
+## ✨ Inspiration
 
 I did not make all of this myself. I am mainly tweaking existing configs from other people:
 - [Phantas0s](https://github.com/Phantas0s/.dotfiles): Solid Zsh setup (without [omz](https://ohmyz.sh/)) and overall nice directory structure (Blog: [The Valuable Dev](https://thevaluable.dev/))
