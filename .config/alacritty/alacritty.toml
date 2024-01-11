@@ -44,7 +44,7 @@ text = "CellBackground"
 TERM = "alacritty"
 
 [font]
-size = 10
+size = 12
 
 [font.glyph_offset]
 x = 0
@@ -65,7 +65,7 @@ multiplier = 3
 [window]
 dynamic_padding = false
 dynamic_title = true
-opacity = 0.8
+opacity = 0.77
 
 [window.class]
 general = "Alacritty"
