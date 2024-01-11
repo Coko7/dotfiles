@@ -5,13 +5,15 @@
 ###############################
 
 export TERM='alacritty'
-export WORKSPACE="$HOME/workspace"
-export SCRIPTS="$XDG_CONFIG_HOME/scripts"
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
+
+# Common
+export WORKSPACE="$HOME/workspace"
+export SCRIPTS="$XDG_CONFIG_HOME/scripts"
 
 # X11
 export XINITRC="$XDG_CONFIG_HOME/X11/.xinitrc"

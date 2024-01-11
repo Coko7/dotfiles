@@ -7,7 +7,7 @@ function run {
   fi
 }
 
-~/scripts/set-wallpaper.sh
+$SCRIPTS/set-wallpaper.sh
 #run "megasync"
 ##run "xscreensaver -no-splash"
 #run "/usr/bin/dropbox"
