@@ -51,7 +51,7 @@ beautiful.init("~/.config/awesome/theme.lua")
 awesome.set_preferred_icon_size(32)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = os.getenv("TERM")
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
