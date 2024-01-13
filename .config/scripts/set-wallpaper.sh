@@ -5,7 +5,7 @@ wallp_dir="$HOME/Pictures/Wallpapers"
 # Pick random wallpaper if no argument supplied
 if [ "$#" -eq 0 ]; then
   # pick=$(fd . $wallp_dir -t f -e '.jpg' -e '.png' -e '.webp' | shuf -n1)
-  feh --no-fehbg --randomize --bg-fill $wallp_dir/*
+  feh --no-fehbg --randomize --recursive --bg-fill $wallp_dir/*
 else
   feh --no-fehbg --bg-fill $1
 fi
