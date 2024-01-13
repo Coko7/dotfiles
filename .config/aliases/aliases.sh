@@ -49,6 +49,9 @@ alias soz="source $ZDOTDIR/.zshrc"
 alias lock='betterlockscreen -l dim'
 alias twitch-dl="$SCRIPTS/twitch-dl/twitch-dl.2.1.3.pyz"
 
+# Keyboard quick switch
+alias kb='sudo setxkbmap -layout'
+
 function weather() {
   if [ -z "$2" ]; then
     curl wttr.in/${1}
