@@ -37,6 +37,7 @@ alias pacr='sudo pacman -R'               # remove package but not dependencies
 alias pacls="sudo pacman -Qe"
 #alias pacc='sudo pacman -Sc'
 #alias paccc='sudo pacman -Scc'            # empty the whole cache
+alias pacbak="sudo pacman -Qe > `date +"%d%m%Y-%H%M"`.txt" # Backup explicitly installed packages to a text file
 
 # APT (Debian)
 alias aptu='sudo apt update && apt list --upgradable && sudo apt upgrade'
