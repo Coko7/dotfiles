@@ -7,4 +7,4 @@ Defaults  insults
 ```
 3. Now your shell will disrespect you if you fail to give the right password.
 
-Source: [It's FOSS](ttps://itsfoss.com/sudo-insult-linux/)
+Source: [It's FOSS](https://itsfoss.com/sudo-insult-linux/)
