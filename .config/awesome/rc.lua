@@ -337,7 +337,11 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey,           }, "c", function ()
 	    awful.util.spawn("rofi -modi calc -show calc -no-show-match -no-sort") end,
-              {description = "open the calculator", group = "launcher"})
+              {description = "open the calculator", group = "launcher"}),
+
+    awful.key({ modkey, "Control"        }, "space", function ()
+	    awful.util.spawn_with_shell("bash $SCRIPTS/keyboard-switcher.sh") end,
+              {description = "switch keyboard layout", group = "launcher"})
 
     -- awful.key({ modkey }, "x",
     --           function ()
