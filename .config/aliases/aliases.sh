@@ -20,6 +20,11 @@ alias dust='du -sh * | sort -hr'
 # anyone? Check if I have internet
 alias any1='ping 8.8.8.8'
 
+# Core commands
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+
 # ls
 alias ls='eza --icons -a --group-directories-first'
 alias ll='ls -alF'
