@@ -240,7 +240,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "e", function ()
 	    awful.util.spawn("nemo") end,
               {description = "launch Nemo", group = "applications"}),
-    awful.key({ modkey,           }, "Print", function ()
+    awful.key({ modkey,           }, "p", function ()
 	    awful.util.spawn("flameshot gui") end,
               {description = "take a screenshot", group = "applications"}),
     awful.key({ modkey, "Mod1"           }, "l", function ()
