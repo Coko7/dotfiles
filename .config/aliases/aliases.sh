@@ -27,6 +27,7 @@ alias rm='rm -iv'
 
 # ls
 alias ls='eza --icons -a --group-directories-first'
+# alias ls='ls --color=auto'
 alias ll='ls -alF'
 
 # pacman

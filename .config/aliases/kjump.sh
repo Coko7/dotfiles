@@ -12,6 +12,7 @@ jump_directory() {
                 #echo "  - roam: $WIN_USER_HOME/AppData/Roaming/"
                 #echo 'Linux:'
                 echo "- conf: $XDG_CONFIG_HOME"
+                echo "- zsh: $ZDOTDIR"
                 echo "- alias: $XDG_CONFIG_HOME/aliases"
                 echo "- dl: $HOME/Downloads"
                 echo "- work: $WORKSPACE"
@@ -22,6 +23,7 @@ jump_directory() {
         #elif [ "$1" = "roam" ]; then cd $WIN_USER_HOME/AppData/Roaming
         # Linux
         elif [ "$1" = "conf" ]; then cd $XDG_CONFIG_HOME
+        elif [ "$1" = "zsh" ]; then cd $ZDOTDIR
         elif [ "$1" = "alias" ]; then cd $XDG_CONFIG_HOME/aliases
         elif [ "$1" = "dl" ]; then cd $HOME/Downloads
         elif [ "$1" = "work" ]; then cd $WORKSPACE
