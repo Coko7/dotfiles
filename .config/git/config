@@ -1,0 +1,31 @@
+[user]
+	name = Coko
+	email = "91132775+Coko7@users.noreply.github.com"
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[core]
+	editor = nvim
+	# The "-+$LESS" is needed so that the pager does not leave input on screen after exit
+	# See this post: https://superuser.com/a/367160
+	pager = diff-so-fancy | less -+$LESS --tabs=4 -RF
+[commit]
+	template = ~/.config/git/gitmessage.txt
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
