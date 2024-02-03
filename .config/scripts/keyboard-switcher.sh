@@ -9,4 +9,4 @@ elif [ "$current_layout" == "fr" ]; then
   next_layout="us"
 fi
 
-setxkbmap -layout $next_layout
+setxkbmap -layout $next_layout && notify-send "Keyboard" "$next_layout layout"
