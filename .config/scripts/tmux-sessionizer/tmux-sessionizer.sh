@@ -4,10 +4,12 @@
 # - GitHub: https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer
 # - Youtube video: https://youtu.be/qd3mfYS_Xow
 
+dirs=`cat $SCRIPTS/tmux-sessionizer/dirs.txt`
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/workspace ~/workspace/rust/projects/learning ~/ ~/.config -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find $dirs -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
