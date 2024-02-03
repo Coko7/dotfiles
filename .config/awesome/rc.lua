@@ -227,25 +227,25 @@ root.buttons(gears.table.join(
 -- {{{ Key bindings
 globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
+              {description = "show help", group = "awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
-    awful.key({ modkey,           }, "b", function ()
-	    awful.util.spawn("firefox") end,
-              {description = "launch Firefox", group = "applications"}),
-    awful.key({ modkey,           }, "e", function ()
-	    awful.util.spawn("nemo") end,
-              {description = "launch Nemo", group = "applications"}),
-    awful.key({            }, "Print", function ()
-	    awful.util.spawn("flameshot gui") end,
-              {description = "take a screenshot", group = "applications"}),
-    awful.key({ modkey, "Mod1"           }, "l", function ()
-	    awful.util.spawn("betterlockscreen -l") end,
-              {description = "lock the computer", group = "applications"}),
+    -- awful.key({ modkey,           }, "b", function ()
+	   --  awful.util.spawn("firefox") end,
+    --           {description = "launch Firefox", group = "applications"}),
+    -- awful.key({ modkey,           }, "e", function ()
+	   --  awful.util.spawn("nemo") end,
+    --           {description = "launch Nemo", group = "applications"}),
+    -- awful.key({            }, "Print", function ()
+	   --  awful.util.spawn("flameshot gui") end,
+    --           {description = "take a screenshot", group = "applications"}),
+    -- awful.key({ modkey, "Mod1"           }, "l", function ()
+	   --  awful.util.spawn("betterlockscreen -l") end,
+    --           {description = "lock the computer", group = "applications"}),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -283,8 +283,8 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
-              {description = "open a terminal", group = "launcher"}),
+    -- awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    --           {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -317,31 +317,35 @@ globalkeys = gears.table.join(
                     )
                   end
               end,
-              {description = "restore minimized", group = "client"}),
+              {description = "restore minimized", group = "client"})
 
     -- Prompt
     -- awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
     --          {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey,           }, "r", function ()
-	    awful.util.spawn("rofi -show drun") end,
-              {description = "open the app launcher", group = "launcher"}),
+    -- awful.key({ modkey,           }, "r", function ()
+	   --  awful.util.spawn("rofi -show drun") end,
+    --           {description = "open the app launcher", group = "launcher"}),
+    --
+    -- awful.key({ modkey, "Shift" }, "r", function ()
+	   --  awful.util.spawn("rofi -show run") end,
+    --           {description = "open the command launcher", group = "launcher"}),
 
-    awful.key({ modkey, "Shift" }, "r", function ()
-	    awful.util.spawn("rofi -show run") end,
-              {description = "open the command launcher", group = "launcher"}),
+    -- awful.key({ modkey,           }, ",", function ()
+	   --  awful.util.spawn("rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c") end,
+    --           {description = "open the emoji picker", group = "launcher"}),
+    --
+    -- awful.key({ modkey,           }, "c", function ()
+	   --  awful.util.spawn("rofi -modi calc -show calc -no-show-match -no-sort") end,
+    --           {description = "open the calculator", group = "launcher"})
 
-    awful.key({ modkey,           }, ",", function ()
-	    awful.util.spawn("rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c") end,
-              {description = "open the emoji picker", group = "launcher"}),
+    -- awful.key({}, "space", function ()
+	   --  awful.util.spawn_with_shell("bash $SCRIPTS/keyboard-switcher.sh") end,
+    --           {description = "switch keyboard layout", group = "launcher"})
 
-    awful.key({ modkey,           }, "c", function ()
-	    awful.util.spawn("rofi -modi calc -show calc -no-show-match -no-sort") end,
-              {description = "open the calculator", group = "launcher"}),
-
-    awful.key({ modkey, "Control"        }, "space", function ()
-	    awful.util.spawn_with_shell("bash $SCRIPTS/keyboard-switcher.sh") end,
-              {description = "switch keyboard layout", group = "launcher"})
+    -- awful.key({ modkey, "Control"        }, "space", function ()
+	   --  awful.util.spawn_with_shell("bash $SCRIPTS/keyboard-switcher.sh") end,
+    --           {description = "switch keyboard layout", group = "launcher"})
 
     -- awful.key({ modkey }, "x",
     --           function ()
@@ -367,14 +371,14 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
-              {description = "toggle floating", group = "client"}),
-    awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
-              {description = "move to master", group = "client"}),
+    -- awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
+    --           {description = "toggle floating", group = "client"}),
+    -- awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
+    --           {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
               {description = "move to screen", group = "client"}),
-    awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
-              {description = "toggle keep on top", group = "client"}),
+    -- awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end,
+    --           {description = "toggle keep on top", group = "client"}),
     awful.key({ modkey,           }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be

@@ -1,0 +1,82 @@
+#########################
+#                       #
+#	KEYBINDS	#
+#                       #
+#########################
+
+# +--------+
+# | SYSTEM |
+# +--------+
+
+# Switch keyboard layout
+super + ctrl + space
+	bash $SCRIPTS/keyboard-switcher.sh
+
+# Lock the screen
+super + shift + e
+	betterlockscreen -l
+
+# Restart sxhkd hotkey daemon
+super + shift + x
+	pkill -USR1 -x sxhkd && notify-send "sxhkd config" "Reloaded."
+
+# +-------+
+# | AUDIO |
+# +-------+
+
+# Pulse audio volume
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+	pactl set-sink-volume @DEFAULT_SINK@ {+2%, -2%}
+
+# +-------+
+# | MEDIA |
+# +-------+
+
+XF86AudioNext
+	playerctl next
+
+XF86AudioPrev
+	playerctl previous
+
+XF86AudioPlay
+	playerctl play-pause
+
+# +-------------+
+# | SCREENSHOTS |
+# +-------------+
+
+Print
+	flameshot gui
+
+Print + shift
+	flameshot full -p ~/Pictures/Screenshots
+
+Print + super
+	flameshot screen -p ~/Pictures/Screenshots
+
+# +------+
+# | ROFI |
+# +------+
+
+# Desktop app launcher
+super + r
+	rofi -show drun -show-icons
+
+# Command launcher
+super + shift + r
+	rofi -show run -show-icons
+
+# Emoji picker
+super + comma
+	rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c
+
+# Calculator
+super + c
+	rofi -modi calc -show calc -no-show-match -no-sort
+
+# +--------------+
+# | APPLICATIONS |
+# +--------------+
+
+super + {Return, b, e, y}
+    {$TERM, firefox, nemo, freetube}

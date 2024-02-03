@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Make sure this is before the 'exec' command or it won't be sourced.
 [ -f /etc/xprofile ] && . /etc/xprofile
@@ -6,6 +6,7 @@
 
 nm-applet &
 flameshot &
+sxhkd &
 
 # set desktop background with custom effect
 betterlockscreen -w dim
