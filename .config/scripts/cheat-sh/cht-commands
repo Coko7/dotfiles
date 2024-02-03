@@ -1,6 +1,7 @@
 awk
 fd
 find
+fzf
 grep
 scp
 tar
