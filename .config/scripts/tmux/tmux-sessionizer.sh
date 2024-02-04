@@ -4,7 +4,7 @@
 # - GitHub: https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer
 # - Youtube video: https://youtu.be/qd3mfYS_Xow
 
-dirs=`cat $SCRIPTS/tmux-sessionizer/dirs.txt`
+dirs=`cat $SCRIPTS/tmux/dirs.txt`
 
 if [[ $# -eq 1 ]]; then
     selected=$1
