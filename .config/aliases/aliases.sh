@@ -69,12 +69,11 @@ function weather() {
   fi
 }
 
-# CD quick aliases
-alias cd..='cd ..'
-alias cd...='cd ../..'
-alias cd....='cd ../../..'
-alias cd.....='cd ../../../..'
-alias cd......='cd ../../../../..'
+# CD quick aliases (From https://stackoverflow.com/q/23456873)
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
 
 # .dotfiles git alias
 alias dtf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
