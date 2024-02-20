@@ -6,6 +6,7 @@
 
 set scrolloff=8
 set relativenumber
+set number
 set showmode
 set showcmd
 
