@@ -56,6 +56,9 @@ alias fs='ranger'
 alias soz="source $ZDOTDIR/.zshrc"
 alias lock='betterlockscreen -l dim'
 alias twitch-dl="$SCRIPTS/twitch-dl/twitch-dl.2.1.3.pyz"
+alias setwp="$SCRIPTS/set-wallpaper.sh"
+alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
+alias tmuxp="$SCRIPTS/tmux/tmux-panizer.sh"
 
 # Keyboard quick switch
 alias kb='sudo setxkbmap -layout'
