@@ -12,6 +12,7 @@
 	pager = diff-so-fancy | less -+$LESS --tabs=4 -RF
 [commit]
 	template = ~/.config/git/gitmessage.txt
+	gpgsign = true # Sign commits cryptographically
 [interactive]
 	diffFilter = diff-so-fancy --patch
 [color]
