@@ -29,3 +29,11 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[rerere] # Automatically resolve previously encountered conflicts
+	enabled = true
+[colum] # Arrange output (namely from git branch command) into columns for better readability
+	ui = auto
+[branch] # Sort branches by last commit date
+	sort = -comitterdate
+[gpg] # Use ssh key to sign commits
+	format = ssh
