@@ -12,7 +12,8 @@ export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 
 # Common
-export WORKSPACE="$HOME/workspace"
+export PROJ_PERSO="$HOME/projects/personal"
+export PROJ_WORK="$HOME/projects/work"
 export SCRIPTS="$XDG_CONFIG_HOME/scripts"
 
 # X11

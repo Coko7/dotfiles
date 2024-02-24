@@ -15,7 +15,8 @@ jump_directory() {
                 echo "- zsh: $ZDOTDIR"
                 echo "- alias: $XDG_CONFIG_HOME/aliases"
                 echo "- dl: $HOME/Downloads"
-                echo "- work: $WORKSPACE"
+                echo "- perso: $PROJ_PERSO"
+                echo "- work: $PROJ_WORK"
         # Windows
         #elif [ "$1" = "wdl" ]; then cd $WIN_USER_HOME/Downloads
         #elif [ "$1" = "rep" ]; then cd $WIN_USER_HOME/source/repos
@@ -26,7 +27,8 @@ jump_directory() {
         elif [ "$1" = "zsh" ]; then cd $ZDOTDIR
         elif [ "$1" = "alias" ]; then cd $XDG_CONFIG_HOME/aliases
         elif [ "$1" = "dl" ]; then cd $HOME/Downloads
-        elif [ "$1" = "work" ]; then cd $WORKSPACE
+        elif [ "$1" = "perso" ]; then cd $PROJ_PERSO
+        elif [ "$1" = "work" ]; then cd $PROJ_WORK
         else echo "Failed to teleport to $1 (hint: j -h)"
         fi
 }
