@@ -60,6 +60,9 @@ alias setwp="$SCRIPTS/set-wallpaper.sh"
 alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
 alias tmuxp="$SCRIPTS/tmux/tmux-panizer.sh"
 
+source "$SCRIPTS/jump-dir/jump-dir.sh"
+alias j='jump_dir'
+
 # Keyboard quick switch
 alias kb='sudo setxkbmap -layout'
 
