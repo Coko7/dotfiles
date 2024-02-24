@@ -39,6 +39,7 @@ function grasp() { grep -inr "$1" --exclude-dir={obj,bin} --exclude=\*.min.\*; }
 alias gb='git branch'
 alias gbl='git branch --list'
 alias gco='git checkout'
+alias gcb='git checkout -b'
 #alias grs='git remote show'
 
 # Log
@@ -54,9 +55,3 @@ alias glgp="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 
 # Stash
 alias gstl='git stash list'
-
-# Custom scripts
-
-# Source Marco Fontani's custom git-grepblame command
-# See: https://blog.darkpan.com/posts/git-grepblame/
-source $SCRIPTS/git-grepblame.sh
