@@ -549,6 +549,7 @@ awful.rules.rules = {
     { rule = { class = "Aseprite" }, properties = { screen = 1, tag = "draw" } },
     { rule = { class = "Gimp" }, properties = { screen = 1, tag = "draw" } },
     { rule = { class = "krita" }, properties = { screen = 1, tag = "draw" } },
+    { rule = { class = "com-eteks-sweethome3d-SweetHome3D" }, properties = { screen = 1, tag = "draw" } },
 
     -- 7. Gaming (game)
     { rule = { class = "steam" }, properties = { screen = 1, tag = "game" } },
