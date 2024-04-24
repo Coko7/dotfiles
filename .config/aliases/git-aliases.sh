@@ -28,6 +28,7 @@ alias gcm='git commit -m'
 # Push
 alias gp='git push'
 alias gpo='git push origin'
+alias gpokindforce='git push origin --force-with-lease'
 
 # Grep
 alias gg='git grep -n'
