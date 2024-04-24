@@ -56,3 +56,12 @@ alias glgp="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 
 # Stash
 alias gstl='git stash list'
+alias gspm='git stash push -m'
+alias gspum='git stash push -um'
+alias gspop='git stash pop'
+alias gsapp='git stash apply'
+
+# Cherry-pick
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
