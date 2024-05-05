@@ -561,6 +561,7 @@ awful.rules.rules = {
 
     -- 9. Miscellaneous (misc)
     { rule = { class = "kdenlive" }, properties = { screen = 1, tag = "misc" } },
+    { rule = { class = "openshot" }, properties = { screen = 1, tag = "misc" } },
     { rule = { class = "QjackCtl" }, properties = { screen = 1, tag = "misc" } },
     { rule = { class = "qBittorrent" }, properties = { screen = 1, tag = "misc" } },
     -- { rule = { class = "Lxappearance" }, properties = { screen = 1, tag = "misc" } },
