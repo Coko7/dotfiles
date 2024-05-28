@@ -20,6 +20,10 @@ function jump_dir() {
         # If no arg supplied, go into interactive mode with fzf
         if [ -z "$1" ]; then
                 jump_entry=`echo $jumps | fzf`
+                if [ $? != 0 ]; then
+                        return 1
+                fi
+
                 jump_location=`echo $jump_entry | cut -d':' -f2 | tr -d '[:blank:]'`
                 cd $jump_location
         else
