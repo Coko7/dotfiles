@@ -25,10 +25,25 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 
-# ls
-alias ls='eza --icons -a --group-directories-first'
+# better ls aliases using eza
+alias ezaic='eza --icons --group-directories-first'
+alias ls='ezaic'
+alias l='ezaic -l'
+alias lsd='ezaic -d */'
+alias ll='ezaic -alF'
+alias lls='ezaic -ralF -s modified'
+alias lld='ezaic -alF -d */'
+alias la='ezaic -A'
+
+# classic ls aliases (if not using eza)
 # alias ls='ls --color=auto'
-alias ll='ls -alF'
+# alias l='ls -l'
+# alias lsd='ls -d */'
+# alias ll='ls -halF'
+# alias lls='ls -halFtr'
+# alias lld='ls -halF -d */'
+# alias la='ls -A'
+# alias lc='ls -CF'
 
 # pacman
 alias paci='sudo pacman -S'               # install
