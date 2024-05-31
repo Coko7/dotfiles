@@ -51,15 +51,15 @@ alias aptar='sudo apt autoremove'
 
 # Common
 alias vim='nvim'
-alias v='nvim'
-alias fs='ranger'
+# alias v='nvim'
+# alias fs='ranger'
 alias soz="source $ZDOTDIR/.zshrc"
 alias lock='betterlockscreen -l dim'
 alias twitch-dl="$SCRIPTS/twitch-dl/twitch-dl.2.1.3.pyz"
 alias setwp="$SCRIPTS/set-wallpaper.sh"
 alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
 alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
-alias flazshbak="cat $HISTFILE | fzf | cut -d';' -f2 | cb"
+# alias flazshbak="cat $HISTFILE | fzf | cut -d';' -f2 | cb"
 
 source "$SCRIPTS/jump-dir/jump-dir.sh"
 alias j='jump_dir'
