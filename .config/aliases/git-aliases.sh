@@ -46,14 +46,16 @@ alias gcb='git checkout -b'
 #alias grs='git remote show'
 
 # Log
-alias glo='git log --pretty="oneline"'
-alias glol='git log --graph --oneline --decorate'
-alias gls='git log --stat'
-alias glg='git log --graph'
-#function glo() { git log --pretty="oneline" "$@" --color=always | less -r; }
-#function glol() { git log --graph --oneline --decorate "$@" --color=always | less -r; }
-#function gls() { git log --stat "$@" --color=always | less -r; }
-#function glg() { git log --graph "$@" --color=always | less -r; }
+alias gl='git log --color=always'
+alias gls='git log --color=always --stat'
+alias glg='git log --color=always --graph'
+# alias glo='git log --color=always --pretty="oneline"'
+alias glgo='git log --color=always --graph --oneline --decorate'
+alias glo='git log --pretty=format:"%C(yellow)%h%Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s" --date=short'
+# function glo() { git log --pretty="oneline" "$@" --color=always | less -r ; }
+# function glol() { git log --graph --oneline --decorate "$@" --color=always | less -r; }
+# function gls() { git log --stat "$@" --color=always | less -r; }
+# function glg() { git log --graph "$@" --color=always | less -r; }
 alias glgp="git log --graph --abbrev-commit --decorate --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold yellow)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 # Stash
@@ -62,6 +64,11 @@ alias gspm='git stash push -m'
 alias gspum='git stash push -um'
 alias gspop='git stash pop'
 alias gsapp='git stash apply'
+
+# Rebase
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
 
 # Cherry-pick
 alias gcp='git cherry-pick'
