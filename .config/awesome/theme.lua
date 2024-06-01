@@ -31,7 +31,7 @@ theme.fg_focus      = "#012635" -- "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
-theme.useless_gap   = 7 --dpi(0)
+theme.useless_gap   = 3 --dpi(0)
 theme.gap_single_client = true
 theme.border_width  = 2 -- dpi(1)
 theme.border_normal = my_bg_alt -- "#000000"
