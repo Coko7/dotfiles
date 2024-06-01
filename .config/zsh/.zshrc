@@ -73,4 +73,4 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cba6f7,bold,bg=1e1e2e,bold"
 source $CARGO_HOME/env
 
 # Flexing Arch
-neofetch
+fastfetch
