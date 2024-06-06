@@ -1,0 +1,5 @@
+alias:      $XDG_CONFIG_HOME/aliases
+conf:       $XDG_CONFIG_HOME
+dl:         $HOME/Downloads
+fun:        $HOME/projects/personal
+work:       $HOME/projects/work
