@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dirs=`cat $SCRIPTS/tmux/dirs.txt | envsubst`
+dirs=`cat $SCRIPTS/freq_dirs.txt | envsubst`
 
 if [[ $# -eq 1 ]]; then
     selected=$1

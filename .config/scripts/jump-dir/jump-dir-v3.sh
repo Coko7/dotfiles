@@ -20,7 +20,7 @@ function jump_dir() {
         return 0
     fi
 
-    jumps_file="$SCRIPTS/jump-dir/jumps.txt"
+    jumps_file="$SCRIPTS/freq_dirs.txt"
 
     # If $1 is set, then fzf will not be launched interactively
     fzf_filter_suffix="-f $1"

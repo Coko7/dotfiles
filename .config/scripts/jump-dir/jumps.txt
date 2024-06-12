@@ -1,5 +1,0 @@
-$XDG_CONFIG_HOME/aliases
-$XDG_CONFIG_HOME
-$HOME/Downloads
-$HOME/projects/personal
-$HOME/projects/work
