@@ -66,8 +66,6 @@ alias aptar='sudo apt autoremove'
 
 # Common
 alias vim='nvim'
-# alias v='nvim'
-# alias fs='ranger'
 alias soz="source $ZDOTDIR/.zshrc"
 alias lock='betterlockscreen -l dim'
 alias twitch-dl="$SCRIPTS/twitch-dl/twitch-dl.2.1.3.pyz"
