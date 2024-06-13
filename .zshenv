@@ -11,11 +11,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 
-# Common
-export PROJ_PERSO="$HOME/projects/personal"
-export PROJ_WORK="$HOME/projects/work"
-export SCRIPTS="$XDG_CONFIG_HOME/scripts"
-
 # X11
 export XINITRC="$XDG_CONFIG_HOME/X11/.xinitrc"
 
@@ -47,3 +42,14 @@ export MANPAGER='nvim +Man!'
 export NPM_PATH="$XDG_CONFIG_HOME/node_modules"
 export NPM_BIN="$XDG_CONFIG_HOME/node_modules/bin"
 export NPM_CONFIG_PREFIX="$XDG_CONFIG_HOME/node_modules"
+
+# Minecraft (Prism Launcher)
+export MC_PRISM="$HOME/.var/app/org.prismlauncher.PrismLauncher"
+export MC_PRISM_INST="$MC_PRISM/data/PrismLauncher/instances"
+export MC_PRISM_1_21="$MC_PRISM_INST/1.21/.minecraft"
+export MC_PRISM_LATEST="$MC_PRISM_1_21"
+
+# Personal
+export PROJ_PERSO="$HOME/projects/personal"
+export PROJ_WORK="$HOME/projects/work"
+export SCRIPTS="$XDG_CONFIG_HOME/scripts"
