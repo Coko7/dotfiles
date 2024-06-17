@@ -80,6 +80,14 @@ alias j='jump_dir'
 # Keyboard quick switch
 alias kb='sudo setxkbmap -layout'
 
+function chill() {
+    num=$((1 + $RANDOM % 4))
+    if [ "$num" = "1" ]; then cacafire; fi
+    if [ "$num" = "2" ]; then nyancat; fi
+    if [ "$num" = "3" ]; then cmatrix; fi
+    if [ "$num" = "4" ]; then ~/pipes.sh-1.3.0/pipes.sh; fi
+}
+
 function weather() {
   if [ -z "$2" ]; then
     curl wttr.in/${1}
