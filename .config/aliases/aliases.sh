@@ -81,11 +81,12 @@ alias j='jump_dir'
 alias kb='sudo setxkbmap -layout'
 
 function chill() {
-    num=$((1 + $RANDOM % 4))
+    num=$((1 + $RANDOM % 5))
     if [ "$num" = "1" ]; then cacafire; fi
     if [ "$num" = "2" ]; then nyancat; fi
     if [ "$num" = "3" ]; then cmatrix; fi
     if [ "$num" = "4" ]; then ~/pipes.sh-1.3.0/pipes.sh; fi
+    if [ "$num" = "5" ]; then $SCRIPTS/rick_roll.sh; fi
 }
 
 function weather() {
