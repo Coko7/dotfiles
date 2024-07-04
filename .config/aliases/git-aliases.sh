@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Shorthand for fzf in git repo
+alias gfzf='git ls-files | fzf'
+
 # Pull
 alias gpl='git pull'
 alias gplo='git pull origin'
