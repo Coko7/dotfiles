@@ -1,18 +1,19 @@
 #!/usr/bin/env zsh
 
-function jump_dir() {
+function jump_dir_v2() {
         # Display help if "--help" or "-h" supplied
         if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
-                echo "Usage: jump_dir [OPTION] [DESTINATION]"
+                echo "Usage: jump_dir_v2 [OPTION] [DESTINATION]"
                 echo "Attempts to change directory to DESTINATION"
                 echo "Supply no argument to use in interactive mode (fzf)"
-                echo "Example: jump_dir downloads\n"
+                echo "V2 only shows a list of most frequent dirs"
+                echo "Example: jump_dir_v2 downloads\n"
                 echo "Options:"
                 echo "\t-h, --help      display this help text and exit"      
                 return 0
         fi
 
-        jumps_file="$SCRIPTS/jump-dir/jumps.txt"
+        jumps_file="$SCRIPTS/jump-dir/jumps-v2.txt"
 
         # envsubst is used to substitute env variables with their actual value
         jumps=`cat $jumps_file | envsubst`

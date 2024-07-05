@@ -74,8 +74,18 @@ alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
 alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
 # alias flazshbak="cat $HISTFILE | fzf | cut -d';' -f2 | cb"
 
+# V3 shows the full list of frequently used directories
+# as well as their sub-directories. It is used for changing directory
+# to most places in a very intuitive manner.
 source "$SCRIPTS/jump-dir/jump-dir-v3.sh"
-alias j='jump_dir'
+alias j='jump_dir_v3'
+
+# V2 shows a smaller list than V3 (only the most frequent directories).
+# The advantage of V2 is that each directory entry has a key which can be used
+# to quickly travel there.
+# While it may handle fewer destinations than V3, it handles them better thanks to pre-set keys.
+source "$SCRIPTS/jump-dir/jump-dir-v2.sh"
+alias jj='jump_dir_v2'
 
 # Keyboard quick switch
 alias kb='sudo setxkbmap -layout'

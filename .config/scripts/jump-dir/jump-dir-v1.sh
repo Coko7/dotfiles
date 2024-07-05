@@ -6,7 +6,7 @@
 # You can easily convert this script to make it work with Bash instead by changing the for loop in help section.
 # Note to self: If I ever need to work with arrays in the future, I should pick a real programming language...
 
-function jump_dir() {
+function jump_dir_v1() {
         jumps_file="$SCRIPTS/jump-dir/jumps.txt"
 
         # Read jumps from file

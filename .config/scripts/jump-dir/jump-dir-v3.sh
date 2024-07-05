@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
-function jump_dir() {
+function jump_dir_v3() {
     # Display help if "--help" or "-h" supplied
     if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
-        echo "Usage: jump_dir [OPTION] [DESTINATION]"
+        echo "Usage: jump_dir_v3 [OPTION] [DESTINATION]"
         echo "Attempts to change directory to DESTINATION"
         echo "Supply no argument to use in interactive mode (fzf)"
-        echo "Example: jump_dir downloads\n"
+        echo "V3 shows the full list of frequent dirs"
+        echo "For jumping to bookmarked dirs, use V2 instead: jump_dir_v2 --help"
+        echo "Example: jump_dir_v3 downloads\n"
         echo "Options:"
         echo "\t-h, --help      display this help text and exit"      
         echo "\t-v, --version   display version information and exit"
