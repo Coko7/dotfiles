@@ -45,6 +45,7 @@ function grasp() { grep -inr "$1" --exclude-dir={obj,bin} --exclude=\*.min.\*; }
 alias gb='git branch'
 alias gbl='git branch --list'
 alias gco='git checkout'
+alias gcof='git checkout $(git branch --list | fzf)'
 alias gcb='git checkout -b'
 #alias grs='git remote show'
 
@@ -62,11 +63,12 @@ alias glo='git log --pretty=format:"%C(yellow)%h%Cblue%>(12)%ad %Cgreen%<(7)%aN%
 alias glgp="git log --graph --abbrev-commit --decorate --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold yellow)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 # Stash
-alias gstl='git stash list'
+alias gsl='git stash list'
 alias gspm='git stash push -m'
 alias gspum='git stash push -um'
 alias gspop='git stash pop'
 alias gsapp='git stash apply'
+alias gssh='git stash show -p $(git stash list | fzf | grep -o "^stash@{[0-9]\+}")'
 
 # Rebase
 alias grb='git rebase'
