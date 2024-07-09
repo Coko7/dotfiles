@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Shorthand for fzf in git repo
-alias gfzf='git ls-files | fzf'
+alias gfzf='git ls-files | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
 # Pull
 alias gpl='git pull'
@@ -12,8 +12,8 @@ alias gst='git status'
 
 # Diff / show
 alias gd='git diff'
-alias gdw='git diff --word-diff'
 alias gds='git diff --staged'
+alias gdw='git diff --word-diff'
 #function gd() { git diff --color=always "$@" | less -r; }
 #function gds() { git diff --color=always --staged "$@" | less -r; }
 alias gsh='git show'

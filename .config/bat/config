@@ -1,0 +1,7 @@
+--theme="Catppuccin Mocha"
+
+--map-syntax='*.proj:XML'
+--map-syntax='*.csproj:XML'
+--map-syntax='*.resx:XML'
+--map-syntax='**/AppData/*.config:XML'
+--map-syntax='*.cshtml:HTML'

@@ -64,6 +64,12 @@ alias pacbak="sudo pacman -Qe > `date +"%d%m%Y-%H%M"`.txt" # Backup explicitly i
 alias aptu='sudo apt update && apt list --upgradable && sudo apt upgrade'
 alias aptar='sudo apt autoremove'
 
+# bat help highlighting
+alias bathelp='bat --plain --language=help'
+help() {
+    "$@" --help 2>&1 | bathelp
+}
+
 # Common
 alias vim='nvim'
 alias soz="source $ZDOTDIR/.zshrc"
