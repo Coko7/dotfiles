@@ -63,12 +63,13 @@ alias glo='git log --pretty=format:"%C(yellow)%h%Cblue%>(12)%ad %Cgreen%<(7)%aN%
 alias glgp="git log --graph --abbrev-commit --decorate --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold yellow)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 # Stash
+alias gstash-fzf='git stash list | fzf | grep -o "^stash@{[0-9]\+}"'
 alias gsl='git stash list'
 alias gspm='git stash push -m'
 alias gspum='git stash push -um'
 alias gspop='git stash pop'
-alias gsapp='git stash apply'
-alias gssh='git stash show -p $(git stash list | fzf | grep -o "^stash@{[0-9]\+}")'
+alias gsapp='git stash apply $(gstash-fzf)'
+alias gssh='git stash show -p $(gstash-fzf)'
 
 # Rebase
 alias grb='git rebase'
