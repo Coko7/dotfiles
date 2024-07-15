@@ -1,12 +1,16 @@
 #########################
 #                       #
-#	KEYBINDS	#
+#	KEYBINDS	        #
 #                       #
 #########################
 
 # +--------+
 # | SYSTEM |
 # +--------+
+
+# Show playing media
+super + ctrl + i
+    bash $SCRIPTS/notify-media.sh
 
 # Switch keyboard layout
 super + ctrl + space
@@ -33,10 +37,10 @@ super + shift + x
 # +-------+
 
 XF86AudioNext
-	playerctl next
+	playerctl next && bash $SCRIPTS/notify-media.sh
 
 XF86AudioPrev
-	playerctl previous
+	playerctl previous && bash $SCRIPTS/notify-media.sh
 
 XF86AudioPlay
 	playerctl play-pause
