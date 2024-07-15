@@ -83,15 +83,19 @@ alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
 # V3 shows the full list of frequently used directories
 # as well as their sub-directories. It is used for changing directory
 # to most places in a very intuitive manner.
-source "$SCRIPTS/jump-dir/jump-dir-v3.sh"
-alias j='jump_dir_v3'
+# source "$SCRIPTS/jump-dir/jump-dir-v3.sh"
+# alias j='jump_dir_v3'
 
 # V2 shows a smaller list than V3 (only the most frequent directories).
 # The advantage of V2 is that each directory entry has a key which can be used
 # to quickly travel there.
 # While it may handle fewer destinations than V3, it handles them better thanks to pre-set keys.
-source "$SCRIPTS/jump-dir/jump-dir-v2.sh"
-alias jj='jump_dir_v2'
+# source "$SCRIPTS/jump-dir/jump-dir-v2.sh"
+# alias jj='jump_dir_v2'
+
+# Kizaru-warp
+alias j='kizaru_warp'
+alias jj='kizaru_warp --awakened'
 
 # Keyboard quick switch
 alias kb='sudo setxkbmap -layout'

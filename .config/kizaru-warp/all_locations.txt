@@ -1,0 +1,7 @@
+$XDG_CONFIG_HOME
+$XDG_CONFIG_HOME/scripts
+$HOME
+$WORKSPACE
+$WORKSPACE/personal
+$WORKSPACE/personal/coko7_git
+$WORKSPACE/work
