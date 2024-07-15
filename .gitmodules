@@ -1,3 +1,9 @@
 [submodule "nvim"]
 	path = .config/nvim
 	url = git@github.com:Coko7/neovim-config.git
+[submodule "zsh-autosuggestions"]
+	path = .config/zsh/plugins/zsh-autosuggestions
+    url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "zsh-syntax-highlighting"]
+	path = .config/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
