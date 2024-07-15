@@ -74,7 +74,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cba6f7,bold,bg=1e1e2e,bold"
 # | RUST |
 # +------+
 
-source $CARGO_HOME/env
+#source $CARGO_HOME/env
+
+# +-------------+
+# | KIZARU-WARP |
+# +-------------+
+source $WORKSPACE/personal/coko7_git/kizaru-warp/kizaru_warp.sh
 
 # Flexing Arch
 fastfetch
