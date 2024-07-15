@@ -123,6 +123,3 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
-
-# .dotfiles git alias
-alias dtf='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
