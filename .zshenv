@@ -26,10 +26,6 @@ export SAVEHIST=10000                   # Maximum events in history file
 
 # prompt
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
-# export SPACESHIP_CONFIG="$ZDOTDIR/my-spaceship.zsh"
-
-# bat
-#export BAT_THEME="Dracula"
 
 # rust
 export RUSTUP_HOME="$XDG_CONFIG_HOME/rustup"
@@ -56,6 +52,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 # Personal
-export PROJ_PERSO="$HOME/projects/personal"
-export PROJ_WORK="$HOME/projects/work"
 export SCRIPTS="$XDG_CONFIG_HOME/scripts"
+export WORKSPACE="$HOME/Workspace"
+export PROJ_PERSO="$WORKSPACE/personal"
+export PROJ_WORK="$WORKSPACE/work"
