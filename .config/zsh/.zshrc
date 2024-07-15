@@ -62,7 +62,11 @@ autoload -U compinit; compinit
 # | PLUGINS |
 # +---------+
 
+# autosuggestions
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# syntax highlighting (with catppuccin theme)
+source $ZDOTDIR/plugins/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cba6f7,bold,bg=1e1e2e,bold"
 

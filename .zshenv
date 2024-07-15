@@ -49,6 +49,12 @@ export MC_PRISM_INST="$MC_PRISM/data/PrismLauncher/instances"
 export MC_PRISM_1_21="$MC_PRISM_INST/1.21/.minecraft"
 export MC_PRISM_LATEST="$MC_PRISM_1_21"
 
+# fzf Catppuccin Mocha theme
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
 # Personal
 export PROJ_PERSO="$HOME/projects/personal"
 export PROJ_WORK="$HOME/projects/work"
