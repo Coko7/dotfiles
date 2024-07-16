@@ -42,7 +42,7 @@ do
     end)
 end
 -- }}}
-naughty.config.defaults['icon_size'] = 32
+naughty.config.defaults['icon_size'] = 128
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
