@@ -16,6 +16,9 @@ nm-applet &
 flameshot &
 sxhkd &
 
+# set desktop background with custom effect
+betterlockscreen -w dim
+
 # set screen layout depending on external monitor
 if [ "${X_MY_LOC}" = "curry" ]; then
     xrdb -merge "$XDG_CONFIG_HOME/screenlayout/xresources-curry"
