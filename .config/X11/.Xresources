@@ -1,9 +1,4 @@
-! Set proper screen DPI
-! Xft.dpi: 96 !
-! Xft.dpi: 128
-
-! HP U24
-Xft.dpi: 158
+! Screen DPI is defined in custom files (see .xinitrc)
 
 ! Catppuccin Mocha color palette
 ! https://github.com/catppuccin/xresources

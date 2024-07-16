@@ -5,6 +5,11 @@ alias xpropc='xprop | grep WM_CLASS' # display xprop class
 alias xop='xdg-open' # open file with default app
 #alias xop='wslview' # WSL only
 
+# startx depending on monitor setup
+alias curryx='export X_MY_LOC="curry" && startx'
+alias geox='export X_MY_LOC="geo" && startx'
+alias nomadx='unset X_MY_LOC && startx'
+
 alias cb='xclip -selection clipboard'
 #alias cb='win32yank.exe -i' # WSL only
 

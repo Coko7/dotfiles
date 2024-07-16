@@ -1,28 +1,38 @@
 #!/usr/bin/env bash
 
-# Make sure this is before the 'exec' command or it won't be sourced.
-[ -f /etc/xprofile ] && . /etc/xprofile
-[ -f ~/.xprofile ] && . ~/.xprofile
+userresources=$XDG_CONFIG_HOME/X11/.Xresources
+usermodmap=$XDG_CONFIG_HOME/X11/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
 
+# merge in defaults and keymaps
+[[ -f $sysresources ]] && xrdb -merge $sysresources
+[[ -f $sysmodmap ]] && xmodmap $sysmodmap
+[[ -f "$userresources" ]] && xrdb -merge "$userresources"
+[[ -f "$usermodmap" ]] && xmodmap "$usermodmap"
+
+# start some nice programs
 nm-applet &
 flameshot &
 sxhkd &
 
-# set desktop background with custom effect
-betterlockscreen -w dim
+# set screen layout depending on external monitor
+if [ "${X_MY_LOC}" = "curry" ]; then
+    xrdb -merge "$XDG_CONFIG_HOME/screenlayout/xresources-curry"
+    "$XDG_CONFIG_HOME/screenlayout/multi-monitor-curry.sh"
+elif [ "${X_MY_LOC}" = "geo" ]; then
+    xrdb -merge "$XDG_CONFIG_HOME/screenlayout/xresources-geo"
+    "$XDG_CONFIG_HOME/screenlayout/multi-monitor-geo.sh"
+else
+    xrandr --auto
+fi
 
-# Needed for SMB access (kiod5 auth) to work in Dolphin
-# see: https://bbs.archlinux.org/viewtopic.php?id=285712
-dbus-update-activation-environment --systemd --all
-
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-#xrandr --auto
-
-~/.screenlayout/multi-monitor-setup.sh
-
-#/usr/bin/prime-offload
-#~/scripts/set-wallpaper.sh &
-# ~/scripts/natural-scrolling.sh
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
 
 # Run window manager
 exec awesome
