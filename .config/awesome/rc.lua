@@ -555,6 +555,7 @@ awful.rules.rules = {
     { rule = { class = "steam" }, properties = { screen = 1, tag = "game" } },
     { rule = { class = "love" }, properties = { screen = 1, tag = "game" } }, -- Olympus has the "love" class
     { rule = { class = "MultiMC" }, properties = { screen = 1, tag = "game" } },
+    { rule = { class = "PrismLauncher" }, properties = { screen = 1, tag = "game" } },
     { rule = { class = "Minecraft Launcher" }, properties = { screen = 1, tag = "game" } },
 
     -- 8.
