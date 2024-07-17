@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-dirs=`cat $SCRIPTS/freq_dirs.txt | envsubst`
+# dirs=`cat $SCRIPTS/freq_dirs.txt | envsubst`
+dirs=`cat $KIZ_WARP_LOC_A | envsubst`
 
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find $dirs -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find -H $dirs -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
