@@ -106,6 +106,8 @@ alias jj='kizaru_warp --awakened'
 # Keyboard quick switch
 alias kb='sudo setxkbmap -layout'
 
+alias battery="acpi -b | grep -P -o '[0-9]+(?=%)'"
+
 function chill() {
     num=$((1 + $RANDOM % 5))
     if [ "$num" = "1" ]; then DISPLAY= cacafire; fi
