@@ -3,6 +3,8 @@
 # Shorthand for fzf in git repo
 alias gfzf='git ls-files | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
+alias gweb="git remote get-url origin | sed 's|git@\(.*\):|https://\1/|' | xargs xdg-open"
+
 # Pull
 alias gpl='git pull'
 alias gplo='git pull origin'
