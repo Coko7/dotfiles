@@ -1,9 +1,0 @@
-$HOME
-$XDG_CONFIG_HOME
-$XDG_CONFIG_HOME/scripts
-$XDG_CONFIG_HOME/scripts/cheat-sh
-$XDG_CONFIG_HOME/scripts/tmux
-$XDG_CONFIG_HOME/scripts/jump-dir
-$HOME/projects
-$HOME/projects/personal
-$HOME/projects/work
