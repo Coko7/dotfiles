@@ -79,7 +79,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cba6f7,bold,bg=1e1e2e,bold"
 # +-------------+
 # | KIZARU-WARP |
 # +-------------+
-source $WORKSPACE/personal/coko7_git/kizaru-warp/kizaru_warp.sh
+source $WORKSPACE/personal/coko7_git/kizaru-warp/kizaru-warp.sh
 
 # Flexing Arch
 fastfetch
