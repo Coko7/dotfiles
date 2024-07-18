@@ -100,8 +100,8 @@ alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
 # alias jj='jump_dir_v2'
 
 # Kizaru-warp
-alias j='kizaru_warp'
-alias jj='kizaru_warp --awakened'
+alias j='kizaru-warp'
+alias jj='kizaru-warp --awakened'
 
 # Keyboard quick switch
 alias kb='sudo setxkbmap -layout'
@@ -114,7 +114,7 @@ function chill() {
     if [ "$num" = "2" ]; then nyancat; fi
     if [ "$num" = "3" ]; then cmatrix; fi
     if [ "$num" = "4" ]; then $SCRIPTS/pipes.sh; fi
-    if [ "$num" = "5" ]; then $SCRIPTS/rick_roll.sh; fi
+    if [ "$num" = "5" ]; then $SCRIPTS/rick-roll.sh; fi
 }
 
 function weather() {
