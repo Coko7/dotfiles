@@ -92,6 +92,11 @@ __set_wallpaper_interactive() {
 
     results=`find $root_wp_path -mindepth 1 -type $node_type 2>/dev/null`
     pick=`echo "$results" | fzf | head -n 1`
+    if [ -z $pick ]; then
+        return 1
+    fi
+
+    echo "setwp $pick" | xclip -selection clipboard
     setwp $pick
 }
 
