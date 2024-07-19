@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
 
-function run {
-  if ! pgrep $1 ;
+run() {
+  if ! pgrep -f "$1" ;
   then
-    $@&
+    "$@"&
   fi
 }
 
-$SCRIPTS/set-wallpaper.sh
+source $SCRIPTS/set-wallpaper.sh
+set-wallpaper
+
 #run "megasync"
 ##run "xscreensaver -no-splash"
 #run "/usr/bin/dropbox"
 #run "insync start"
 run "picom"
+# run "$XDG_CONFIG_HOME/polybar/launch.sh"
 #run "/usr/bin/redshift"
 ##run "mpd"
 ##run "nm-applet"

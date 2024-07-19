@@ -76,6 +76,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cba6f7,bold,bg=1e1e2e,bold"
 
 #source $CARGO_HOME/env
 
+# +---------------+
+# | SET-WALLPAPER |
+# +---------------+
+
+source $XDG_CONFIG_HOME/scripts/set-wallpaper.sh
+
 # +-------------+
 # | KIZARU-WARP |
 # +-------------+

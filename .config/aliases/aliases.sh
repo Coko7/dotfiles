@@ -72,16 +72,32 @@ alias aptar='sudo apt autoremove'
 
 # bat help highlighting
 alias bathelp='bat --plain --language=help'
-help() {
-    "$@" --help 2>&1 | bathelp
-}
+help() { "$@" --help 2>&1 | bathelp; }
 
 # Common
 alias vim='nvim'
 alias soz="source $ZDOTDIR/.zshrc"
 alias lock='betterlockscreen -l dim'
 alias twitch-dl="$SCRIPTS/twitch-dl/twitch-dl.2.1.3.pyz"
-alias setwp="$SCRIPTS/set-wallpaper.sh"
+alias setwp="set-wallpaper"
+
+__set_wallpaper_interactive() {
+    local node_type=$1
+    local root_wp_path
+    if [ $# -eq 1 ]; then
+        root_wp_path=$WALLPAPERS_DIR
+    else
+        root_wp_path=$2
+    fi
+
+    results=`find $root_wp_path -mindepth 1 -type $node_type 2>/dev/null`
+    pick=`echo "$results" | fzf | head -n 1`
+    setwp $pick
+}
+
+setwpid() { __set_wallpaper_interactive 'd'; }
+setwpii() { __set_wallpaper_interactive 'f'; }
+
 alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
 alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
 # alias flazshbak="cat $HISTFILE | fzf | cut -d';' -f2 | cb"
