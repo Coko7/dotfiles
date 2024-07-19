@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for changing desktop wallpaper every 15 minutes
+
+[Timer]
+OnCalendar=*:0/15
+Persistent=true
+Unit=update-my-wallpaper.service
+
+[Install]
+WantedBy=update-my-wallpaper.service

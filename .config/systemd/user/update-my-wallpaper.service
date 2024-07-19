@@ -1,0 +1,10 @@
+[Unit]
+Description=Change desktop wallpaper periodically
+
+[Service]
+Type=oneshot
+Environment=DISPLAY=:0.0
+ExecStart=/usr/bin/bash -c 'source %h/.config/scripts/set-wallpaper.sh && set-wallpaper'
+
+[Install]
+WantedBy=basic.target
