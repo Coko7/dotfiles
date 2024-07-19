@@ -100,8 +100,8 @@ __set_wallpaper_interactive() {
     setwp $pick
 }
 
-setwpid() { __set_wallpaper_interactive 'd'; }
-setwpii() { __set_wallpaper_interactive 'f'; }
+setwpid() { __set_wallpaper_interactive 'd' $1; }
+setwpii() { __set_wallpaper_interactive 'f' $1; }
 
 alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
 alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
