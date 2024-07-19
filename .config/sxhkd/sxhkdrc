@@ -20,6 +20,11 @@ super + ctrl + space
 super + shift + e
 	betterlockscreen -l
 
+# Suspend (+ lock screen)
+# See: https://github.com/betterlockscreen/betterlockscreen?tab=readme-ov-file#systemd-service-lockscreen-after-sleepsuspend
+super + shift + w
+	systemctl suspend
+
 # Restart sxhkd hotkey daemon
 super + shift + x
 	pkill -USR1 -x sxhkd && notify-send "sxhkd config" "Reloaded."
