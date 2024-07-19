@@ -76,7 +76,7 @@ super + comma
 
 # Calculator
 super + c
-	rofi -modi calc -show calc -no-show-match -no-sort
+	rofi -modi calc -show calc -no-show-match -no-sort -calc-command "echo -n '\{result\}' | xclip -selection clipboard"
 
 # +--------------+
 # | APPLICATIONS |
