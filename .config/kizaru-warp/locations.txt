@@ -1,7 +1,8 @@
 alias:      $XDG_CONFIG_HOME/aliases
 conf:       $XDG_CONFIG_HOME
-desk:       $WIN_HOME/Desktop
-dl:         $WIN_HOME/Downloads
+desk:       $HOME/Desktop
+df:         $HOME/dotfiles
+dl:         $HOME/Downloads
 fun:        $WORKSPACE/personal
 work:       $WORKSPACE/work
 script:     $XDG_CONFIG_HOME/scripts
