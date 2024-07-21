@@ -7,4 +7,4 @@ Persistent=true
 Unit=update-my-wallpaper.service
 
 [Install]
-WantedBy=update-my-wallpaper.service
+WantedBy=timers.target
