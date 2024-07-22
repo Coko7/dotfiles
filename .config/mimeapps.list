@@ -1,0 +1,37 @@
+[Default Applications]
+application/pdf=firefox.desktop
+audio/mpeg=mpv.desktop
+audio/wav=mpv.desktop
+image/gif=mpv.desktop
+image/jpeg=feh.desktop
+image/png=feh.desktop
+image/webp=feh.desktop
+text/html=firefox.desktop
+text/plain=nvim.desktop
+video/mp4=mpv.desktop
+video/mpeg=mpv.desktop
+video/webm=mpv.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/unknown=firefox.desktop
+
+[Added Associations]
+application/pdf=firefox.desktop;brave.desktop;
+audio/mpeg=mpv.desktop;vlc.desktop;
+audio/wav=mpv.desktop;vlc.desktop;
+image/gif=mpv.desktop;vlc.desktop;
+image/jpeg=feh.desktop
+image/png=feh.desktop
+image/webp=feh.desktop
+text/html=firefox.desktop;brave.desktop;
+text/plain=nvim.desktop
+video/mp4=mpv.desktop;vlc.desktop;
+video/mpeg=mpv.desktop;vlc.desktop;
+video/webm=mpv.desktop;vlc.desktop;
+x-scheme-handler/about=firefox.desktop;brave.desktop;
+x-scheme-handler/http=firefox.desktop;brave.desktop;
+x-scheme-handler/https=firefox.desktop;brave.desktop;
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/unknown=firefox.desktop
