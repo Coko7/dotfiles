@@ -3,7 +3,7 @@ Description=Notify if battery is low
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/bash -c '%h/.config/scripts/battery-alert.sh'
+ExecStart=/usr/bin/bash %h/.config/scripts/battery-alert.sh
 
 [Install]
 WantedBy=basic.target
