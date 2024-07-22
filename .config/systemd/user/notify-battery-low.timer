@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for sending a notification if battery low every minute
+
+[Timer]
+OnCalendar=*:0/1
+Persistent=true
+Unit=notify-battery-low.service
+
+[Install]
+WantedBy=timers.target
