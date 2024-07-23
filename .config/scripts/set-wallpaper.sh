@@ -10,7 +10,7 @@ __set_dir_wallp() {
         feh --no-fehbg --bg-fill --randomize --recursive $dir
         return 0
     else
-        echo "set-wallpaper: Not a directory: $dir"
+        >&2 echo "set-wallpaper: not a directory '$dir'"
         return 1
     fi
 }
@@ -19,14 +19,14 @@ __set_img_wallp() {
     local file_path="$1"
 
     if [ ! -f "$file_path" ]; then
-        echo "set-wallpaper: No such file: $file_path"
+        >&2 echo "set-wallpaper: no such file '$file_path'"
         return 1
     fi
 
     local file_type=`file -b --mime-type "$file_path"`
 
     if [[ $file_type != image/* ]]; then
-        echo "set-wallpaper: Not wallpaper material: $file_path"
+        >&2 echo "set-wallpaper: not wallpaper material '$file_path'"
         return 1
     fi
 
