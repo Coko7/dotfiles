@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 
 # X11
-alias xpropc='xprop | grep WM_CLASS' # display xprop class
-alias xop='xdg-open' # open file with default app
-#alias xop='wslview' # WSL only
-
-# startx depending on monitor setup
-alias curryx='export X_MY_LOC="curry" && startx'
-alias geox='export X_MY_LOC="geo" && startx'
-alias nomadx='unset X_MY_LOC && startx'
+alias xpropc='xprop | grep WM_CLASS'        # display xprop class
+alias xop='xdg-open'                        # open file with default app
+#alias xop='wslview'                        # WSL only
+alias monsel="$SCRIPTS/x-mon-select.sh"     # x-mon-select allows to pick a monitor setup before starting x-server
 alias xdpi="xrdb -query | grep Xft.dpi | awk '{print \$2}'"
-
 alias cb='xclip -selection clipboard'
 #alias cb='win32yank.exe -i' # WSL only
 
@@ -52,18 +47,18 @@ alias la='ezaic -A'
 # alias lc='ls -CF'
 
 # pacman
-alias paci='sudo pacman -S'               # install
-#alias pachi='sudo pacman -Ql'             # Pacman Has Installed - what files where installed in a package
-alias pacs='sudo pacman -Ss'              # search
-alias pacu='sudo pacman -Syu'             # update
-alias pacr='sudo pacman -R'               # remove package but not dependencies
-#alias pacrr='sudo pacman -Rs'             # remove package with unused dependencies by other softwares
-#alias pacrc='sudo pacman -Sc'             # remove pacman's cache
+alias paci='sudo pacman -S'                 # install
+#alias pachi='sudo pacman -Ql'              # Pacman Has Installed - what files where installed in a package
+alias pacs='sudo pacman -Ss'                # search
+alias pacu='sudo pacman -Syu'               # update
+alias pacr='sudo pacman -R'                 # remove package but not dependencies
+#alias pacrr='sudo pacman -Rs'              # remove package with unused dependencies by other softwares
+#alias pacrc='sudo pacman -Sc'              # remove pacman's cache
 #alias pacro='pacman -Rns $(pacman -Qtdq)'
-#alias pacrl='rm /var/lib/pacman/db.lck'   # pacman remove locks
+#alias pacrl='rm /var/lib/pacman/db.lck'    # pacman remove locks
 alias pacls="sudo pacman -Qe"
 #alias pacc='sudo pacman -Sc'
-#alias paccc='sudo pacman -Scc'            # empty the whole cache
+#alias paccc='sudo pacman -Scc'             # empty the whole cache
 alias pacbak="sudo pacman -Qe > `date +"%d%m%Y-%H%M"`.txt" # Backup explicitly installed packages to a text file
 
 # APT (Debian)

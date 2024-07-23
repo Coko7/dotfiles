@@ -26,6 +26,9 @@ if [ "${X_MY_LOC}" = "curry" ]; then
 elif [ "${X_MY_LOC}" = "geo" ]; then
     xrdb -merge "$XDG_CONFIG_HOME/screenlayout/xresources-geo"
     "$XDG_CONFIG_HOME/screenlayout/multi-monitor-geo.sh"
+elif [ "${X_MY_LOC}" = "geo-cinema" ]; then
+    xrdb -merge "$XDG_CONFIG_HOME/screenlayout/xresources-geo"
+    "$XDG_CONFIG_HOME/screenlayout/multi-monitor-geo-cinema.sh"
 else
     xrandr --auto
 fi
