@@ -4,7 +4,7 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
-export TERM='alacritty'
+export TERM='kitty'
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
