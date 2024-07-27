@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Aliases to quickly edit important files
 
 alias valias="vim $XDG_CONFIG_HOME/aliases/aliases.sh"
 alias vgalias="vim $XDG_CONFIG_HOME/aliases/git-aliases.sh"
 alias vquick="vim $XDG_CONFIG_HOME/aliases/vim-quick-edits.sh"
-alias vjump="vim $XDG_CONFIG_HOME/aliases/kjump.sh"
+alias vjump="vim $KIZ_WARP_CFG"
 
 alias vzsh="vim $ZDOTDIR/.zshrc"
 alias vzshenv="vim $HOME/.zshenv"
@@ -19,3 +19,4 @@ alias valac="vim $XDG_CONFIG_HOME/alacritty/alacritty.toml"
 alias vawe="vim $XDG_CONFIG_HOME/awesome/rc.lua"
 alias vawet="vim $XDG_CONFIG_HOME/awesome/theme.lua"
 alias vpic="vim $XDG_CONFIG_HOME/picom/picom.conf"
+alias vrof="vim $XDG_CONFIG_HOME/rofi/config.rasi"
