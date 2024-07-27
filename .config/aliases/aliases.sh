@@ -47,7 +47,8 @@ alias la='ezaic -A'
 # alias lc='ls -CF'
 
 # pacman
-alias paci='sudo pacman -S'                 # install
+# alias paci='sudo pacman -S'                 # install
+paci() { pkgstats search "$1" && sudo pacman -S "$1"; }
 #alias pachi='sudo pacman -Ql'              # Pacman Has Installed - what files where installed in a package
 alias pacs='sudo pacman -Ss'                # search
 alias pacu='sudo pacman -Syu'               # update
@@ -86,7 +87,14 @@ __set_wallpaper_interactive() {
     fi
 
     results=`find $root_wp_path -mindepth 1 -type $node_type 2>/dev/null`
-    pick=`echo "$results" | fzf | head -n 1`
+    if [ "$node_type" = "f" ]; then
+        preview_cmd="$SCRIPTS/fzf-preview.sh {}"
+    else
+        preview_cmd="eza -alF --icons {}"
+    fi
+
+    pick=`echo "$results" | fzf --preview $preview_cmd | head -n 1`
+
     if [ -z $pick ]; then
         return 1
     fi
