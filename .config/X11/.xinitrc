@@ -12,9 +12,8 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 [[ -f "$usermodmap" ]] && xmodmap "$usermodmap"
 
 # start some nice programs
-nm-applet &
-flameshot &
-sxhkd &
+# nm-applet &
+# sxhkd &
 
 # set desktop background with custom effect
 betterlockscreen -w dim
