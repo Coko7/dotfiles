@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 # This script is called in ~/.config/X11/.xinitrc
 
+if [ -n "$1" ]; then
+    opts="-f $1"
+fi
+
 configs="curry,nomad,geo,geo-cinema"
-pick=`echo $configs | tr ',' '\n' | fzf`
+pick=`echo $configs | tr ',' '\n' | fzf $opts`
 
 case $pick in
   curry)
