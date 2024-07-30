@@ -6,8 +6,9 @@ alias xop='xdg-open'                        # open file with default app
 #alias xop='wslview'                        # WSL only
 alias monsel="$SCRIPTS/x-mon-select.sh"     # x-mon-select allows to pick a monitor setup before starting x-server
 alias xdpi="xrdb -query | grep Xft.dpi | awk '{print \$2}'"
-alias cb='xclip -selection clipboard'
-#alias cb='win32yank.exe -i' # WSL only
+alias cbi='xclip -selection clipboard'      # copy to clipboard
+#alias cbi='win32yank.exe -i'               # WSL only: copy to cliboard
+alias cbo='xclip -o -selection clipboard'   # get clipboard content
 
 # wget
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
