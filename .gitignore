@@ -1,2 +1,6 @@
+# ZSH
 .config/zsh/.zhistory
 .config/zsh/.zcompdump
+
+# Cache
+.config/cache
