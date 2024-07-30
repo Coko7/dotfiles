@@ -20,6 +20,7 @@ run "picom"
 # Misc apps
 run "flameshot"
 run "keepassxc"
+run "protonvpn-app"
 
 # Messaging apps
 run "webcord"
