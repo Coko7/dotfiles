@@ -57,7 +57,7 @@ alias pacr='sudo pacman -R'                 # remove package but not dependencie
 #alias pacrc='sudo pacman -Sc'              # remove pacman's cache
 #alias pacro='pacman -Rns $(pacman -Qtdq)'
 #alias pacrl='rm /var/lib/pacman/db.lck'    # pacman remove locks
-alias pacls="sudo pacman -Qe"
+alias pacls="pacman -Qe"
 #alias pacc='sudo pacman -Sc'
 #alias paccc='sudo pacman -Scc'             # empty the whole cache
 alias pacbak="sudo pacman -Qe > `date +"%d%m%Y-%H%M"`.txt" # Backup explicitly installed packages to a text file
@@ -99,10 +99,10 @@ __set_wallpaper_interactive() {
         return 1
     fi
 
-    echo "setwp $pick" | xclip -selection clipboard
     setwp $pick
 }
 
+setwpca() { echo "set-wallpaper-cache: $MY_LAST_WP_SELECT" && set-wallpaper $MY_LAST_WP_SELECT; }
 setwpid() { __set_wallpaper_interactive 'd' $1; }
 setwpii() { __set_wallpaper_interactive 'f' $1; }
 
@@ -155,3 +155,12 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}

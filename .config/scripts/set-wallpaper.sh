@@ -56,6 +56,8 @@ set-wallpaper() {
         else
             __set_img_wallp $wp_path
         fi
+
+        export MY_LAST_WP_SELECT=$pick
     fi
 
     return 0
