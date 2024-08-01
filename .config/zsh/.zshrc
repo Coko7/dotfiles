@@ -41,7 +41,7 @@ eval "$(starship init zsh)"
 # | ALIASES |
 # +---------+
 
-for f in $XDG_CONFIG_HOME/aliases/*; do source "$f"; done
+for f in $XDG_CONFIG_HOME/aliases/*.sh; do source "$f"; done
 
 # +-----------+
 # | VI KEYMAP |
