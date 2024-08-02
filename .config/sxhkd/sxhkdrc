@@ -58,10 +58,10 @@ Print
 	flameshot gui
 
 Print + shift
-	flameshot full -p ~/Pictures/Screenshots
-
-Print + super
 	flameshot screen -p ~/Pictures/Screenshots
+
+Print + ctrl
+	flameshot full -p ~/Pictures/Screenshots
 
 # +------+
 # | ROFI |
