@@ -4,3 +4,6 @@
 
 # Cache
 .config/cache
+
+# Log files
+*.log
