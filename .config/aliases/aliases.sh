@@ -107,7 +107,7 @@ __set_wallpaper_interactive() {
     setwp $pick
 }
 
-setwpca() { echo "set-wallpaper-cache: $MY_LAST_WP_SELECT" && set-wallpaper $MY_LAST_WP_SELECT; }
+setwpca() { echo "set-wallpaper-cache: $SET_WP_LAST_PICK" && set-wallpaper $SET_WP_LAST_PICK; }
 setwpid() { __set_wallpaper_interactive 'd' $1; }
 setwpii() { __set_wallpaper_interactive 'f' $1; }
 
