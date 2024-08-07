@@ -76,6 +76,10 @@ alias vim='nvim'
 alias soz="source $ZDOTDIR/.zshrc"
 alias lock='betterlockscreen -l dim'
 alias twitch-dl="$SCRIPTS/twitch-dl/twitch-dl.2.1.3.pyz"
+alias battery="acpi -b | grep -P -o '[0-9]+(?=%)'"
+# alias kb='sudo setxkbmap -layout'       # Keyboard quick switch
+
+# set-wallpaper
 alias setwp="set-wallpaper"
 
 __set_wallpaper_interactive() {
@@ -109,29 +113,11 @@ setwpii() { __set_wallpaper_interactive 'f' $1; }
 
 alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
 alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
-# alias flazshbak="cat $HISTFILE | fzf | cut -d';' -f2 | cb"
-
-# V3 shows the full list of frequently used directories
-# as well as their sub-directories. It is used for changing directory
-# to most places in a very intuitive manner.
-# source "$SCRIPTS/jump-dir/jump-dir-v3.sh"
-# alias j='jump_dir_v3'
-
-# V2 shows a smaller list than V3 (only the most frequent directories).
-# The advantage of V2 is that each directory entry has a key which can be used
-# to quickly travel there.
-# While it may handle fewer destinations than V3, it handles them better thanks to pre-set keys.
-# source "$SCRIPTS/jump-dir/jump-dir-v2.sh"
-# alias jj='jump_dir_v2'
+# alias flazshbak="cat $HISTFILE | fzf | cut -d';' -f2 | xclip -selection clipboardo"
 
 # Kizaru-warp
 alias j='kizaru-warp'
 alias jj='kizaru-warp --awakened'
-
-# Keyboard quick switch
-alias kb='sudo setxkbmap -layout'
-
-alias battery="acpi -b | grep -P -o '[0-9]+(?=%)'"
 
 function chill() {
     num=$((1 + $RANDOM % 5))
@@ -157,6 +143,7 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 
+# Yazi helper
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
@@ -166,80 +153,7 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
-#
-# Credit to @jkishner for https://gist.github.com/jkishner/2fccb24640a27c2d7ac9
-#
-# Also interesting: https://gist.github.com/cdown/1163649
-#
-function url_encode() {
-    echo "$@" \
-    | sed \
-        -e 's/%/%25/g' \
-        -e 's/ /%20/g' \
-        -e 's/!/%21/g' \
-        -e 's/"/%22/g' \
-        -e "s/'/%27/g" \
-        -e 's/#/%23/g' \
-        -e 's/(/%28/g' \
-        -e 's/)/%29/g' \
-        -e 's/+/%2b/g' \
-        -e 's/,/%2c/g' \
-        -e 's/-/%2d/g' \
-        -e 's/:/%3a/g' \
-        -e 's/;/%3b/g' \
-        -e 's/?/%3f/g' \
-        -e 's/@/%40/g' \
-        -e 's/\$/%24/g' \
-        -e 's/\&/%26/g' \
-        -e 's/\*/%2a/g' \
-        -e 's/\./%2e/g' \
-        -e 's/\//%2f/g' \
-        -e 's/\[/%5b/g' \
-        -e 's/\\/%5c/g' \
-        -e 's/\]/%5d/g' \
-        -e 's/\^/%5e/g' \
-        -e 's/_/%5f/g' \
-        -e 's/`/%60/g' \
-        -e 's/{/%7b/g' \
-        -e 's/|/%7c/g' \
-        -e 's/}/%7d/g' \
-        -e 's/~/%7e/g'
-}
-
-function url_decode() {
-    echo "$@" \
-    | sed \
-        -e 's/%25/%/g' \
-        -e 's/%20/ /g' \
-        -e 's/%21/!/g' \
-        -e 's/%22/"/g' \
-        -e "s/%27/'/g" \
-        -e 's/%23/#/g' \
-        -e 's/%28/(/g' \
-        -e 's/%29/)/g' \
-        -e 's/%2b/+/g' \
-        -e 's/%2c/,/g' \
-        -e 's/%2d/-/g' \
-        -e 's/%3a/:/g' \
-        -e 's/%3b/;/g' \
-        -e 's/%3f/?/g' \
-        -e 's/%40/@/g' \
-        -e 's/%24/\$/g' \
-        -e 's/%26/\&/g' \
-        -e 's/%2a/\*/g' \
-        -e 's/%2e/\./g' \
-        -e 's/%2f/\//g' \
-        -e 's/%5b/\[/g' \
-        -e 's/%5c/\\/g' \
-        -e 's/%5d/\]/g' \
-        -e 's/%5e/\^/g' \
-        -e 's/%5f/_/g' \
-        -e 's/%60/`/g' \
-        -e 's/%7b/{/g' \
-        -e 's/%7c/|/g' \
-        -e 's/%7d/}/g' \
-        -e 's/%7e/~/g'
-}
-
-urle() { local input="$(< /dev/stdin)"; url_encode $input; }
-urld() { local input="$(< /dev/stdin)"; url_decode $input; }
+# Aliases to cmd-utils functions
+alias urle="MY_url_encode"
+alias urld="MY_url_decode"
+alias jstc="MY_json_strip_comments"

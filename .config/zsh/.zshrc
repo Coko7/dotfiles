@@ -37,6 +37,12 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 #source $ZDOTDIR/spaceship/spaceship.zsh
 eval "$(starship init zsh)"
 
+# +-----------+
+# | CMD UTILS |
+# +-----------+
+
+source $SCRIPTS/cmd-utils.sh
+
 # +---------+
 # | ALIASES |
 # +---------+

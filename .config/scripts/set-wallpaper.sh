@@ -2,7 +2,7 @@
 
 # Set env
 # JSON is overkill but I just wanted to use jq for fun
-export SET_WP_CFG="${SET_WP_CFG:-$XDG_CONFIG_HOME/set-wallpaper/config.json}"
+export SET_WP_CFG="${SET_WP_CFG:-$XDG_CONFIG_HOME/set-wallpaper/config.jsonc}"
 
 __set_dir_wallp() {
     local dir=$1
@@ -38,7 +38,7 @@ __set_img_wallp() {
 set-wallpaper() {
     # If no arg supplied, use the wallpapers directory from env
     if [ "$#" -eq 0 ]; then
-        wp_path=`jq '.pick' $SET_WP_CFG | tr -d '"' | envsubst`
+        wp_path=`cat $SET_WP_CFG | MY_json_strip_comments | jq '.pick' | tr -d '"' | envsubst`
     else
         if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
             echo "Usage: set-wallpaper [OPTION] [PATH]"
