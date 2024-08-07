@@ -1,9 +1,9 @@
 wrfe() {
-    query=`url_encode "$@"`
+    query=`MY_url_encode "$@"`
     xdg-open "https://www.wordreference.com/fren/$query";
 }
 
 wref() {
-    query=`url_encode "$@"`
+    query=`MY_url_encode "$@"`
     xdg-open "https://www.wordreference.com/enfr/$query";
 }
