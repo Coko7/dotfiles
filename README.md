@@ -5,7 +5,7 @@ All my Linux configuration files. I use this to configure my entire system.
 ## 🐧 System setup
 
 - Operating system: [Arch Linux](https://archlinux.org/)
-- Window manager: [awesome](https://awesomewm.org/ ([Xorg](https://www.x.org/) as display server)
+- Window manager: [awesome](https://awesomewm.org/) ([Xorg](https://www.x.org/) as display server)
 - Compositor: [picom](https://github.com/yshui/picom)
 - Shell: [Zsh](https://www.zsh.org/) (with [Starship](https://starship.rs/) for my prompt)
 - Application launcher: [Rofi](https://github.com/davatorium/rofi) (also using [emoji](https://github.com/Mange/rofi-emoji) and [calc](https://github.com/svenstaro/rofi-calc))
