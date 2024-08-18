@@ -6,7 +6,7 @@ if [ -n "$1" ]; then
 fi
 
 configs="curry,nomad,geo,geo-cinema"
-pick=`echo $configs | tr ',' '\n' | fzf $opts`
+pick=`echo $configs | tr ',' '\n' | fzf $opts | head -n 1`
 
 case $pick in
   curry)
