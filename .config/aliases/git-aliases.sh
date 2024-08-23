@@ -5,6 +5,11 @@ alias gfzf='git ls-files | fzf --preview "bat --color=always --style=numbers --l
 
 alias gweb="git remote get-url origin | sed 's|git@\(.*\):|https://\1/|' | xargs xdg-open"
 
+alias gfls="$HOME/.local/bin/git-ls-files-meta.sh"
+
+# Get summary of all authors for a given file and sort by most commits made
+function gknow() { git log --follow --pretty=format:'%ae' -- $1 | sort | uniq -c | sort -nr; }
+
 # Pull
 alias gpl='git pull'
 alias gplo='git pull origin'
