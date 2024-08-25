@@ -18,6 +18,9 @@ betterlockscreen -w dim
 if [ "${X_MY_LOC}" = "curry" ]; then
     xrdb -merge "$XDG_CONFIG_HOME/screenlayout/xresources-curry"
     "$XDG_CONFIG_HOME/screenlayout/multi-monitor-curry.sh"
+elif [ "${X_MY_LOC}" = "curry-cinema" ]; then
+    xrdb -merge "$XDG_CONFIG_HOME/screenlayout/xresources-curry-cinema"
+    "$XDG_CONFIG_HOME/screenlayout/multi-monitor-curry-cinema.sh"
 elif [ "${X_MY_LOC}" = "geo" ]; then
     xrdb -merge "$XDG_CONFIG_HOME/screenlayout/xresources-geo"
     "$XDG_CONFIG_HOME/screenlayout/multi-monitor-geo.sh"
