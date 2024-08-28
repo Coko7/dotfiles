@@ -48,7 +48,7 @@ XF86AudioPrev
 	playerctl previous && bash $SCRIPTS/notify-media.sh
 
 XF86AudioPlay
-	playerctl play-pause
+    bash $SCRIPTS/play-pause-media.sh
 
 # +-------------+
 # | SCREENSHOTS |
