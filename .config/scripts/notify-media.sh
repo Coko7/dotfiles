@@ -1,16 +1,25 @@
 #!/usr/bin/env bash
 
-output=`playerctl metadata`
+function show_notif() {
+    local player=$1
 
-title=`echo "$output" | grep -oP '.*xesam:title\s*\K.*'`
-album=`echo "$output" | grep -oP '.*xesam:album\s*\K.*'`
-artist=`echo "$output" | grep -oP '.*xesam:artist\s*\K.*'`
-art_url=`echo "$output" | grep -oP '.*mpris:artUrl\s*\K.*'`
+    local output=`playerctl -p $player metadata`
 
-if [[ -n "$album" ]]; then
-    body="$album\n$artist"
-else
-    body="$artist"
-fi
+    local title=`echo "$output" | grep -oP '.*xesam:title\s*\K.*'`
+    local album=`echo "$output" | grep -oP '.*xesam:album\s*\K.*'`
+    local artist=`echo "$output" | grep -oP '.*xesam:artist\s*\K.*'`
+    local art_url=`echo "$output" | grep -oP '.*mpris:artUrl\s*\K.*'`
 
-notify-send -u low "$title" "$body" -i "$art_url"
+    if [[ -n "$album" ]]; then
+        local body="$album\n$artist"
+    else
+        local body="$artist"
+    fi
+
+    notify-send -u low "$title" "$body" -i "$art_url"
+}
+
+players=`playerctl -l`
+for player in $players; do
+    show_notif $player
+done
