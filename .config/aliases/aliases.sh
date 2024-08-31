@@ -36,6 +36,7 @@ alias ll='ezaic -alF'
 alias lls='ezaic -ralF -s modified'
 alias lld='ezaic -alF -d */'
 alias la='ezaic -A'
+alias tree='ezaic --tree --no-permissions --no-filesize --no-user --no-time'
 
 # classic ls aliases (if not using eza)
 # alias ls='ls --color=auto'
@@ -59,6 +60,7 @@ alias pacr='sudo pacman -R'                 # remove package but not dependencie
 #alias pacro='pacman -Rns $(pacman -Qtdq)'
 #alias pacrl='rm /var/lib/pacman/db.lck'    # pacman remove locks
 alias pacls="pacman -Qe"
+alias pacll="pacman -Q"
 #alias pacc='sudo pacman -Sc'
 #alias paccc='sudo pacman -Scc'             # empty the whole cache
 alias pacbak="sudo pacman -Qe > `date +"%d%m%Y-%H%M"`.txt" # Backup explicitly installed packages to a text file

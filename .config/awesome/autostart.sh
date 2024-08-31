@@ -7,6 +7,8 @@ run() {
     fi
 }
 
+exec --no-startup-id /usr/lib/pam_kwallet_init
+
 #run "megasync"
 ##run "xscreensaver -no-splash"
 #run "/usr/bin/dropbox"
@@ -20,7 +22,7 @@ run "picom"
 # Misc apps
 run "flameshot"
 run "keepassxc"
-run "protonvpn-app"
+# run "protonvpn-app"
 
 # Messaging apps
 run "webcord"
@@ -29,8 +31,7 @@ run "signal-desktop"
 # Office apps
 run "joplin-desktop"
 
-source $SCRIPTS/set-wallpaper.sh
-set-wallpaper
+. $SCRIPTS/set-wallpaper-script.sh
 
 # run "$XDG_CONFIG_HOME/polybar/launch.sh"
 #run "/usr/bin/redshift"

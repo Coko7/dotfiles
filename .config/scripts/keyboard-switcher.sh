@@ -5,7 +5,7 @@ current_layout=`setxkbmap -query | grep layout | awk '{print $2}'`
 if [ "$current_layout" == "us" ]; then
   next_layout="fr"
   layout_desc="AZERTY FR"
-  icon_path="azerty_icon.png"
+  icon_path="azerty_icon2.png"
 elif [ "$current_layout" == "fr" ]; then
   next_layout="us"
   layout_desc="QWERTY US"
