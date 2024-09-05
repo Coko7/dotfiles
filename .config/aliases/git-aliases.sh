@@ -52,7 +52,17 @@ function grasp() { grep -inr "$1" --exclude-dir={obj,bin} --exclude=\*.min.\*; }
 alias gb='git branch'
 alias gbl='git branch --list'
 alias gco='git checkout'
-alias gcof='git checkout $(git branch --list | fzf)'
+function gcof() {
+    local branches=`git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/`
+
+    # local branch=`echo "$branches" | fzf --ansi --preview="git log -n 10 --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --color=always {}"`
+    local branch=`echo "$branches" | fzf --ansi --preview="git log -n 10 --stat --color=always {}"`
+    if [ -z $branch ]; then
+        return 1
+    fi
+
+    git checkout $branch
+}
 alias gcb='git checkout -b'
 function gbdf() {
     local branches=`git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/`
