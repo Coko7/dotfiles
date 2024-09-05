@@ -59,8 +59,11 @@ function gbdf() {
 
     # local branch=`echo "$branches" | fzf --ansi --preview="git log -n 10 --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --color=always {}"`
     local branch=`echo "$branches" | fzf --ansi --preview="git log -n 10 --stat --color=always {}"`
+    if [ -z $branch ]; then
+        return 1
+    fi
 
-    echo -n "Delete $branch (y/N)? " 
+    echo -n "Delete $branch ? [y/N] " 
     read confirm
 
     if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
