@@ -5,6 +5,17 @@ alias gfzf='git ls-files | fzf --preview "bat --color=always --style=numbers --l
 
 alias gweb="git remote get-url origin | sed 's|git@\(.*\):|https://\1/|' | xargs xdg-open"
 
+# Open issue page based on current branch name
+function gissue() {
+    if [ -z "$ISSUES_BASE_URL" ]; then
+        echo "gissue: env var \`ISSUES_BASE_URL\` must be set" >&2
+        return 1
+    fi
+
+    local issue=`git branch --show-current | awk -F '/' '{print $1}'`
+    xop "$ISSUES_BASE_URL/$issue"
+}
+
 alias gfls="$HOME/.local/bin/git-ls-files-meta.sh"
 
 # Get summary of all authors for a given file and sort by most commits made
