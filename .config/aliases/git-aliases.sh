@@ -54,6 +54,21 @@ alias gbl='git branch --list'
 alias gco='git checkout'
 alias gcof='git checkout $(git branch --list | fzf)'
 alias gcb='git checkout -b'
+function gbdf() {
+    local branches=`git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/`
+
+    # local branch=`echo "$branches" | fzf --ansi --preview="git log -n 10 --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --color=always {}"`
+    local branch=`echo "$branches" | fzf --ansi --preview="git log -n 10 --stat --color=always {}"`
+
+    echo -n "Delete $branch (y/N)? " 
+    read confirm
+
+    if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
+        git branch -D $branch
+    else
+        return 1
+    fi
+}
 #alias grs='git remote show'
 
 # Log
