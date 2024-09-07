@@ -30,13 +30,6 @@ setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
-# +--------------+
-# | SHELL PROMPT |
-# +--------------+
-
-#source $ZDOTDIR/spaceship/spaceship.zsh
-eval "$(starship init zsh)"
-
 # +-----------+
 # | CMD UTILS |
 # +-----------+
@@ -82,17 +75,21 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#cba6f7,bold,bg=1e1e2e,bold"
 
 source $CARGO_HOME/env
 
-# +---------------+
-# | SET-WALLPAPER |
-# +---------------+
+# +----------------+
+# | CUSTOM SCRIPTS |
+# +----------------+
 
 source $XDG_CONFIG_HOME/scripts/set-wallpaper.sh
+source $XDG_CONFIG_HOME/scripts/selekthor.sh
+# source $WORKSPACE/personal/coko7_git/kizaru-warp/kizaru-warp.sh
 
-# +-------------+
-# | KIZARU-WARP |
-# +-------------+
+# +--------------+
+# | SHELL PROMPT |
+# +--------------+
 
-source $WORKSPACE/personal/coko7_git/kizaru-warp/kizaru-warp.sh
+#source $ZDOTDIR/spaceship/spaceship.zsh
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh --cmd j)"
 
 # Flexing Arch
 fastfetch
