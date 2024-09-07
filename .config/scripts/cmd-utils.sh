@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Set of frequently used bash functions
 
-function MY_json_strip_comments() {
+function jstc() {
     local sed_exp='/^[[:blank:]]*#/d;s/\/\/.*//'
 
     if [ -n "$1" ]; then
@@ -16,7 +16,7 @@ function MY_json_strip_comments() {
 #
 # Also interesting: https://gist.github.com/cdown/1163649
 #
-function MY_url_encode() {
+function urle() {
     local input="${@:-$(< /dev/stdin)}"
 
     echo $input \
@@ -33,7 +33,7 @@ function MY_url_encode() {
         -e 's/|/%7c/g'  -e 's/}/%7d/g'  -e 's/~/%7e/g'
 }
 
-function MY_url_decode() {
+function urld() {
     local input="${@:-$(< /dev/stdin)}"
 
     echo $input \

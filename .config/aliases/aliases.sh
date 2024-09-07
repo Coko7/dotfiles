@@ -113,13 +113,14 @@ setwpca() { echo "set-wallpaper-cache: $SET_WP_LAST_PICK" && set-wallpaper $SET_
 setwpid() { __set_wallpaper_interactive 'd' $1; }
 setwpii() { __set_wallpaper_interactive 'f' $1; }
 
+alias mux="$SCRIPTS/tmux/tmux-start-env.sh"
 alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
 alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
 # alias flazshbak="cat $HISTFILE | fzf | cut -d';' -f2 | xclip -selection clipboardo"
 
 # Kizaru-warp
-alias j='kizaru-warp'
-alias jj='kizaru-warp --awakened'
+# alias j='kizaru-warp'
+# alias jj='kizaru-warp --awakened'
 
 function chill() {
     num=$((1 + $RANDOM % 5))
@@ -154,8 +155,3 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
-
-# Aliases to cmd-utils functions
-alias urle="MY_url_encode"
-alias urld="MY_url_decode"
-alias jstc="MY_json_strip_comments"
