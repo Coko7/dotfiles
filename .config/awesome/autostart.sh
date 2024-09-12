@@ -18,7 +18,7 @@ exec --no-startup-id /usr/lib/pam_kwallet_init
 run "nm-applet"
 run "sxhkd"
 run "picom"
-run "redshift"
+# run "redshift-gtk"
 
 # Misc apps
 run "flameshot"
