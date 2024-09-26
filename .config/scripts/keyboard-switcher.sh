@@ -9,7 +9,7 @@ if [ "$current_layout" == "us" ]; then
 elif [ "$current_layout" == "fr" ]; then
   next_layout="us"
   layout_desc="QWERTY US"
-  icon_path="qwerty_icon.png"
+  icon_path="qwerty_icon2.png"
 fi
 
 setxkbmap -layout $next_layout && notify-send "Keyboard Layout" "$layout_desc" -i "$HOME/Pictures/System/$icon_path"
