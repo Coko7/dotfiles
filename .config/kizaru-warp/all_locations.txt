@@ -1,9 +1,0 @@
-$XDG_CONFIG_HOME
-$XDG_CONFIG_HOME/scripts
-$HOME
-$WORKSPACE
-$HOME/Pictures
-$HOME/Pictures/Wallpapers
-$WORKSPACE/personal
-$WORKSPACE/personal/coko7_git
-$WORKSPACE/work
