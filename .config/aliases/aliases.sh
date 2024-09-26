@@ -17,7 +17,7 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias grep='grep --color=auto'
 
 # dust
-alias dust='du -sh * | sort -hr'
+# alias dust='du -sh * | sort -hr'
 
 # anyone? Check if I have internet
 alias any1='ping 8.8.8.8'
