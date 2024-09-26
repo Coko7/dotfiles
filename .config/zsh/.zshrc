@@ -49,6 +49,7 @@ for f in $XDG_CONFIG_HOME/aliases/*.sh; do source "$f"; done
 # Vi mode
 bindkey -v
 export KEYTIMEOUT=1
+bindkey '^R' history-incremental-search-backward
 
 # +------------+
 # | COMPLETION |
@@ -89,7 +90,7 @@ source $XDG_CONFIG_HOME/scripts/selekthor.sh
 
 #source $ZDOTDIR/spaceship/spaceship.zsh
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh --cmd j)"
+eval "$(zoxide init zsh)"
 
 # Flexing Arch
 fastfetch
