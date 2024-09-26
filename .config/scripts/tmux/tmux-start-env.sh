@@ -20,7 +20,13 @@ function tmux-start-env() {
         *) return 1 ;;
     esac
 
-    tmux new-session -s "$session_name" -e TMUX_WS_TYPE="$ws_type"
+    tmux has-session -t $session_name 2>/dev/null
+
+    if [ $? != 0 ]; then
+        tmux new-session -d -s $session_name -e TMUX_WS_TYPE="$ws_type"
+    fi
+
+    tmux attach-session -t $session_name
 }
 
 tmux-start-env $@
