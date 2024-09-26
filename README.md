@@ -42,24 +42,24 @@ Anyway, here are the desktop apps I most commonly use:
   - Messaging: [Signal](https://www.signal.org/)
   - Discord client: [Webcord](https://github.com/SpacingBat3/WebCord)
 - File managers:
+  - [yazi](https://github.com/sxyazi/yazi) (terminal-based, previously used [ranger](https://github.com/ranger/ranger))
   - [Dolphin](https://apps.kde.org/dolphin/)
   - [Nemo](https://github.com/linuxmint/nemo)
-  - [ranger](https://github.com/ranger/ranger) (terminal-based)
 - Images
   - Drawing: [Krita](https://krita.org/)
   - Editing: [Gimp](https://www.gimp.org/)
-  - Vewing: [feh](https://feh.finalrewind.org/)
+  - Viewing: [nsxiv](https://github.com/nsxiv/nsxiv) (previously used [feh](https://feh.finalrewind.org/))
 - Network:
   - Synchronization: [Syncthing](https://syncthing.net/)
   - VPN: [OpenVPN](https://openvpn.net/)
 - Office:
   - [ONLYOFFICE](https://www.onlyoffice.com/) for my Office suite 
-  - [Joplin](https://joplinapp.org/) for taking notes (uses Markdown)
+  - [Joplin](https://joplinapp.org/) for taking notes (uses Markdown, has Vim motions)
 - Screenshots: [Flameshot](https://flameshot.org/)
 - Torrent: [qBittorrent](https://www.qbittorrent.org/)
 - Videos:
   - Editing: [Kdenlive](https://kdenlive.org/en/)
-  - Viewing: [mpv](https://mpv.io/)
+  - Viewing: [mpv](https://mpv.io/) and [vlc](https://www.videolan.org/vlc/)
   - YouTube client: [FreeTube](https://freetubeapp.io/)
 
 ## ✨ Inspiration
