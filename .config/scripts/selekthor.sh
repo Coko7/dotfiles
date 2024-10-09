@@ -19,6 +19,6 @@ function selekthor() {
         return 1
     fi
 
-    res=`echo $pick | cut -d':' -f2- | tr -d '[:blank:]'`
+    res=`echo $pick | cut -d':' -f2- | xargs`
     echo $res
 }
