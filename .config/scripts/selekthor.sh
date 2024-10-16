@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 
 function selekthor() {
-    if [ -z "$SELEK_FILE" ]; then
-        >&2 echo "selekthor: please set SELEK_FILE"
-        return 1
-    fi
+    stdin=`cat -`
+    entries=`echo "$stdin" | envsubst`
 
     input=$1
-    entries=`cat $SELEK_FILE | envsubst`
 
     local opts=""
     if [ -n "$input" ]; then

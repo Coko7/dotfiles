@@ -1,0 +1,4 @@
+git:                    https://github.com/Coko7
+monkeytype:             https://monkeytype.com
+perplexity:             https://perplexity.ai
+word reference:         https://www.wordreference.com
