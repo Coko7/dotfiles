@@ -38,7 +38,7 @@ __set_img_wallp() {
 set-wallpaper() {
     # If no arg supplied, use the wallpapers directory from env
     if [ "$#" -eq 0 ]; then
-        wp_path=`cat $SET_WP_CFG | MY_json_strip_comments | jq '.pick' | tr -d '"' | envsubst`
+        wp_path=`cat $SET_WP_CFG | jstc | jq '.pick' | tr -d '"' | envsubst`
     else
         if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
             echo "Usage: set-wallpaper [OPTION] [PATH]"
