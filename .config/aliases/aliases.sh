@@ -9,6 +9,7 @@ alias xdpi="xrdb -query | grep Xft.dpi | awk '{print \$2}'"
 alias cbi='xclip -selection clipboard'      # copy to clipboard
 #alias cbi='win32yank.exe -i'               # WSL only: copy to cliboard
 alias cbo='xclip -o -selection clipboard'   # get clipboard content
+alias kbs="$SCRIPTS/keyboard-switcher.sh"
 
 # wget
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
@@ -116,7 +117,6 @@ setwpii() { __set_wallpaper_interactive 'f' $1; }
 alias mux="$SCRIPTS/tmux/tmux-start-env.sh"
 alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
 alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
-# alias flazshbak="cat $HISTFILE | fzf | cut -d';' -f2 | xclip -selection clipboardo"
 
 # Kizaru-warp
 # alias j='kizaru-warp'
