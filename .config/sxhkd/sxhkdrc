@@ -14,7 +14,8 @@ super + ctrl + i
 
 # Switch keyboard layout
 super + ctrl + space
-	bash $SCRIPTS/keyboard-switcher.sh
+	bash $SCRIPTS/switch-keyboard-x11.sh
+	# bash $SCRIPTS/switch-keyboard-hyprland.sh
 
 # Lock the screen
 super + shift + e
