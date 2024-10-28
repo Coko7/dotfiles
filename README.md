@@ -2,7 +2,7 @@
 
 All my Linux configuration files. I use this to configure my entire system.
 
-I started out with X server (with awesomewm) but recently switched to Wayland (with Hyprland) to try it out.
+I started out with X server (with AwesomeWM) but recently switched to Wayland (with Hyprland) to try it out.
 
 ## 🐧 System setup
 
@@ -11,13 +11,16 @@ I started out with X server (with awesomewm) but recently switched to Wayland (w
     - [X](https://www.x.org/), *or Xorg, or X11 (call it what you want)*
     - [Wayland](https://wayland.freedesktop.org/)
 - Window managers:
-    - [awesome](https://awesomewm.org/) (on X)
+    - [AwesomeWM](https://awesomewm.org/) (on X)
     - [Hyprland](https://hyprland.org/) (on Wayland)
 - Compositors: 
     - [picom](https://github.com/yshui/picom) (on X)
     - [Hyprland](https://hyprland.org/) *(Wayland window managers are also compositors)*
+- System/status bars:
+    - AwesomeWM widgets (on X)
+    - [Waybar](https://github.com/Alexays/Waybar) (on Wayland)
 - Notification daemons:
-    - [naughty](https://awesomewm.org/doc/api/libraries/naughty.html) (built into awesomewm, on X)
+    - [naughty](https://awesomewm.org/doc/api/libraries/naughty.html) (built into AwesomeWM, on X)
     - [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter) (on Wayland)
 - Shell: [Zsh](https://www.zsh.org/) (with [Starship](https://starship.rs/) for my prompt)
 - Application launchers:
