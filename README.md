@@ -11,31 +11,34 @@ I started out with X server (with awesomewm) but recently switched to Wayland (w
     - [X](https://www.x.org/), *or Xorg, or X11 (call it what you want)*
     - [Wayland](https://wayland.freedesktop.org/)
 - Window managers:
-    - [awesome](https://awesomewm.org/) (with X)
-    - [Hyprland](https://hyprland.org/) (with Wayland)
+    - [awesome](https://awesomewm.org/) (on X)
+    - [Hyprland](https://hyprland.org/) (on Wayland)
 - Compositors: 
-    - [picom](https://github.com/yshui/picom) (when using X11)
+    - [picom](https://github.com/yshui/picom) (on X)
     - [Hyprland](https://hyprland.org/) *(Wayland window managers are also compositors)*
+- Notification daemons:
+    - [naughty](https://awesomewm.org/doc/api/libraries/naughty.html) (built into awesomewm, on X)
+    - [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter) (on Wayland)
 - Shell: [Zsh](https://www.zsh.org/) (with [Starship](https://starship.rs/) for my prompt)
 - Application launchers:
-    - [Rofi](https://github.com/davatorium/rofi) (with X):
+    - [Rofi](https://github.com/davatorium/rofi) (on X):
         - [rofi-emoji](https://github.com/Mange/rofi-emoji)
         - [rofi-calc](https://github.com/svenstaro/rofi-calc))
-    - [Wofi](https://hg.sr.ht/~scoopta/wofi) (with Wayland)
+    - [Wofi](https://hg.sr.ht/~scoopta/wofi) (on Wayland)
 - Terminals:
     - [Kitty](https://sw.kovidgoyal.net/kitty)
     - [Alacritty](https://alacritty.org)
 - Text/code editor: [Neovim](https://neovim.io/) (using [kickstart](https://github.com/nvim-lua/kickstart.nvim))
 - Audio:
-  - Drivers and interface: [ALSA](https://www.alsa-project.org/)
-  - Sound server: [PipeWire](https://pipewire.org/)
-  - GUI apps:
-    - [PulseAudio Volume Control](https://freedesktop.org/software/pulseaudio/pavucontrol/) for simple audio control
-    - ~~[QjackCtl](https://qjackctl.sourceforge.io/) for advanced audio stuff~~
+    - Drivers and interface: [ALSA](https://www.alsa-project.org/)
+    - Sound server: [PipeWire](https://pipewire.org/)
+    - GUI apps:
+        - [PulseAudio Volume Control](https://freedesktop.org/software/pulseaudio/pavucontrol/) for simple audio control
+        - ~~[QjackCtl](https://qjackctl.sourceforge.io/) for advanced audio stuff~~
 - Theming:
-  - [Catpuccin](https://github.com/catppuccin/catppuccin) Mocha for my color scheme (I also use [Rigel](https://github.com/Rigellute/rigel) sometimes)
-  - [LXAppearance](https://github.com/lxde/lxappearance) to configure my GTK theme
-  - [Qt5ct](https://github.com/desktop-app/qt5ct) for apps that use QT toolkit (KDE apps)
+    - [Catpuccin](https://github.com/catppuccin/catppuccin) Mocha for my color scheme (I also use [Rigel](https://github.com/Rigellute/rigel) sometimes)
+    - [LXAppearance](https://github.com/lxde/lxappearance) to configure my GTK theme
+    - [Qt5ct](https://github.com/desktop-app/qt5ct) for apps that use QT toolkit (KDE apps)
 
 ## 🖥️ Desktop applications
 
@@ -54,28 +57,31 @@ I started out with X server (with awesomewm) but recently switched to Wayland (w
 Anyway, here are the desktop apps I most commonly use:
 - Browser: [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - Communication:
-  - Messaging: [Signal](https://www.signal.org/)
-  - Discord client: [Webcord](https://github.com/SpacingBat3/WebCord)
+    - Messaging: [Signal](https://www.signal.org/)
+    - Discord client: [Webcord](https://github.com/SpacingBat3/WebCord)
 - File managers:
-  - [yazi](https://github.com/sxyazi/yazi) (terminal-based, previously used [ranger](https://github.com/ranger/ranger))
-  - [Dolphin](https://apps.kde.org/dolphin/)
-  - [Nemo](https://github.com/linuxmint/nemo)
+    - [yazi](https://github.com/sxyazi/yazi) (terminal-based, previously used [ranger](https://github.com/ranger/ranger))
+    - [Dolphin](https://apps.kde.org/dolphin/)
+    - [Nemo](https://github.com/linuxmint/nemo)
 - Images
-  - Drawing: [Krita](https://krita.org/)
-  - Editing: [Gimp](https://www.gimp.org/)
-  - Viewing: [nsxiv](https://github.com/nsxiv/nsxiv) (previously used [feh](https://feh.finalrewind.org/))
+    - Drawing: [Krita](https://krita.org/)
+    - Editing: [Gimp](https://www.gimp.org/)
+    - Viewing: [nsxiv](https://github.com/nsxiv/nsxiv)
 - Network:
-  - Synchronization: [Syncthing](https://syncthing.net/)
-  - VPN: [OpenVPN](https://openvpn.net/)
+    - Synchronization: [Syncthing](https://syncthing.net/)
+    - VPN: [OpenVPN](https://openvpn.net/)
 - Office:
-  - [ONLYOFFICE](https://www.onlyoffice.com/) for my Office suite 
-  - [Joplin](https://joplinapp.org/) for taking notes (uses Markdown, has Vim motions)
+    - [ONLYOFFICE](https://www.onlyoffice.com/) for my Office suite 
+    - [Joplin](https://joplinapp.org/) for taking notes (uses Markdown, has Vim motions)
 - Screenshots: [Flameshot](https://flameshot.org/)
 - Torrent: [qBittorrent](https://www.qbittorrent.org/)
 - Videos:
-  - Editing: [Kdenlive](https://kdenlive.org/en/)
-  - Viewing: [mpv](https://mpv.io/) and [vlc](https://www.videolan.org/vlc/)
-  - YouTube client: [FreeTube](https://freetubeapp.io/)
+    - Editing: [Kdenlive](https://kdenlive.org/en/)
+    - Viewing: [mpv](https://mpv.io/) and [vlc](https://www.videolan.org/vlc/)
+    - YouTube client: [FreeTube](https://freetubeapp.io/)
+- Wallpaper setters:
+    - [feh](https://feh.finalrewind.org/) (on X)
+    - [swww](https://github.com/LGFae/swww) (on Wayland)
 
 ## ✨ Inspiration
 
