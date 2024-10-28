@@ -3,10 +3,12 @@ alias:              $XDG_CONFIG_HOME/aliases/aliases.sh
 awesome:            $XDG_CONFIG_HOME/awesome/rc.lua
 awesome theme:      $XDG_CONFIG_HOME/awesome/theme.lua
 git alias:          $XDG_CONFIG_HOME/aliases/git-aliases.sh
+hyprland:           $XDG_CONFIG_HOME/hypr/hyprland.conf
 kitty:              $XDG_CONFIG_HOME/kitty/kitty.conf
 picom:              $XDG_CONFIG_HOME/picom/picom.conf
 rofi:               $XDG_CONFIG_HOME/rofi/config.rasi
 starship:           $XDG_CONFIG_HOME/starship/starship.toml
 tmux:               $XDG_CONFIG_HOME/tmux/tmux.conf
+waybar:             $XDG_CONFIG_HOME/waybar/config.jsonc
 zshenv:             $HOME/.zshenv
 zshrc:              $ZDOTDIR/.zshrc
