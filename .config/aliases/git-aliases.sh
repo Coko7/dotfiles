@@ -5,6 +5,8 @@ alias gfzf='git ls-files | fzf --preview "bat --color=always --style=numbers --l
 
 alias gweb="git remote get-url origin | sed 's|git@\(.*\):|https://\1/|' | xargs xdg-open"
 
+alias lg="lazygit"
+
 # Open issue page based on current branch name
 function gissue() {
     if [ -z "$ISSUES_BASE_URL" ]; then
@@ -57,6 +59,29 @@ alias gg='git grep -n'
 alias gu='git grep -n --no-index'
 function ggv() { git grep -n $1 | grep -v $2 | grep -n --color=always $1 | less; }
 function grasp() { grep -inr "$1" --exclude-dir={obj,bin} --exclude=\*.min.\*; }
+
+function ggf() {
+    local pattern=$1
+    local matches=`git grep -l $pattern`
+    if [ -z $matches ]; then
+        echo "ggf: No match for '$pattern'" >&2
+        return 1
+    fi
+ 
+    local file;
+    local lines_count=`echo "$matches" | wc -l`
+    if [ "$lines_count" -eq 1 ]; then
+        file=`echo "$matches"`
+    else
+        file=`echo "$matches" | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"`
+        if [ -z $file ]; then
+            return 1
+        fi
+    fi
+ 
+    local line=`git grep -n $pattern -- $file | head -n 1 | awk -F: '{print $2}'`
+    vim +$line $file
+}
 
 # Branch
 #alias gr='git branch -r'
