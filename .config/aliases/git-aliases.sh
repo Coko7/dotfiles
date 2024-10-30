@@ -3,7 +3,10 @@
 # Shorthand for fzf in git repo
 alias gfzf='git ls-files | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
-alias gweb="git remote get-url origin | sed 's|git@\(.*\):|https://\1/|' | xargs xdg-open"
+function gweb() {
+    url=`git remote get-url origin | sed 's|git@\(.*\):|https://\1/|'`
+    $SCRIPTS/web-open.sh $url
+}
 
 alias lg="lazygit"
 
