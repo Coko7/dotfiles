@@ -9,7 +9,7 @@ alias xdpi="xrdb -query | grep Xft.dpi | awk '{print \$2}'"
 alias cbi='xclip -selection clipboard'      # copy to clipboard
 #alias cbi='win32yank.exe -i'               # WSL only: copy to cliboard
 alias cbo='xclip -o -selection clipboard'   # get clipboard content
-alias kbs="$SCRIPTS/keyboard-switcher.sh"
+alias kbs="$SCRIPTS/switch-keyboard-hyprland.sh"
 
 # wget
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
@@ -21,7 +21,8 @@ alias grep='grep --color=auto'
 # alias dust='du -sh * | sort -hr'
 
 # anyone? Check if I have internet
-alias any1='ping 8.8.8.8'
+# alias any1='ping 8.8.8.8'
+alias any1='gping archlinux.org'
 
 # Core commands
 alias cp='cp -iv'
@@ -37,7 +38,7 @@ alias ll='ezaic -alF'
 alias lls='ezaic -ralF -s modified'
 alias lld='ezaic -alF -d */'
 alias la='ezaic -A'
-alias tree='ezaic --tree --no-permissions --no-filesize --no-user --no-time'
+alias lst='ezaic --tree --no-permissions --no-filesize --no-user --no-time'
 
 # classic ls aliases (if not using eza)
 # alias ls='ls --color=auto'
@@ -107,7 +108,7 @@ __set_wallpaper_interactive() {
         return 1
     fi
 
-    setwp $pick
+    set-wallpaper $pick
 }
 
 setwpca() { echo "set-wallpaper-cache: $SET_WP_LAST_PICK" && set-wallpaper $SET_WP_LAST_PICK; }

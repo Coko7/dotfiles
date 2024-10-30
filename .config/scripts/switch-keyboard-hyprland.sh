@@ -15,19 +15,19 @@ KEYBOARD=`get_main_keyboard`
 function set_fr_azerty() {
     # ID 1 for FR (see hyprland.conf)
     hyprctl switchxkblayout $KEYBOARD 1 \
-        && notify-send "Keyboard Layout" "AZERTY Baguette" -i "$HOME/Pictures/System/azerty_icon2.png"
+        && notify-send -t 2000 "Keyboard Layout" "AZERTY Baguette" -i "$HOME/Pictures/System/azerty_icon2.png" -r 123
 }
 
 function set_us_qwerty() {
     # ID 0 for EN (see hyprland.conf)
     hyprctl switchxkblayout $KEYBOARD 0 \
-        && notify-send "Keyboard Layout" "QWERTY Burger" -i "$HOME/Pictures/System/kb_us_qwerty3.png"
+        && notify-send -t 2000 "Keyboard Layout" "QWERTY Burger" -i "$HOME/Pictures/System/kb_us_qwerty3.png" -r 123
 }
 
 function set_us_dvorak() {
     # ID 2 for Dvorak (see hyprland.conf)
     hyprctl switchxkblayout $KEYBOARD 2 \
-        && notify-send "Keyboard Layout" "QWERTY Dvorak" -i "$HOME/Pictures/System/kb_us_dvorak.png"
+        && notify-send -t 2000 "Keyboard Layout" "QWERTY Dvorak" -i "$HOME/Pictures/System/kb_us_dvorak.png" -r 123
 }
 
 
