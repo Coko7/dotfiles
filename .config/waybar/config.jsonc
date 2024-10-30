@@ -13,38 +13,58 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "tray",
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
         "network",
         // "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
+        // "cpu",
+        // "memory",
+        // "temperature",
         // "backlight",
         // "keyboard-state",
-        "sway/language",
+        "hyprland/language",
         "battery",
         // "battery#bat2",
         "clock",
-        "tray",
         "custom/power"
     ],
     // Modules configuration
     "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+        "all-outputs": false,
+        "format": "{icon}",
+        "persistent-workspaces" : {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": [],
+        },
         "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
             // "1": "",
             // "2": "",
             // "3": "",
             // "4": "",
             // "5": "",
-            "urgent": "",
-            "active": "",
-            "default": ""
+            // "urgent": "",
+            // "active": "",
+            // "default": ""
         }
     },
     // "keyboard-state": {
@@ -118,6 +138,12 @@
     //     "format": "{percent}% {icon}",
     //     "format-icons": ["", "", "", "", "", "", "", "", ""]
     // },
+    "hyprland/language": {
+        "format": "  {}",
+        "format-en": "US",
+        "format-en-dvorak": "DVO",
+        "format-fr": "FR"
+    },
     "battery": {
         "states": {
             // "good": 95,

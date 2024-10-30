@@ -17,8 +17,8 @@ window#waybar {
 
 #window {
     margin: 8px;
-    padding-left: 8;
-    padding-right: 8;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 button {
@@ -27,26 +27,32 @@ button {
     border-radius: 0;
 }
 
-button:hover {
+button:hover:not(.active) {
     background: inherit;
     color: @mauve;
+    padding-top: 2px;
     border-top: 2px solid @mauve;
 }
 
 #workspaces button {
-    padding: 0 4px;
+    padding: 0 10px;
+    font-weight: bold;
+    color: @mauve;
+}
+
+#workspaces button.empty {
+    color: @overlay0;
 }
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.3);
     color: @rosewater;
-    border-top: 2px solid @rosewater;
 }
 
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background-color: @mauve;
+    color: @crust;
 }
 
 #workspaces button.urgent {
@@ -64,6 +70,7 @@ button:hover {
 #wireplumber,
 #tray,
 #network,
+#language,
 #mode,
 #scratchpad {
   margin-top: 2px;
@@ -101,6 +108,16 @@ button:hover {
 
 #idle_inhibitor.activated {
     color: @red;
+}
+
+#cpu {
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
+}
+
+#language {
+    color: @teal;
+    border-bottom: 2px solid @teal;
 }
 
 #battery {
