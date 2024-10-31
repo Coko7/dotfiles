@@ -5,7 +5,7 @@ function main() {
 
     case $TMUX_WS_TYPE in
         "WORK")
-            firefox -P "Work" -new-tab $link
+            firefox -P "work_main" -new-tab $link
             ;;
         # "PERSONAL") 
             *)
