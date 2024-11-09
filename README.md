@@ -26,7 +26,7 @@ I started out with X server (with AwesomeWM) but recently switched to Wayland (w
 - Application launchers:
     - [Rofi](https://github.com/davatorium/rofi) (on X):
         - [rofi-emoji](https://github.com/Mange/rofi-emoji)
-        - [rofi-calc](https://github.com/svenstaro/rofi-calc))
+        - [rofi-calc](https://github.com/svenstaro/rofi-calc)
     - [Wofi](https://hg.sr.ht/~scoopta/wofi) (on Wayland)
 - Terminals:
     - [Kitty](https://sw.kovidgoyal.net/kitty)
@@ -69,7 +69,9 @@ Anyway, here are the desktop apps I most commonly use:
 - Images
     - Drawing: [Krita](https://krita.org/)
     - Editing: [Gimp](https://www.gimp.org/)
-    - Viewing: [nsxiv](https://github.com/nsxiv/nsxiv)
+    - Viewing:
+        - [nsxiv](https://github.com/nsxiv/nsxiv) (on X)
+        - [vimiv](https://karlch.github.io/vimiv/) (on Wayland)
 - Network:
     - Synchronization: [Syncthing](https://syncthing.net/)
     - VPN: [OpenVPN](https://openvpn.net/)
