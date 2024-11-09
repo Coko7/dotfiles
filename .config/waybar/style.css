@@ -57,6 +57,7 @@ button:hover:not(.active) {
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
+    color: @crust;
 }
 
 #pulseaudio,
