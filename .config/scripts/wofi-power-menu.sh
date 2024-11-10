@@ -2,7 +2,7 @@
 
 function confirm_prompt() {
     prompt=$1 
-    choice=`echo -e "Yes\nNo" | wofi --dmenu --prompt $prompt -W 15% -H 20%`
+    choice=`echo -e "Yes\nNo" | wofi --dmenu --prompt "$prompt" -W 15% -H 20%`
 
     if [ "$choice" != "Yes" ]; then
         return 1
@@ -11,7 +11,7 @@ function confirm_prompt() {
     return 0
 }
 
-pick=`echo -e "󰐥 Shutdown\n󰜉 Reboot\n󰒲 Suspend\n󰍃 Logout\n󰌾 Lock" | wofi --dmenu --prompt "Action:" -i -W 20% -H 25%`
+pick=`echo -e "󰐥 Shutdown\n󰜉 Reboot\n󰒲 Suspend\n󰍃 Logout\n󰌾 Lock" | wofi --dmenu --prompt "Action:" -i -W 5% -H 25%`
 formatted_pick=`echo $pick | awk '{print $2}'`
 
 case $formatted_pick in
@@ -39,6 +39,5 @@ case $formatted_pick in
         ;;
     "Lock")
         loginctl lock-session
-        notify-send "Locking..."
         ;;
 esac
