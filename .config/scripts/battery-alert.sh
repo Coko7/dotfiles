@@ -10,12 +10,14 @@ if [ $? -eq 0 ]; then
 
         notify-send -u critical "System" \
             "Battery: $battery_level%\nYoooo!! PLUG ME NOOOOW!!!" \
-            -i $HOME/Pictures/Memes/y-u-no.jpg
+            -i $HOME/Pictures/Memes/y-u-no.jpg \
+            -h string:x-canonical-private-synchronous:bat-alert
 
     elif [ $battery_level -le 15 ]; then
 
         notify-send -u normal "System" \
             "Battery: $battery_level%\nGetting tired now, plug me soon pls" \
-            -i $HOME/Pictures/System/battery_low.png
+            -i $HOME/Pictures/System/battery_low.png \
+            -h string:x-canonical-private-synchronous:bat-alert
     fi
 fi

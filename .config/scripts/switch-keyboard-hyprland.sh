@@ -10,24 +10,32 @@ function get_main_keyboard() {
     hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .name'
 }
 
+function notif() {
+    local title=$1
+    local body=$2
+    local img="$HOME/Pictures/System/$3"
+    local time=$4
+    notify-send "$title" "$body" -i "$img" -t $time -h string:x-canonical-private-synchronous:sw-kb
+}
+
 KEYBOARD=`get_main_keyboard`
 
 function set_fr_azerty() {
     # ID 1 for FR (see hyprland.conf)
     hyprctl switchxkblayout $KEYBOARD 1 \
-        && notify-send -t 2000 "Keyboard Layout" "AZERTY Baguette" -i "$HOME/Pictures/System/azerty_icon2.png" -r 123
+        && notif "Keyboard Layout" "AZERTY Baguette" "azerty_icon2.png" 2000
 }
 
 function set_us_qwerty() {
     # ID 0 for EN (see hyprland.conf)
     hyprctl switchxkblayout $KEYBOARD 0 \
-        && notify-send -t 2000 "Keyboard Layout" "QWERTY Burger" -i "$HOME/Pictures/System/kb_us_qwerty3.png" -r 123
+        && notif "Keyboard Layout" "QWERTY Burger" "kb_us_qwerty3.png" 2000
 }
 
 function set_us_dvorak() {
     # ID 2 for Dvorak (see hyprland.conf)
     hyprctl switchxkblayout $KEYBOARD 2 \
-        && notify-send -t 2000 "Keyboard Layout" "QWERTY Dvorak" -i "$HOME/Pictures/System/kb_us_dvorak.png" -r 123
+        && notif "Keyboard Layout" "QWERTY Dvorak" "kb_us_dvorak.png" 2000
 }
 
 

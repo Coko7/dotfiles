@@ -2,6 +2,7 @@
 
 function show_notif() {
     local player=$1
+    local id=$2
 
     local output=`playerctl -p $player metadata`
 
@@ -16,10 +17,12 @@ function show_notif() {
         local body="$artist"
     fi
 
-    notify-send -u low "$title" "$body" -i "$art_url"
+    notify-send "$title" "$body" -i "$art_url" -h "string:x-canonical-private-synchronous:cur-media-$id"
 }
 
+id=0
 players=`playerctl -l`
 for player in $players; do
-    show_notif $player
+    ((id++))
+    show_notif $player $id
 done
