@@ -145,7 +145,7 @@ __set_wallpaper_interactive() {
     if [ "$node_type" = "f" ]; then
         preview_cmd="$SCRIPTS/fzf-preview.sh {}"
     else
-        preview_cmd="eza -alF --icons {}"
+        preview_cmd="eza -alF --color=always --icons {}"
     fi
 
     pick=`echo "$results" | fzf --preview $preview_cmd | head -n 1`
