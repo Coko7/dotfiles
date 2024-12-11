@@ -105,6 +105,9 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 # grep
 alias grep='grep --color=auto'
 
+# cal
+alias cal='cal --monday --week'
+
 # dust
 # alias dust='du -sh * | sort -hr'
 
@@ -161,21 +164,22 @@ setwpca() { echo "set-wallpaper-cache: $SET_WP_LAST_PICK" && set-wallpaper $SET_
 setwpid() { __set_wallpaper_interactive 'd' $1; }
 setwpii() { __set_wallpaper_interactive 'f' $1; }
 
-alias mux="$SCRIPTS/tmux/tmux-start-env.sh"
-alias tmuxs="$SCRIPTS/tmux/tmux-sessionizer.sh"
-alias tmuxw="$SCRIPTS/tmux/tmux-windowizer.sh"
+alias mux="$SCRIPTS/tmux/start-env.sh"
+# alias tmuxs="$SCRIPTS/tmux/sessionizer.sh"
+# alias tmuxw="$SCRIPTS/tmux/windowizer.sh"
 
 # Kizaru-warp
 # alias j='kizaru-warp'
 # alias jj='kizaru-warp --awakened'
 
 function chill() {
-    num=$((1 + $RANDOM % 5))
+    num=$((1 + $RANDOM % 6))
     if [ "$num" = "1" ]; then DISPLAY= cacafire; fi
     if [ "$num" = "2" ]; then nyancat; fi
     if [ "$num" = "3" ]; then cmatrix; fi
     if [ "$num" = "4" ]; then $SCRIPTS/pipes.sh; fi
     if [ "$num" = "5" ]; then $SCRIPTS/rick-roll.sh; fi
+    if [ "$num" = "6" ]; then cava; fi
 }
 
 function weather() {
