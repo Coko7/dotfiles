@@ -11,12 +11,12 @@ function confirm_prompt() {
     return 0
 }
 
-pick=`echo -e "󰐥 Shutdown\n󰜉 Reboot\n󰒲 Suspend\n󰍃 Logout\n󰌾 Lock" | wofi --dmenu --prompt "Action:" -i -W 5% -H 25%`
-formatted_pick=`echo $pick | awk '{print $2}'`
+pick=`echo -e "󰐥 Power off\n󰜉 Reboot\n󰒲 Suspend\n󰍃 Logout\n󰌾 Lock\n󰸉 Wallpaper" | wofi --dmenu --prompt "Action:" -i -W 5% -H 25%`
+formatted_pick=`echo $pick | cut -d' ' -f2-`
 
 case $formatted_pick in
 
-    "Shutdown")
+    "Power off")
         confirm_prompt "UNPLUGGING ME???"
         if [ $? -eq 0 ]; then
             systemctl poweroff
@@ -39,5 +39,8 @@ case $formatted_pick in
         ;;
     "Lock")
         loginctl lock-session
+        ;;
+    "Wallpaper")
+        bash $SCRIPTS/wofi-kanumi.sh
         ;;
 esac
