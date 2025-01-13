@@ -11,7 +11,7 @@ function confirm_prompt() {
     return 0
 }
 
-pick=`echo -e "󰐥 Power off\n󰜉 Reboot\n󰒲 Suspend\n󰍃 Logout\n󰌾 Lock\n󰸉 Wallpaper" | wofi --dmenu --prompt "Action:" -i -W 5% -H 25%`
+pick=`echo -e "󰐥 Power off\n󰜉 Reboot\n󰒲 Suspend\n󰍃 Logout\n󰌾 Lock\n󰸉 Wallpaper" | wofi --dmenu --prompt "Action:" -i -W 25% -H 25%`
 formatted_pick=`echo $pick | cut -d' ' -f2-`
 
 case $formatted_pick in
