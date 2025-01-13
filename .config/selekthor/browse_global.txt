@@ -1,4 +1,7 @@
+chat GPT:                           https://chatgpt.com
 git:                                https://github.com/Coko7
+imgflip (meme):                     https://imgflip.com/memegenerator
 monkeytype:                         https://monkeytype.com
 perplexity:                         https://perplexity.ai
+roadmap.sh:                         https://roadmap.sh
 word reference:                     https://www.wordreference.com
