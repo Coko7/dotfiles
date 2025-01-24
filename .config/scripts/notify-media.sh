@@ -16,11 +16,21 @@ function show_notif() {
     local artist=`get_meta "$player" "artist"`
     local art_url=`get_meta "$player" "mpris:artUrl"`
 
+    local media_status=`playerctl -p $player status`
+    case $media_status in
+        Playing) STATUS="";;
+        Paused) STATUS="";;
+        Stopped) STATUS="";;
+        *) ;;
+    esac
+
+    local BODY=""
+
     if [[ -n "$album" ]]; then
-        local body="$album\n$artist"
-    else
-        local body="$artist"
+        BODY="$BODY$album\n"
     fi
+
+    BODY="$BODY$artist"
 
     # image has to be downloaded
     if [[ $art_url == http* ]]; then
@@ -36,8 +46,13 @@ function show_notif() {
         img="$HOME/Pictures/System/music.jpg"
     fi
 
-    notify-send "$title" "$body" -i "$img" -t 2000 -h "string:x-canonical-private-synchronous:cur-media-$notif_id"
+    notify-send "$STATUS $title" "$BODY" -i "$img" -t 2000 -h "string:x-canonical-private-synchronous:cur-media-$notif_id"
 }
+
+if [ -n "$1" ]; then
+    show_notif $1 1
+    exit 0
+fi
 
 id=0
 players=`playerctl -l`
