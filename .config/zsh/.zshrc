@@ -86,7 +86,6 @@ source $CARGO_HOME/env
 # | CUSTOM SCRIPTS |
 # +----------------+
 
-source $XDG_CONFIG_HOME/scripts/set-wallpaper.sh
 source $XDG_CONFIG_HOME/scripts/selekthor.sh
 # source $WORKSPACE/personal/coko7_git/kizaru-warp/kizaru-warp.sh
 

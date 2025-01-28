@@ -37,7 +37,7 @@ if [ "$player_count" -eq 0 ]; then
 fi
 
 if [ "$player_count" -eq 1 ]; then
-    playerctl -p $players play-pause && $SCRIPTS/notify-media.sh
+    playerctl -p $players play-pause && bash $SCRIPTS/notify-media.sh
     exit 0
 fi
 
@@ -78,4 +78,4 @@ if [ -z "$target" ]; then
     exit 1
 fi
 
-playerctl -p $target play-pause && $SCRIPTS/notify-media.sh $target
+playerctl -p $target play-pause && bash $SCRIPTS/notify-media.sh $target

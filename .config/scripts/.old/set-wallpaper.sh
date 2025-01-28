@@ -31,7 +31,15 @@ __set_img_wallp() {
         return 1
     fi
 
-    feh --no-fehbg --bg-fill $file_path
+    echo "ipc = off
+
+    preload = $file_path
+
+	wallpaper = eDP-1,$file_path
+	wallpaper = DP-4,$file_path" > "$XDG_CONFIG_HOME/hypr/hyprpaper.conf"
+
+	hyprpaper &
+    # feh --no-fehbg --bg-fill $file_path
     return 0
 }
 
