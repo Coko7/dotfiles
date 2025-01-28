@@ -1,5 +1,5 @@
 [Default Applications]
-application/pdf=firefox.desktop
+application/pdf=org.pwmt.zathura.desktop
 audio/mpeg=mpv.desktop
 audio/wav=mpv.desktop
 image/gif=vimiv.desktop
@@ -25,7 +25,7 @@ x-scheme-handler/msteams=teams.desktop
 image/jpg=vimiv.desktop
 
 [Added Associations]
-application/pdf=firefox.desktop;brave.desktop;
+application/pdf=org.pwmt.zathura.desktop
 audio/mpeg=mpv.desktop;vlc.desktop;
 audio/wav=mpv.desktop;vlc.desktop;
 image/gif=vimiv.desktop
