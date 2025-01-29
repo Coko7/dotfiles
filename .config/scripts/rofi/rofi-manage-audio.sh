@@ -1,8 +1,19 @@
 #/usr/bin/env bash
 
-pick=`pactl --format=json list sinks | jq -r '.[].description' | rofi -dmenu -p " 󰓃 Default Speaker " -theme-str 'window { width: 1000px; }'`
+DEFAULT_SINK=`pactl get-default-sink`
+sinks=`pactl --format=json list sinks`
 
-if [ -n "$pick" ]; then
-    sink=`pactl --format=json list sinks | jq --arg desc "$pick" -r '.[] | select(.description == $desc) | .name'`
+pick=`echo $sinks | jq -r --arg def_sink "$DEFAULT_SINK" '
+  map(
+    if .name == $def_sink then
+      "  " + .description
+    else
+      "  " + .description
+    end
+  ) | .[]' | rofi -dmenu -p " 󰓃 Speaker " -theme-str 'window { width: 1000px; height: 270px; }'`
+formatted_pick=`echo $pick | cut -d' ' -f2-`
+
+if [ -n "$formatted_pick" ]; then
+    sink=`echo $sinks | jq --arg desc "$formatted_pick" -r '.[] | select(.description == $desc) | .name'`
     pactl set-default-sink $sink
 fi
