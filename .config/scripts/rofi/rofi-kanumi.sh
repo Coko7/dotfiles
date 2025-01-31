@@ -37,7 +37,7 @@ function pick_dir() {
     # set wallpaper for each monitor
     for monitor in $monitor_names; do
         # img=`get_rand_img $wp_dir`
-        img=`kanumi --type image --score 0..1 $wp_dir | shuf | head -n 1`
+        img=`kanumi --type image $wp_dir | shuf | head -n 1`
         swww img -o $monitor $img -t outer
     done
 }
