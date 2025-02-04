@@ -31,6 +31,7 @@ I started out with X server (with AwesomeWM) but recently switched to Wayland (w
 - Terminals:
     - [Kitty](https://sw.kovidgoyal.net/kitty)
     - [Alacritty](https://alacritty.org)
+    - [Ghostty](https://ghostty.org)
 - Text/code editor: [Neovim](https://neovim.io/) (using [kickstart](https://github.com/nvim-lua/kickstart.nvim))
 - Audio:
     - Drivers and interface: [ALSA](https://www.alsa-project.org/)

@@ -6,7 +6,8 @@
 
 export PATH="$HOME/.local/bin:$PATH"
 
-export TERM='kitty'
+# export TERM='kitty'
+export TERM='xterm-ghostty'
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"

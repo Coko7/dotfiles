@@ -1,0 +1,7 @@
+theme = catppuccin-mocha
+
+# Cursor
+cursor-style = block
+shell-integration-features = no-cursor
+
+background-opacity = 0.9
