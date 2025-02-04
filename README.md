@@ -45,48 +45,7 @@ I started out with X server (with AwesomeWM) but recently switched to Wayland (w
 
 ## 🖥️ Desktop applications
 
-<table>
-  <tr>
-    <td>🚨</td>
-    <td>I try to limit myself to only use <a href="https://wikipedia.org/wiki/Free_and_open-source_software">FLOSS</a> software. If you are interested, I recommend you to check the following websites:
-      <ul>
-        <li><a href="https://www.privacytools.io/">Privacy Tools</a></li>
-        <li><a href="https://www.privacyguides.org/">Privacy Guides</a></li>
-        <li><a href="https://thenewoil.org/">The New Oil</a></li>
-      </ul>
-  </tr>
-</table>
-
-Anyway, here are the desktop apps I most commonly use:
-- Browser: [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-- Communication:
-    - Messaging: [Signal](https://www.signal.org/)
-    - Discord client: [Webcord](https://github.com/SpacingBat3/WebCord)
-- File managers:
-    - [yazi](https://github.com/sxyazi/yazi) (terminal-based, previously used [ranger](https://github.com/ranger/ranger))
-    - [Dolphin](https://apps.kde.org/dolphin/)
-    - [Nemo](https://github.com/linuxmint/nemo)
-- Images
-    - Drawing: [Krita](https://krita.org/)
-    - Editing: [Gimp](https://www.gimp.org/)
-    - Viewing:
-        - [nsxiv](https://github.com/nsxiv/nsxiv) (on X)
-        - [vimiv](https://karlch.github.io/vimiv/) (on Wayland)
-- Network:
-    - Synchronization: [Syncthing](https://syncthing.net/)
-    - VPN: [OpenVPN](https://openvpn.net/)
-- Office:
-    - [ONLYOFFICE](https://www.onlyoffice.com/) for my Office suite 
-    - [Joplin](https://joplinapp.org/) for taking notes (uses Markdown, has Vim motions)
-- Screenshots: [Flameshot](https://flameshot.org/)
-- Torrent: [qBittorrent](https://www.qbittorrent.org/)
-- Videos:
-    - Editing: [Kdenlive](https://kdenlive.org/en/)
-    - Viewing: [mpv](https://mpv.io/) and [vlc](https://www.videolan.org/vlc/)
-    - YouTube client: [FreeTube](https://freetubeapp.io/)
-- Wallpaper setters:
-    - [feh](https://feh.finalrewind.org/) (on X)
-    - [swww](https://github.com/LGFae/swww) (on Wayland)
+You can check a detailed list of my preferred apps here: [my-floss/desktop](https://github.com/Coko7/my-floss/blob/main/desktop.md)
 
 ## ✨ Inspiration
 
