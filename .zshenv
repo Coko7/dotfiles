@@ -4,8 +4,6 @@
 # EXPORT ENVIRONMENT VARIABLE #
 ###############################
 
-export PATH="$HOME/.local/bin:$PATH"
-
 # export TERM='kitty'
 export TERM='xterm-ghostty'
 
@@ -13,6 +11,10 @@ export TERM='xterm-ghostty'
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
 export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
+
+# PATH
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$XDG_CONFIG_HOME/local/bin-sh"
 
 # X11
 export XINITRC="$XDG_CONFIG_HOME/X11/.xinitrc"

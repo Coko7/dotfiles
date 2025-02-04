@@ -16,7 +16,7 @@ function browse_thor_work() {
     local global=$XDG_CONFIG_HOME/selekthor/browse_global.txt
     local work=$XDG_CONFIG_HOME/selekthor/browse_work.txt
 
-    pick=`cat $global $work | sort | selekthor $@`
+    pick=`cat $global $work | sort | selekthor.sh $@`
     if [ -z "$pick" ]; then
         return 1
     fi
@@ -28,7 +28,7 @@ function browse_thor_perso() {
     local global=$XDG_CONFIG_HOME/selekthor/browse_global.txt
     local perso=$XDG_CONFIG_HOME/selekthor/browse_perso.txt
 
-    pick=`cat $global $perso | sort | selekthor $@`
+    pick=`cat $global $perso | sort | selekthor.sh $@`
     if [ -z "$pick" ]; then
         return 1
     fi
@@ -40,7 +40,7 @@ function vim_thor_work() {
     local global=$XDG_CONFIG_HOME/selekthor/vim_global.txt
     local work=$XDG_CONFIG_HOME/selekthor/vim_work.txt
 
-    pick=`cat $global $work | sort | selekthor $@`
+    pick=`cat $global $work | sort | selekthor.sh $@`
     if [ -z "$pick" ]; then
         return 1
     fi
@@ -52,7 +52,7 @@ function vim_thor_perso() {
     local global=$XDG_CONFIG_HOME/selekthor/vim_global.txt
     local perso=$XDG_CONFIG_HOME/selekthor/vim_perso.txt
 
-    pick=`cat $global $perso | sort | selekthor $@`
+    pick=`cat $global $perso | sort | selekthor.sh $@`
     if [ -z "$pick" ]; then
         return 1
     fi
