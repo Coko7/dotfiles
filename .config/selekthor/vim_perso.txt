@@ -1,0 +1,2 @@
+todo:                           $PROJ_PERSO/notes/todo-log/todo.md
+backlog:                        $PROJ_PERSO/notes/todo-log/backlog.md
