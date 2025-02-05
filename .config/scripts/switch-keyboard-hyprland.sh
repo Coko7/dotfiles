@@ -15,7 +15,10 @@ function notif() {
     local body=$2
     local img="$HOME/Pictures/System/$3"
     local time=$4
-    notify-send "$title" "$body" -i "$img" -t $time -h string:x-canonical-private-synchronous:sw-kb
+
+    notify-send -u low "$title" "$body" \
+        -i "$img" -t $time \
+        -h string:x-canonical-private-synchronous:sw-kb --transient
 }
 
 KEYBOARD=`get_main_keyboard`

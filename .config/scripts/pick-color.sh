@@ -6,8 +6,8 @@ if [ -n "$color" ]; then
     magick -size 10x10 "xc:$color" $TMP_PATH
     notify-send -u low "Hyprpicker" \
         "Copied $color to clipboard" \
-        -i $TMP_PATH \
-        -h string:x-canonical-private-synchronous:pick-color
+        -i $TMP_PATH -t 2000 \
+        -h string:x-canonical-private-synchronous:pick-color --transient
 
     rm $TMP_PATH
 fi
