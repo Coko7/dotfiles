@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-color=`hyprpicker`
+color=`hyprpicker -a`
 if [ -n "$color" ]; then
     TMP_PATH=`mktemp -t pikolorXXXXX.png`
     magick -size 10x10 "xc:$color" $TMP_PATH
