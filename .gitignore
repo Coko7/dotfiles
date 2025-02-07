@@ -2,8 +2,18 @@
 .config/zsh/.zhistory
 .config/zsh/.zcompdump
 
-# Cache
-.config/cache
+# Cargo
+.config/cargo/
+!.config/cargo/env
+
+# Exclude local/share apart from applications and icons
+.config/local/share/
+!.config/local/share/applications/
+!.config/local/share/icons/
+
+# Cache & tmp
+.config/cache/
+*.tmp
 
 # Log files
 *.log
