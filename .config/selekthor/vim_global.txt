@@ -2,6 +2,7 @@ alacritty:                      $XDG_CONFIG_HOME/alacritty/alacritty.toml
 alias:                          $XDG_CONFIG_HOME/aliases/aliases.sh
 awesome:                        $XDG_CONFIG_HOME/awesome/rc.lua
 awesome theme:                  $XDG_CONFIG_HOME/awesome/theme.lua
+ghostty:                        $XDG_CONFIG_HOME/ghostty/config
 git alias:                      $XDG_CONFIG_HOME/aliases/git-aliases.sh
 hyprland:                       $XDG_CONFIG_HOME/hypr/hyprland.conf
 kitty:                          $XDG_CONFIG_HOME/kitty/kitty.conf
