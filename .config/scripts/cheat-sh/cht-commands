@@ -3,5 +3,6 @@ fd
 find
 fzf
 grep
+jq
 scp
 tar
