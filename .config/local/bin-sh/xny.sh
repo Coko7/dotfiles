@@ -3,7 +3,7 @@
 # The xny_langs.json is a modified copy of: https://github.com/YesSeri/xny-cli/blob/417a25258ee3b8b9a46a05f43f0a355bf94b6815/data.json
 
 BASE_URL="https://learnxinyminutes.com"
-XNY_DATA=`jq '.' ./xny_langs.json`
+XNY_DATA=`jq '.' $XDG_CONFIG_HOME/local/bin-sh/xny_langs.json`
 
 function display_lang_docs() {
     local LANG_CODE=$1
