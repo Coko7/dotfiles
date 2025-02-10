@@ -10,7 +10,7 @@ pick=`echo $sinks | jq -r --arg def_sink "$DEFAULT_SINK" '
     else
       "  " + .description
     end
-  ) | .[]' | rofi -dmenu -p " 󰓃 Speaker " -theme-str 'window { width: 1000px; height: 270px; }'`
+  ) | .[]' | rofi -dmenu -p " 󰓃 Audio source " -i -theme-str 'window { width: 1000px; height: 270px; }'`
 formatted_pick=`echo $pick | cut -d' ' -f2-`
 
 if [ -n "$formatted_pick" ]; then
