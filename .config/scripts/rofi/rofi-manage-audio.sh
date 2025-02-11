@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 DEFAULT_SINK=`pactl get-default-sink`
 sinks=`pactl --format=json list sinks`
