@@ -1,17 +1,27 @@
 #!/bin/bash
 
-# Shorthand for fzf in git repo
-alias gfzf='git ls-files | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"'
-
-function gweb() {
-    url=`git remote get-url origin | sed 's|git@\(.*\):|https://\1/|'`
-    $SCRIPTS/web-open.sh $url
+function __ensure_git_repo() {
+    if ! git rev-parse --is-inside-work-tree &> /dev/null; then
+        echo "fatal: not a git repository"
+        return 1
+    fi
 }
 
-alias lg="lazygit"
+# Shorthand for fzf in git repo
+function gfzf() {
+    __ensure_git_repo || return 1
+    git ls-files | fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"
+}
+
+function gweb() {
+    __ensure_git_repo || return 1
+    local repo_url=`git remote get-url origin | sed 's|git@\(.*\):|https://\1/|'`
+    $SCRIPTS/web-open.sh $repo_url
+}
 
 # Open issue page based on current branch name
 function gissue() {
+    __ensure_git_repo || return 1
     if [ -z "$ISSUES_BASE_URL" ]; then
         echo "gissue: env var \`ISSUES_BASE_URL\` must be set" >&2
         return 1
@@ -21,10 +31,16 @@ function gissue() {
     xop "$ISSUES_BASE_URL/$issue"
 }
 
-alias gfls="$HOME/.local/bin/git-ls-files-meta.sh"
+function gfls() {
+    __ensure_git_repo || return 1
+    $SCRIPTS/git-ls-files-meta.sh
+}
 
 # Get summary of all authors for a given file and sort by most commits made
-function gknow() { git log --follow --pretty=format:'%ae' -- $1 | sort | uniq -c | sort -nr; }
+function gknow() {
+    __ensure_git_repo || return 1
+    git log --follow --pretty=format:'%ae' -- $1 | sort | uniq -c | sort -nr; 
+}
 
 # Pull
 alias gpl='git pull'
@@ -60,10 +76,18 @@ alias gpokindforce='git push origin --force-with-lease'
 # Grep
 alias gg='git grep -n'
 alias gu='git grep -n --no-index'
-function ggv() { git grep -n $1 | grep -v $2 | grep -n --color=always $1 | less; }
-function grasp() { grep -inr "$1" --exclude-dir={obj,bin} --exclude=\*.min.\*; }
+function ggv() {
+    __ensure_git_repo || return 1
+    git grep -n $1 | grep -v $2 | grep -n --color=always $1 | less; 
+}
+
+function grasp() {
+    __ensure_git_repo || return 1
+    grep -inr "$1" --exclude-dir={obj,bin} --exclude=\*.min.\*; 
+}
 
 function ggf() {
+    __ensure_git_repo || return 1
     local pattern=$1
     local matches=`git grep -l $pattern`
     if [ -z $matches ]; then
@@ -92,6 +116,7 @@ alias gb='git branch'
 alias gbl='git branch --list'
 alias gco='git checkout'
 function gcof() {
+    __ensure_git_repo || return 1
     local branches=`git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/`
 
     # local branch=`echo "$branches" | fzf --ansi --preview="git log -n 10 --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --color=always {}"`
@@ -104,6 +129,7 @@ function gcof() {
 }
 alias gcb='git checkout -b'
 function gbdf() {
+    __ensure_git_repo || return 1
     local branches=`git for-each-ref --sort=-committerdate --format="%(refname:short)" refs/heads/`
 
     # local branch=`echo "$branches" | fzf --ansi --preview="git log -n 10 --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --color=always {}"`
@@ -137,13 +163,32 @@ alias glo='git log --pretty=format:"%C(yellow)%h%Cblue%>(12)%ad %Cgreen%<(7)%aN%
 alias glgp="git log --graph --abbrev-commit --decorate --format=format:'%C(bold green)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold yellow)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 
 # Stash
-alias gstash-fzf="git stash list | fzf --preview '$SCRIPTS/git-stash-preview.sh {}'"
+function gstash-fzf() {
+    __ensure_git_repo || return 1
+    git stash list | fzf --preview "$SCRIPTS/git-stash-preview.sh {}"
+}
+
 alias gsl='git stash list'
 alias gspm='git stash push -m'
 alias gspum='git stash push -um'
 alias gspop='git stash pop'
-alias gsapp='git stash apply $(gstash-fzf)'
-alias gssh='git stash show -p $(gstash-fzf)'
+function gsapp() {
+    __ensure_git_repo || return 1
+    local STASH=`gstash-fzf | cut -d':' -f1`
+    if [ -z "$STASH" ]; then
+        return 1
+    fi
+    git stash apply "$STASH"
+}
+
+function gssh() {
+    __ensure_git_repo || return 1
+    local STASH=`gstash-fzf | cut -d':' -f1`
+    if [ -z "$STASH" ]; then
+        return 1
+    fi
+    git stash show -p "$STASH"
+}
 
 # Rebase
 alias grb='git rebase'
