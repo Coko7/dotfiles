@@ -4,7 +4,10 @@ awesome:                        $XDG_CONFIG_HOME/awesome/rc.lua
 awesome theme:                  $XDG_CONFIG_HOME/awesome/theme.lua
 ghostty:                        $XDG_CONFIG_HOME/ghostty/config
 git alias:                      $XDG_CONFIG_HOME/aliases/git-aliases.sh
-hyprland:                       $XDG_CONFIG_HOME/hypr/hyprland.conf
+hyprland (keybindings):         $XDG_CONFIG_HOME/hypr/keybindings.conf
+hyprland (main):                $XDG_CONFIG_HOME/hypr/hyprland.conf
+hyprland (monitors):            $XDG_CONFIG_HOME/hypr/monitors.conf
+hyprland (windowrules):         $XDG_CONFIG_HOME/hypr/window_rules.conf
 kitty:                          $XDG_CONFIG_HOME/kitty/kitty.conf
 picom:                          $XDG_CONFIG_HOME/picom/picom.conf
 rofi:                           $XDG_CONFIG_HOME/rofi/config.rasi
