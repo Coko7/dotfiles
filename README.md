@@ -4,6 +4,8 @@ All my Linux configuration files. I use this to configure my entire system.
 
 I started out with X server (with AwesomeWM) but recently switched to Wayland (with Hyprland) to try it out.
 
+![screenshot](./assets/screenshot.png)
+
 ## 🐧 System setup
 
 - Operating system: [Arch Linux](https://archlinux.org/)
