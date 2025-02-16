@@ -2,11 +2,15 @@
 {
     // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 50, // Waybar height (to be removed for auto height)
+    "margin-top": 20,
+    "margin-right": 20,
+    "margin-left": 20,
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/icon",
         "hyprland/workspaces",
     ],
     "modules-center": [],
@@ -28,10 +32,17 @@
         "clock",
         "custom/power"
     ],
+    "custom/icon": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "Power menu",
+        "on-click": "$SCRIPTS/rofi/rofi-power-menu.sh"
+    },
     // Modules configuration
     "hyprland/workspaces": {
         "all-outputs": false,
         "format": "{icon}",
+        "on-click": "",
         "persistent-workspaces" : {
             "1": [],
             "2": [],
@@ -103,16 +114,18 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
+            "activated": " ",
+            "deactivated": " "
+        },
+        "tooltip-format-activated": "Anti-idle ON",
+        "tooltip-format-deactivated": "Anti-idle OFF"
     },
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
-        "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+        "format": "{:%H󰇙%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -137,10 +150,11 @@
     //     "format-icons": ["", "", "", "", "", "", "", "", ""]
     // },
     "hyprland/language": {
-        "format": "  {}",
+        "format": "<span size='13000' foreground='#cba6f7'> </span> {}",
         "format-en": "US",
         "format-en-dvorak": "DVO",
-        "format-fr": "FR"
+        "format-fr": "FR",
+        "on-click": "$SCRIPTS/switch-keyboard-hyprland.sh",
     },
     "battery": {
         "states": {
@@ -148,10 +162,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format": "<span size='13000' foreground='#cba6f7'>{icon}</span> {capacity}%",
+        "format-full": "<span size='13000' foreground='#cba6f7'>{icon}</span> {capacity}%",
+        "format-charging": "<span size='13000' foreground='#cba6f7'></icon> {capacity}%",
+        "format-plugged": "<span size='13000' foreground='#cba6f7'></span> {capacity}%",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -161,29 +175,30 @@
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
+        "format-wifi": "<span size='13000' foreground='#cba6f7'> </span> {essid}",
         // "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}    {volume}%",
+        "format": "<span size='13000' foreground='#cba6f7'>{icon}</span>  {volume}%",
         // "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -212,17 +227,5 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
     }
 }

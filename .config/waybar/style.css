@@ -1,18 +1,21 @@
 @import "mocha.css"; 
 
 * {
-    font-family: "JetBrainsMono NF Mono Bold";
-    font-size: 16px;
+    /* font-family: "JetBrainsMono NF Mono Bold"; */
+    font-family: "Hack Nerd Font";
+    font-size: 18px;
     min-height: 0;
 }
 
 window#waybar {
+    border-radius: 10px;
     background: transparent;
     background-color: @crust;
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
+    border: 2px solid @mauve;
+    /* border: 1px solid @overlay1; */
 }
 
 #window {
@@ -30,14 +33,22 @@ button {
 button:hover:not(.active) {
     background: inherit;
     color: @mauve;
-    padding-top: 2px;
-    border-top: 2px solid @mauve;
+    background-color: @blue;
+    /* padding-top: 2px; */
+    /* border-top: 2px solid @mauve; */
+}
+
+
+#workspaces button:hover:not(.active) {
+    color: @white;
+    background-color: @blue;
+    /* padding-top: 2px; */
+    /* border-top: 2px solid @mauve; */
 }
 
 #workspaces button {
-    padding: 0 10px;
-    font-weight: bold;
-    color: @mauve;
+    min-width: 30px;
+    color: @white;
 }
 
 #workspaces button.empty {
@@ -74,56 +85,77 @@ button:hover:not(.active) {
 #language,
 #mode,
 #scratchpad {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    transition-property: color;
+    transition-duration: 0.1s;
+}
+
+#pulseaudio:hover,
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#wireplumber:hover,
+#tray:hover,
+#network:hover,
+#language:hover,
+#mode:hover,
+#scratchpad:hover {
+    color: @blue;
 }
 
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
+    color: @blue;
+    font-size: 25px;
+    padding: 0 20px;
+    border-left: 2px solid @mauve;
 }
 
 #clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
+    color: @white;
 }
 
 #pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+    color: @white;
 }
 
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    color: @white;
 }
 
 #idle_inhibitor {
-    margin-right: 12px;
-    color: #7cb342;
+    font-size: 20px;
+    min-width: 50px;
+    color: @overlay0;
+    border-left: 2px solid @mauve;
+    border-right: 2px solid @mauve;
+    transition-property: color, background-color;
+    transition-duration: 0.1s;
 }
 
 #idle_inhibitor.activated {
-    color: @red;
+    color: @crust;
+    background-color: @mauve;
 }
 
 #cpu {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
+    color: @white;
 }
 
 #language {
-    color: @teal;
-    border-bottom: 2px solid @teal;
+    color: @white;
 }
 
 #battery {
-    color: @green;
-    border-bottom: 2px solid @green;
+    color: @white;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -134,6 +166,20 @@ button:hover:not(.active) {
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right>widget:last-child>#workspaces {
     margin-right: 0;
+}
+
+#custom-icon {
+    color: @blue;
+    font-size: 30px;
+    padding: 0 30px;
+    padding-right: 40px;
+    transition-property: color, background-color, border-radius;
+    transition-duration: 0.2s;
+}
+
+#custom-icon:hover {
+    color: @red;
+    border-radius: 10px 0 0 10px;
 }
 
 #custom-vpn {
