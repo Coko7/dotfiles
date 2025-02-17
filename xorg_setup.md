@@ -1,0 +1,27 @@
+# 🇽 X.Org Server system setup
+
+- Operating system: [Arch Linux](https://archlinux.org/)
+- Display server: [X.Org](https://www.x.org/)
+- Window manager: [AwesomeWM](https://awesomewm.org/)
+- Compositor: [picom](https://github.com/yshui/picom)
+- System/status bar: AwesomeWM widgets
+- Notification daemon: [naughty](https://awesomewm.org/doc/api/libraries/naughty.html) (built into AwesomeWM)
+- Shell: [Zsh](https://www.zsh.org/) (with [Starship](https://starship.rs/) for my prompt)
+- Application launcher: [Rofi](https://github.com/davatorium/rofi)
+    - [rofi-emoji](https://github.com/Mange/rofi-emoji)
+    - [rofi-calc](https://github.com/svenstaro/rofi-calc)
+- Terminals:
+    - [Kitty](https://sw.kovidgoyal.net/kitty)
+    - [Alacritty](https://alacritty.org)
+    - [Ghostty](https://ghostty.org)
+- Text/code editor: [Neovim](https://neovim.io/) (using [kickstart](https://github.com/nvim-lua/kickstart.nvim))
+- Audio:
+    - Drivers and interface: [ALSA](https://www.alsa-project.org/)
+    - Sound server: [PipeWire](https://pipewire.org/)
+    - GUI apps:
+        - [PulseAudio Volume Control](https://freedesktop.org/software/pulseaudio/pavucontrol/) for simple audio control
+        - ~~[QjackCtl](https://qjackctl.sourceforge.io/) for advanced audio stuff~~
+- Theming:
+    - [Catpuccin](https://github.com/catppuccin/catppuccin) Mocha for my color scheme (I also use [Rigel](https://github.com/Rigellute/rigel) sometimes)
+    - [LXAppearance](https://github.com/lxde/lxappearance) to configure my GTK theme
+    - [Qt5ct](https://github.com/desktop-app/qt5ct) for apps that use QT toolkit (KDE apps)

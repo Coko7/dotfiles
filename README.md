@@ -1,35 +1,23 @@
 # .dotfiles
 
-All my Linux configuration files. I use this to configure my entire system.
-
-I started out with X server (with AwesomeWM) but recently switched to Wayland (with Hyprland) to try it out.
+All of my Linux configuration files.
 
 ![screenshot](./assets/screenshot.png)
 
 ## 🐧 System setup
 
 - Operating system: [Arch Linux](https://archlinux.org/)
-- Display servers:
-    - [X](https://www.x.org/), *or Xorg, or X11 (call it what you want)*
-    - [Wayland](https://wayland.freedesktop.org/)
-- Window managers:
-    - [AwesomeWM](https://awesomewm.org/) (on X)
-    - [Hyprland](https://hyprland.org/) (on Wayland)
-- Compositors: 
-    - [picom](https://github.com/yshui/picom) (on X)
-    - [Hyprland](https://hyprland.org/) *(Wayland window managers are also compositors)*
-- System/status bars:
-    - AwesomeWM widgets (on X)
-    - [Waybar](https://github.com/Alexays/Waybar) (on Wayland)
-- Notification daemons:
-    - [naughty](https://awesomewm.org/doc/api/libraries/naughty.html) (built into AwesomeWM, on X)
-    - [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter) (on Wayland)
+- Display server: [Wayland](https://wayland.freedesktop.org/)
+- Window manager: [Hyprland](https://hyprland.org/)
+- Compositor: [Hyprland](https://hyprland.org/) *(Wayland window managers are also compositors)*
+- System/status bar: [Waybar](https://github.com/Alexays/Waybar)
+- Notification daemon: [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter)
 - Shell: [Zsh](https://www.zsh.org/) (with [Starship](https://starship.rs/) for my prompt)
-- Application launchers:
-    - [Rofi](https://github.com/davatorium/rofi) (on X):
+- Application launcher:
+    - [rofi-wayland](https://github.com/lbonn/rofi) (fork of [rofi](https://github.com/davatorium/rofi), compatible with Wayland):
         - [rofi-emoji](https://github.com/Mange/rofi-emoji)
         - [rofi-calc](https://github.com/svenstaro/rofi-calc)
-    - [Wofi](https://hg.sr.ht/~scoopta/wofi) (on Wayland)
+    - ~~[Wofi](https://hg.sr.ht/~scoopta/wofi)~~
 - Terminals:
     - [Kitty](https://sw.kovidgoyal.net/kitty)
     - [Alacritty](https://alacritty.org)
@@ -38,13 +26,16 @@ I started out with X server (with AwesomeWM) but recently switched to Wayland (w
 - Audio:
     - Drivers and interface: [ALSA](https://www.alsa-project.org/)
     - Sound server: [PipeWire](https://pipewire.org/)
-    - GUI apps:
-        - [PulseAudio Volume Control](https://freedesktop.org/software/pulseaudio/pavucontrol/) for simple audio control
-        - ~~[QjackCtl](https://qjackctl.sourceforge.io/) for advanced audio stuff~~
+    - GUI apps: [PulseAudio Volume Control](https://freedesktop.org/software/pulseaudio/pavucontrol/) for simple audio control
 - Theming:
     - [Catpuccin](https://github.com/catppuccin/catppuccin) Mocha for my color scheme (I also use [Rigel](https://github.com/Rigellute/rigel) sometimes)
     - [LXAppearance](https://github.com/lxde/lxappearance) to configure my GTK theme
     - [Qt5ct](https://github.com/desktop-app/qt5ct) for apps that use QT toolkit (KDE apps)
+
+## 🇽 X.Org Server system setup
+
+Before migrating to Wayland, I was using an X-server based config.
+If you are curious, you can check it out [here](./xorg_setup.md).
 
 ## 🖥️ Desktop applications
 
