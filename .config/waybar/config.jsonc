@@ -19,14 +19,15 @@
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
+        "custom/vpn",
         "network",
         // "power-profiles-daemon",
         // "cpu",
         // "memory",
-        // "temperature",
         // "backlight",
         // "keyboard-state",
         "hyprland/language",
+        // "temperature",
         "battery",
         // "battery#bat2",
         "clock",
@@ -127,7 +128,7 @@
     "clock": {
         "format": "{:%H󰇙%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%a %d, %b}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -140,9 +141,10 @@
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-critical": "<span size='15000' foreground='#f38ba8'>󰈸</span> {temperatureC}°C",
+        "format": "<span size='13000' foreground='#cba6f7'>{icon}</span> {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "on-click": "ghostty --gtk-single-instance=true -e btop"
     },
     // "backlight": {
     //     // "device": "acpi_video1",
@@ -215,6 +217,12 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/vpn": {
+        "format": "<span size='16000' foreground='#cba6f7'>󰖂</span>  {}",
+        "exec": "$SCRIPTS/waybar-vpn-check.sh",
+        "return-type": "json",
+        "interval": 5
     },
     "custom/media": {
         "format": "{icon} {text}",

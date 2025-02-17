@@ -41,14 +41,14 @@ button:hover:not(.active) {
 
 #workspaces button:hover:not(.active) {
     color: @white;
-    background-color: @blue;
+    background-color: rgba(137, 180, 250, 0.5);
     /* padding-top: 2px; */
     /* border-top: 2px solid @mauve; */
 }
 
 #workspaces button {
     min-width: 30px;
-    color: @white;
+    color: @mauve;
 }
 
 #workspaces button.empty {
@@ -82,6 +82,7 @@ button:hover:not(.active) {
 #wireplumber,
 #tray,
 #network,
+#custom-vpn,
 #language,
 #mode,
 #scratchpad {
@@ -93,6 +94,7 @@ button:hover:not(.active) {
     padding-right: 4px;
     transition-property: color;
     transition-duration: 0.1s;
+    color: @white;
 }
 
 #pulseaudio:hover,
@@ -106,6 +108,7 @@ button:hover:not(.active) {
 #wireplumber:hover,
 #tray:hover,
 #network:hover,
+#custom-vpn:hover,
 #language:hover,
 #mode:hover,
 #scratchpad:hover {
@@ -114,20 +117,11 @@ button:hover:not(.active) {
 
 #clock {
     color: @blue;
-    font-size: 25px;
     padding: 0 20px;
     border-left: 2px solid @mauve;
 }
 
 #clock.date {
-    color: @white;
-}
-
-#pulseaudio {
-    color: @white;
-}
-
-#network {
     color: @white;
 }
 
@@ -144,18 +138,6 @@ button:hover:not(.active) {
 #idle_inhibitor.activated {
     color: @crust;
     background-color: @mauve;
-}
-
-#cpu {
-    color: @white;
-}
-
-#language {
-    color: @white;
-}
-
-#battery {
-    color: @white;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -179,12 +161,17 @@ button:hover:not(.active) {
 
 #custom-icon:hover {
     color: @red;
-    border-radius: 10px 0 0 10px;
+    /* border-radius: 10px 0 0 10px; */
 }
 
-#custom-vpn {
-    color: @lavender;
-    border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
+#temperature.critical {
+    color: @red;
+}
+
+#custom-vpn.inactive {
+    color: @overlay0;
+}
+
+#custom-vpn.active {
+    color: @green;
 }
