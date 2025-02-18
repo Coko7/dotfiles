@@ -46,7 +46,7 @@ function show_notif() {
         img="$HOME/Pictures/System/music.jpg"
     fi
 
-    notify-send -u low "$STATUS $title" "$BODY" \
+    notify-send -u low "[ $STATUS ] $title" "$BODY" \
         -i "$img" -t 2000 \
         -h "string:x-canonical-private-synchronous:cur-media-$notif_id" --transient
 }

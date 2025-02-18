@@ -6,14 +6,14 @@ acpi -b | grep -Poq 'Discharging'
 if [ $? -eq 0 ]; then
     battery_level=`cat /sys/class/power_supply/BAT1/capacity`
 
-    if [ $battery_level -le 5 ]; then
+    if [ $battery_level -le 15 ]; then
 
         notify-send -u critical "System" \
             "Battery: $battery_level%\nYoooo!! PLUG ME NOOOOW!!!" \
             -i $HOME/Pictures/Memes/y-u-no.jpg \
             -h string:x-canonical-private-synchronous:bat-alert
 
-    elif [ $battery_level -le 15 ]; then
+    elif [ $battery_level -le 30 ]; then
 
         notify-send -u normal "System" \
             "Battery: $battery_level%\nGetting tired now, plug me soon pls" \

@@ -36,6 +36,8 @@ if [ -n "$wg_interface" ]; then
     notify-send -u normal "VPN" "Disconnected" \
         -i "$HOME/Pictures/System/unlocked.png" -t 3000 \
         -h string:x-canonical-private-synchronous:vpn-notif --transient
+
+    pkill -RTMIN+8 waybar
 else
     # not connected
     pretty $GRAY "󰦜 Active connection: None"
@@ -62,4 +64,6 @@ else
     notify-send -u normal "VPN" "Connected to: $interface" \
         -i "$HOME/Pictures/System/locked.png" -t 3000 \
         -h string:x-canonical-private-synchronous:vpn-notif --transient
+
+    pkill -RTMIN+8 waybar
 fi

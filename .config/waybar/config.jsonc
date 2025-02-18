@@ -18,20 +18,20 @@
         "tray",
         "mpd",
         "idle_inhibitor",
-        "pulseaudio",
         "custom/vpn",
+        "pulseaudio",
         "network",
-        // "power-profiles-daemon",
         // "cpu",
         // "memory",
         // "backlight",
         // "keyboard-state",
-        "hyprland/language",
+        "custom/language",
         // "temperature",
+        "power-profiles-daemon",
         "battery",
         // "battery#bat2",
-        "clock",
-        "custom/power"
+        "clock"
+        // "custom/power"
     ],
     "custom/icon": {
         "format": "",
@@ -115,11 +115,11 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+            "activated": "",
+            "deactivated": ""
         },
-        "tooltip-format-activated": "Anti-idle ON",
-        "tooltip-format-deactivated": "Anti-idle OFF"
+        "tooltip-format-activated": "Anti-idle: ON",
+        "tooltip-format-deactivated": "Anti-idle: OFF"
     },
     "tray": {
         // "icon-size": 21,
@@ -151,12 +151,21 @@
     //     "format": "{percent}% {icon}",
     //     "format-icons": ["", "", "", "", "", "", "", "", ""]
     // },
-    "hyprland/language": {
-        "format": "<span size='13000' foreground='#cba6f7'> </span> {}",
-        "format-en": "US",
-        "format-en-dvorak": "DVO",
-        "format-fr": "FR",
-        "on-click": "$SCRIPTS/switch-keyboard-hyprland.sh",
+    // "hyprland/language": {
+    //     "format": "{}",
+    //     "format-en": "US",
+    //     "format-en-dvorak": "DVO",
+    //     "format-fr": "FR",
+    //     "on-click": "$SCRIPTS/switch-keyboard-hyprland.sh",
+    // },
+    "custom/language": {
+        "format": "{}",
+        "on-click": "$SCRIPTS/rofi/rofi-kb-switch.sh",
+        "exec": "$SCRIPTS/waybar/waybar-lang-select.sh",
+        "return-type": "json",
+        "tooltip": true,
+        "signal": 8,
+        "interval": "once"
     },
     "battery": {
         "states": {
@@ -164,13 +173,15 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "<span size='13000' foreground='#cba6f7'>{icon}</span> {capacity}%",
-        "format-full": "<span size='13000' foreground='#cba6f7'>{icon}</span> {capacity}%",
-        "format-charging": "<span size='13000' foreground='#cba6f7'></icon> {capacity}%",
-        "format-plugged": "<span size='13000' foreground='#cba6f7'></span> {capacity}%",
+        "format": "{icon}",
+        "format-full": "{icon} ",
+        "format-charging": "{icon} ",
+        "format-plugged": "",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
+        "tooltip": true,
+        "tooltip-format-plugged": "Plugged: {capacity}%",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
@@ -178,29 +189,31 @@
     },
     "power-profiles-daemon": {
         "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "format-icons": {
             "default": "",
             "performance": "",
-            "balanced": "",
+            "balanced": " ",
             "power-saver": ""
         }
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "<span size='13000' foreground='#cba6f7'> </span> {essid}",
+        "format-wifi": " ",
         // "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "nm-connection-editor"
+        "on-click": "nm-connection-editor",
+        "tooltip": true,
+        "tooltip-format-wifi": "Wi-Fi: {essid}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "<span size='13000' foreground='#cba6f7'>{icon}</span>  {volume}%",
+        "format": "{icon}",
         // "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -214,15 +227,20 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", " ", " "]
         },
+        "tooltip": true,
+        "tooltip-format": "{desc}\nVolume: {volume}%",
         "on-click": "pavucontrol"
     },
     "custom/vpn": {
-        "format": "<span size='16000' foreground='#cba6f7'>󰖂</span>  {}",
-        "exec": "$SCRIPTS/waybar-vpn-check.sh",
+        "format": "",
+        "exec": "$SCRIPTS/waybar/waybar-vpn-check.sh",
         "return-type": "json",
-        "interval": 5
+        "tooltip": true,
+        "tooltip-format": "VPN: {}",
+        "signal": 8,
+        "interval": "once"
     },
     "custom/media": {
         "format": "{icon} {text}",

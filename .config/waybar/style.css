@@ -1,8 +1,7 @@
 @import "mocha.css"; 
 
 * {
-    /* font-family: "JetBrainsMono NF Mono Bold"; */
-    font-family: "Hack Nerd Font";
+    font-family: "JetBrainsMono NF Mono Bold";
     font-size: 18px;
     min-height: 0;
 }
@@ -72,7 +71,6 @@ button:hover:not(.active) {
 }
 
 #pulseaudio,
-#clock,
 #battery,
 #cpu,
 #memory,
@@ -81,24 +79,30 @@ button:hover:not(.active) {
 #backlight,
 #wireplumber,
 #tray,
+#idle_inhibitor,
 #network,
 #custom-vpn,
-#language,
+#custom-language,
 #mode,
+#power-profiles-daemon,
 #scratchpad {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-left: 4px;
-    margin-right: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
+    font-family: "Hack Nerd Font";
+    min-width: 30px;
     transition-property: color;
     transition-duration: 0.1s;
     color: @white;
 }
 
+#custom-vpn {
+    padding-right: 4px;
+}
+
+#tray {
+    border-right: 2px solid @mauve;
+    padding-right: 10px;
+}
+
 #pulseaudio:hover,
-#clock:hover,
 #battery:hover,
 #cpu:hover,
 #memory:hover,
@@ -107,37 +111,50 @@ button:hover:not(.active) {
 #backlight:hover,
 #wireplumber:hover,
 #tray:hover,
+#idle_inhibitor:hover,
 #network:hover,
 #custom-vpn:hover,
-#language:hover,
+#custom-language:hover,
 #mode:hover,
+#power-profiles-daemon:hover,
 #scratchpad:hover {
-    color: @blue;
+    color: @mauve;
+}
+
+#battery.warning {
+    color: @peach;
+}
+
+#battery.critical {
+    color: @red;
 }
 
 #clock {
+    font-family: "Hack Nerd Font";
+    font-size: 20px;
     color: @blue;
     padding: 0 20px;
     border-left: 2px solid @mauve;
 }
 
-#clock.date {
+#idle_inhibitor {
+    color: @overlay0;
+    /* padding-right: 20px; */
+    /* border-right: 2px solid @mauve; */
+    transition-property: color, background-color;
+    transition-duration: 0.1s;
+    margin-left: 0;
+    padding-right: 1px;
+}
+
+#idle_inhibitor:hover {
     color: @white;
 }
 
-#idle_inhibitor {
-    font-size: 20px;
-    min-width: 50px;
-    color: @overlay0;
-    border-left: 2px solid @mauve;
-    border-right: 2px solid @mauve;
-    transition-property: color, background-color;
-    transition-duration: 0.1s;
-}
-
 #idle_inhibitor.activated {
-    color: @crust;
-    background-color: @mauve;
+    margin-left: 1px;
+    padding-right: 0;
+    color: @red;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -160,7 +177,7 @@ button:hover:not(.active) {
 }
 
 #custom-icon:hover {
-    color: @red;
+    color: @white;
     /* border-radius: 10px 0 0 10px; */
 }
 
