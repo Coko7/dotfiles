@@ -32,6 +32,12 @@ All of my Linux configuration files.
     - [LXAppearance](https://github.com/lxde/lxappearance) to configure my GTK theme
     - [Qt5ct](https://github.com/desktop-app/qt5ct) for apps that use QT toolkit (KDE apps)
 
+## 🚀 Custom scripts
+
+To have a Linux experience customized to my liking, I rely on a lot of homemade scripts. If you are curious about them, you can take a look there:
+- [.config/scripts/](./.config/scripts): scripts intended to be used by other scripts or linked to keybinds
+- [.config/local/bin-sh/](./.config/local/bin-sh): custom bash scripts that I intend to invoke directly from the command line
+
 ## 🇽 X.Org Server system setup
 
 Before migrating to Wayland, I was using an X-server based config.
