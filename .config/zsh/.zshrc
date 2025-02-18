@@ -2,6 +2,51 @@
 
 fpath=($XDG_CONFIG_HOME/zsh/plugins $fpath)
 
+# +------------------------+
+# | TMUX ENVIRONMENT SETUP |
+# +------------------------+
+
+if [ "$TMUX_WS_TYPE" = "PERSO" ]; then # Perso profile
+
+    # zsh history
+    export HISTFILE="$ZDOTDIR/history/personal/zhistory"
+
+    # setup zoxide
+    export _ZO_DATA_DIR="$XDG_DATA_HOME/zoxide/perso"
+
+    export _ZO_EXCLUDE_DIRS="$_ZO_EXCLUDE_DIRS:$PROJ_WORK"
+    export _ZO_EXCLUDE_DIRS="$_ZO_EXCLUDE_DIRS:$HOME/Downloads/Work"
+    export _ZO_EXCLUDE_DIRS="$_ZO_EXCLUDE_DIRS:$HOME/Pictures/Work"
+
+    # setup starship
+    export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship-perso.toml"
+
+elif [ "$TMUX_WS_TYPE" = "WORK" ]; then # Work profile
+
+    # zsh history
+    export HISTFILE="$ZDOTDIR/history/work/zhistory"
+
+    # setup zoxide
+    export _ZO_DATA_DIR="$XDG_DATA_HOME/zoxide/work"
+
+    export _ZO_EXCLUDE_DIRS="$_ZO_EXCLUDE_DIRS:$PROJ_PERSO"
+    export _ZO_EXCLUDE_DIRS="$_ZO_EXCLUDE_DIRS:$HOME/Downloads/Personal"
+
+    # setup starship
+    export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship-work.toml"
+
+else # Default: unknown tmux env OR not using tmux
+
+    # zsh history
+    export HISTFILE="$ZDOTDIR/history/zhistory"
+
+    # setup zoxide
+    export _ZO_DATA_DIR="$XDG_DATA_HOME/zoxide"
+
+    # setup starship
+    export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+fi
+
 # +------------+
 # | NAVIGATION |
 # +------------+
@@ -95,7 +140,12 @@ source $CARGO_HOME/env
 
 #source $ZDOTDIR/spaceship/spaceship.zsh
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
+
+# +--------+
+# | ZOXIDE |
+# +--------+
+
+eval "$(zoxide init bash)"
 
 # Flexing Arch
 fastfetch
