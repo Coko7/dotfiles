@@ -21,13 +21,6 @@ alias cbi='wl-copy'                             # Wayland only: copy IN
 # alias cbo='xclip -o -selection clipboard'     # X11 only: copy OUT
 alias cbo='wl-paste'                            # Wayland only: copy OUT
 
-# +----------+
-# | KEYBOARD |
-# +----------+
-
-alias kbs="$SCRIPTS/switch-keyboard-hyprland.sh"    # Hyprland
-# alias kbs="$SCRIPTS/switch-keyboard-x11.sh"       # X11
-
 # +-----------------+
 # | PACMAN COMMANDS |
 # +-----------------+
@@ -145,13 +138,13 @@ alias mux="$SCRIPTS/tmux/start-env.sh"
 # alias jj='kizaru-warp --awakened'
 
 function chill() {
-    num=$((1 + $RANDOM % 6))
+    num=$((1 + $RANDOM % 5))
     if [ "$num" = "1" ]; then DISPLAY= cacafire; fi
     if [ "$num" = "2" ]; then nyancat; fi
     if [ "$num" = "3" ]; then cmatrix; fi
     if [ "$num" = "4" ]; then $SCRIPTS/pipes.sh; fi
     if [ "$num" = "5" ]; then $SCRIPTS/rick-roll.sh; fi
-    if [ "$num" = "6" ]; then cava; fi
+    # if [ "$num" = "6" ]; then cava; fi
 }
 
 function weather() {
