@@ -33,7 +33,7 @@ function tmux-start-env() {
     pick=`echo $spaces | tr ',' '\n' | fzf $opts --prompt="Pick env > "`
 
     case $pick in
-        "Personal") __start_tmux_env "Perso-Mux" "PERSO" "$PROJ_PERSO/notes/todo-log" ;;
+        "Personal") __start_tmux_env "Perso-Mux" "PERSO" "$PROJ_PERSO/Notes/todo-log" ;;
         "Work") __start_tmux_env "Work-Mux" "WORK" "$PROJ_WORK/Signifikant/notes/work-log" ;;
         *) return 1 ;;
     esac
