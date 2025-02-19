@@ -138,13 +138,13 @@ alias mux="$SCRIPTS/tmux/start-env.sh"
 # alias jj='kizaru-warp --awakened'
 
 function chill() {
-    num=$((1 + $RANDOM % 5))
+    num=$((1 + $RANDOM % 6))
     if [ "$num" = "1" ]; then DISPLAY= cacafire; fi
     if [ "$num" = "2" ]; then nyancat; fi
     if [ "$num" = "3" ]; then cmatrix; fi
     if [ "$num" = "4" ]; then $SCRIPTS/pipes.sh; fi
     if [ "$num" = "5" ]; then $SCRIPTS/rick-roll.sh; fi
-    # if [ "$num" = "6" ]; then cava; fi
+    if [ "$num" = "6" ]; then cava; fi
 }
 
 function weather() {
