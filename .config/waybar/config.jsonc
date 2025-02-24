@@ -167,13 +167,13 @@
         "signal": 8,
         "interval": "once"
     },
-    "battery": {
+    "battery": { 
         "states": {
             // "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}",
+        "format": "{icon} ",
         "format-full": "{icon} ",
         "format-charging": "{icon} ",
         "format-plugged": "",
@@ -205,19 +205,20 @@
         "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": " ",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click": "nm-connection-editor",
         "tooltip": true,
-        "tooltip-format-wifi": "Wi-Fi: {essid}"
+        "tooltip-format-wifi": "Wi-Fi: {essid}",
+        "tooltip-format-disconnected": "Network: offline"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon}",
         // "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": " ",
+        "format-muted": " ",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
